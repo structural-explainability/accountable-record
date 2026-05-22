@@ -6,7 +6,7 @@ Claims have stable identifiers, declared shapes, applicability rules, maturity
 or profile assignments, mandatory or optional status, and machine-readable
 definitions.
 
-## Claim shapes
+## Claim Shapes
 
 AR defines these claim shapes:
 
@@ -20,14 +20,14 @@ AR defines these claim shapes:
 
 The AR core uses the first four declarative shapes.
 
-## Claims and traits
+## Claims and Traits
 
 Traits and claims are not the same thing.
 
 A trait is a declarative property of a record type. A claim is a verifier check.
 The trait-conformance claim checks declared record-type and trait pairs.
 
-## Claims and profiles
+## Claims and Profiles
 
 Profiles may select AR packages, domain packages, local packages, or
 proprietary packages. A profile may add requirements on top of AR claim

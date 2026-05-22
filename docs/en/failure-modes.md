@@ -22,7 +22,7 @@ Failure modes are not exhaustive. They name recurring risks that profiles,
 claims, traits, mappings, transformation checks, and conformance checks can
 detect or help prevent.
 
-## Core concepts
+## Core Concepts
 
 | Concept | Meaning |
 | --- | --- |
@@ -33,7 +33,7 @@ detect or help prevent.
 | Collapse Remediation | Guidance for fixing or avoiding a record collapse. |
 | Profile Failure Mode | A domain-specific failure mode defined by a profile. |
 
-## Core AR failure modes
+## Core AR Failure Modes
 
 AR defines six core structural-collapse patterns:
 
@@ -49,7 +49,7 @@ AR defines six core structural-collapse patterns:
 These are structural patterns, not final judgments about truth, authority,
 legitimacy, obligation, enforcement, or domain meaning.
 
-## Source vs. interpretation
+## Source vs. Interpretation
 
 This collapse occurs when a record fuses source material with an
 interpretation of what the source means.
@@ -71,7 +71,7 @@ Remediation: keep source-bearing fields faithful to source material. Express
 interpretation in separate records, profile-specific interpretive records,
 claims, annotations, or cross-referenced structures.
 
-## Name vs. identity
+## Name vs. Identity
 
 This collapse occurs when identity is tied to a name, title, address, section
 number, display label, or other mutable designation.
@@ -92,7 +92,7 @@ Remediation: use stable identifiers for records and subjects. Treat names,
 titles, addresses, display labels, section numbers, and other designations as
 mutable fields rather than identity.
 
-## Content vs. status
+## Content vs. Status
 
 This collapse occurs when content is mutated to encode current status.
 
@@ -113,7 +113,7 @@ Remediation: keep content separable from status. Express repeal, supersession,
 limitation, current status, or other status changes as separate status
 structure, status history, linked records, or declared transformations.
 
-## Event vs. record
+## Event vs. Record
 
 This collapse occurs when a record treats a representation of an event as the
 event itself.
@@ -134,7 +134,7 @@ Remediation: treat the event and the record describing the event as distinct.
 Corrections, additions, and reinterpretations should be new records or declared
 transformations that reference the original record.
 
-## Provenance vs. authority
+## Provenance vs. Authority
 
 This collapse occurs when provenance is treated as conferring authority.
 
@@ -154,7 +154,7 @@ Remediation: record provenance as information about how the record came to be.
 Treat authority as a separate interpretive, profile-specific, institutional, or
 downstream claim rather than as something AR infers from provenance.
 
-## Context vs. claim
+## Context vs. Claim
 
 This collapse occurs when contextual limits, scope, environment, observation
 conditions, or applicability boundaries are folded into the claim itself.
@@ -203,7 +203,7 @@ Remediation does not rewrite records by itself.
 
 Remediation does not decide final domain meaning.
 
-## Profile failure modes
+## Profile Failure Modes
 
 Profiles may define additional domain-specific failure modes.
 
@@ -226,7 +226,7 @@ Examples:
 - a civic or institutional profile might define contribution-vs-influence or
   meeting-vs-decision collapses.
 
-## Why failure modes matter
+## Why Failure Modes Matter
 
 Many collapses are locally attractive because they make records simpler in the
 short term.
