@@ -77,7 +77,7 @@ Each element type may define:
 - deprecation metadata
 - stewardship metadata
 
-A domain system such as JR or CIR may define its own element types while
+A domain system such as JR or CR may define its own element types while
 depending on AR core element types.
 
 ## Element packages

@@ -255,13 +255,11 @@ uv run python -m pytest
 uv run python -m zensical build
 
 # run AR checks
-uv run accountable-record check
 uv run accountable-record check --strict
 
 # generate derived artifacts as implemented
 uv run accountable-record export
 uv run accountable-record render-docs
-
 ```
 
 ### Task 3. Commit, tag, push

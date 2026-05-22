@@ -32,13 +32,13 @@ repository = "judicial-record-us-federal-supreme"
 url = "https://github.com/structural-explainability/judicial-record-us-federal-supreme"
 
 [[authorities.projects]]
-project = "compliance-intelligence-record"
+project = "civic-record"
 label = "Compliance Intelligence Record"
-canonical_uri_base = "https://structural-explainability.org/compliance-intelligence-record"
-compact_id_base = "se.compliance-intelligence-record"
+canonical_uri_base = "https://structural-explainability.org/civic-record"
+compact_id_base = "se.civic-record"
 
 [authorities.projects.hosting]
 provider = "github"
 organization = "structural-explainability"
-repository = "compliance-intelligence-record"
-url = "https://github.com/structural-explainability/compliance-intelligence-record"
+repository = "civic-record"
+url = "https://github.com/structural-explainability/civic-record"

@@ -24,5 +24,5 @@ Each example lives under its own subdirectory with:
 ## Status
 
 Empty until the contract reaches schema stability. Examples will be
-populated as worked cases from JR, CIR, and Civic Interconnect are
+populated as worked cases from JR, CR, and Civic Interconnect are
 adapted to the AR envelope.

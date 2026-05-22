@@ -2,6 +2,16 @@
 
 import json
 from pathlib import Path
+from typing import TypedDict
+
+
+class PackageData(TypedDict):
+    """Source data used to generate an element package manifest."""
+
+    label: str
+    description: str
+    elements: list[str]
+
 
 ROOT = Path.cwd()
 
@@ -2347,6 +2357,7 @@ def scaffold_docs() -> None:
         "contracts",
         "identity-contract",
         "package-contract",
+        "packages",
         "change-contract",
         "component-groups",
         "verifiable-elements",
@@ -2685,8 +2696,8 @@ allowed_differences = [
     )
 
 
-def package_manifest(package_id: str, package_data: dict[str, object]) -> str:
-    """Generate the content of a package manifest file based on the provided package data."""
+def package_manifest(package_id: str, package_data: PackageData) -> str:
+    """Generate the content of a package manifest file from package data."""
     label = str(package_data["label"])
     description = str(package_data["description"])
     elements = package_data["elements"]

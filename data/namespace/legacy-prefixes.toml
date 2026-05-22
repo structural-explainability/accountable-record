@@ -18,11 +18,11 @@ Earlier drafts used `JR.*` for judicial-record domain identifiers.
 """
 
 [[prefixes]]
-prefix = "CIR"
+prefix = "CR"
 status = "legacy-domain-prefix"
-replacement = "se.compliance-intelligence-record"
+replacement = "se.civic-record"
 description = """
-Earlier drafts used `CIR.*` for compliance-intelligence-record domain
+Earlier drafts used `CR.*` for civic-record domain
 identifiers.
 """
 

@@ -395,7 +395,7 @@ AR separates three concepts:
   compatibility fixtures.
 
 Profiles compose element packages or selected element types. Domain systems
-such as JR and CIR may define their own element packages while depending on
+such as JR and CR may define their own element packages while depending on
 AR core element packages.
 
 ### Rationale
@@ -428,7 +428,7 @@ persistent-ID form, and the compact-ID form, along with the rule that none of
 these forms includes a version.
 
 Hosting metadata is recorded separately and is not part of identity. Domain
-systems such as JR and CIR define their own project spaces and element types
+systems such as JR and CR define their own project spaces and element types
 while depending on AR core identifiers. Deprecated identifiers remain citable
 and must not be reused.
 
