@@ -1,0 +1,29 @@
+{
+  "prefixes": [
+    {
+      "description": "Earlier drafts used `AR.*` identifiers for AR-owned claims, traits, profiles,\ntransformation behaviors, and artifacts.",
+      "prefix": "AR",
+      "replacement": "se.accountable-record",
+      "status": "deprecated"
+    },
+    {
+      "description": "Earlier drafts used `JR.*` for judicial-record domain identifiers.",
+      "prefix": "JR",
+      "replacement": "se.judicial-record-us-federal-supreme",
+      "status": "legacy-domain-prefix"
+    },
+    {
+      "description": "Earlier drafts used `CR.*` for civic-record domain\nidentifiers.",
+      "prefix": "CR",
+      "replacement": "se.civic-record",
+      "status": "legacy-domain-prefix"
+    },
+    {
+      "description": "Earlier drafts referenced upstream accountable-entity identifiers using\n`AE.*`. AR now treats these as upstream mappings or referenced concepts rather\nthan AR-owned identifiers.",
+      "prefix": "AE",
+      "replacement": "",
+      "status": "upstream-reference"
+    }
+  ],
+  "schema": "ar-legacy-prefixes-1"
+}

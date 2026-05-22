@@ -1,0 +1,55 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "relations"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": []
+  },
+  "definition": {
+    "description": "TODO: Define this verifiable element type.",
+    "plain_language": "TODO: Explain this element in plain language."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/relations/mapping-relation",
+    "compact_id": "se.accountable-record.relations.mapping-relation",
+    "label": "Mapping Relation",
+    "local_name": "mapping-relation",
+    "persistent_id": "urn:ar:se:accountable-record:relations:mapping-relation"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

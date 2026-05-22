@@ -13,8 +13,6 @@ Two complementary strategies are used:
    A check that never fails is not a check.
 """
 
-from __future__ import annotations
-
 import json
 from pathlib import Path
 import tomllib

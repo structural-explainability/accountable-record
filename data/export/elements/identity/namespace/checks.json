@@ -1,0 +1,18 @@
+{
+  "checks": [
+    {
+      "description": "An element instance must identify the element type it conforms to.",
+      "id": "namespace.has-element-type-id",
+      "label": "Has element type ID",
+      "level": "required"
+    },
+    {
+      "description": "An element instance must have a stable element instance identifier.",
+      "id": "namespace.has-instance-id",
+      "label": "Has instance ID",
+      "level": "required"
+    }
+  ],
+  "element_type_id": "se.accountable-record.identity.namespace",
+  "schema": "ar-element-checks-1"
+}

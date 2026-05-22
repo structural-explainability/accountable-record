@@ -1,0 +1,58 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "subjects"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.subjects.record-subject >=0.1.0",
+      "se.accountable-record.subjects.subject-kind >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A classification assigned to a record subject by a profile, domain vocabulary,\nexternal vocabulary, mapping guide, verifier, or other declared authority.\nSubject classifications are explicit claims or declarations about a subject;\nthey are not AR-owned ontology commitments.",
+    "plain_language": "A category assigned to the subject of a record."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/subjects/subject-classification",
+    "compact_id": "se.accountable-record.subjects.subject-classification",
+    "label": "Subject Classification",
+    "local_name": "subject-classification",
+    "persistent_id": "urn:ar:se:accountable-record:subjects:subject-classification"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

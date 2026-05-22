@@ -1,0 +1,789 @@
+{
+  "schema": "ar-vocabulary-terms-1",
+  "terms": [
+    {
+      "definition": "A language-neutral contract for information systems that must remain usable\nunder persistent disagreement.",
+      "id": "accountable-record",
+      "label": "Accountable Record",
+      "plain_language": "A structured record system for keeping information inspectable and usable even\nwhen people disagree about meaning, authority, correctness, or interpretation.",
+      "related_terms": [
+        "verifiable-element",
+        "element-type",
+        "element-instance",
+        "component-group",
+        "claim",
+        "trait",
+        "verification",
+        "conformance",
+        "disagreement"
+      ],
+      "status": "stable-draft"
+    },
+    {
+      "definition": "An incremental level of Accountable Record adoption that describes which\nrecord structure, identifiers, elements, checks, and exports a system supports.",
+      "id": "adoption-level",
+      "label": "Adoption Level",
+      "plain_language": "A step in how fully a system has adopted Accountable Records.",
+      "related_terms": [
+        "accountable-record",
+        "conformance-profile",
+        "maturity-level"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A short registry-scoped name used in compact identifiers to refer to a\nnamespace authority.",
+      "id": "authority-alias",
+      "label": "Authority Alias",
+      "plain_language": "A short name for the organization or authority that owns a namespace.",
+      "related_terms": [
+        "compact-id",
+        "namespace-authority"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "AR preserves the structure needed for disagreement to remain inspectable. AR\ndoes not resolve disagreement.",
+      "id": "boundary-statement",
+      "label": "Boundary Statement",
+      "related_terms": [
+        "accountable-record",
+        "disagreement",
+        "verification",
+        "conformance"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A machine-readable artifact exported by a system for inspection, validation,\nexchange, or review.",
+      "id": "bundle",
+      "label": "Bundle",
+      "plain_language": "The exported package a system provides so others can inspect the record.",
+      "related_terms": [
+        "export-bundle",
+        "profile",
+        "report"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A durable URI used as the preferred public identifier for an Accountable\nRecord artifact, element type, element package, schema, or related resource.",
+      "id": "canonical-uri",
+      "label": "Canonical URI",
+      "plain_language": "The durable web-style identifier for something in Accountable Records.",
+      "related_terms": [
+        "compact-id",
+        "identifier",
+        "persistent-id"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The Accountable Record contract that defines additive, compatible, breaking,\ndeprecated, superseded, and withdrawn changes for elements, packages, schemas,\nexports, and conformance semantics.",
+      "id": "change-contract",
+      "label": "Change Contract",
+      "plain_language": "The rules for what can change without breaking systems that depend on AR.",
+      "related_terms": [
+        "identity-contract",
+        "package-contract"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "An assertion preserved within an Accountable Record.",
+      "id": "claim",
+      "label": "Claim",
+      "plain_language": "Something the record says and keeps available for checking.",
+      "related_terms": [
+        "claim-outcome",
+        "evidence",
+        "trait",
+        "verification",
+        "verifiable-element"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The result produced when an applicable claim is checked against a bundle.",
+      "id": "claim-outcome",
+      "label": "Claim Outcome",
+      "plain_language": "The result of checking a claim.",
+      "related_terms": [
+        "claim",
+        "report",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared structural form describing how a claim is checked by a verifier.",
+      "id": "claim-shape",
+      "label": "Claim Shape",
+      "plain_language": "The kind of check a claim uses.",
+      "related_terms": [
+        "claim",
+        "verifier",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A check, claim, trait, mapping, transformation rule, conformance rule, or\nprofile rule used to detect a structural collapse.",
+      "id": "collapse-detection",
+      "label": "Collapse Detection",
+      "plain_language": "A way to find a record collapse.",
+      "related_terms": [
+        "collapse-pattern",
+        "failure-mode",
+        "structural-collapse"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A recurrent form of structural collapse in which a record fuses things that AR\nrequires to remain separable.",
+      "id": "collapse-pattern",
+      "label": "Collapse Pattern",
+      "plain_language": "A recurring pattern where a record mixes things that should stay separate.",
+      "related_terms": [
+        "failure-mode",
+        "structural-collapse"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "Guidance for repairing, avoiding, or restructuring records that exhibit a\nstructural collapse.",
+      "id": "collapse-remediation",
+      "label": "Collapse Remediation",
+      "plain_language": "Guidance for fixing or avoiding a record collapse.",
+      "related_terms": [
+        "collapse-pattern",
+        "failure-mode"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A human-readable and tool-friendly identifier composed from an authority alias,\nproject, component group, and local element or package name.",
+      "id": "compact-id",
+      "label": "Compact ID",
+      "plain_language": "A shorter identifier that tools and people can use instead of the full URI.",
+      "related_terms": [
+        "authority-alias",
+        "canonical-uri",
+        "identifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A canonical example, bundle, or expected report used to check whether\nindependent implementations preserve Accountable Record semantics.",
+      "id": "compatibility-fixture",
+      "label": "Compatibility Fixture",
+      "plain_language": "A shared test example used to make sure different tools behave the same way.",
+      "related_terms": [
+        "bundle",
+        "report",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A stable architectural category that organizes related verifiable element\ntypes.",
+      "id": "component-group",
+      "label": "Component Group",
+      "plain_language": "A named group that organizes related kinds of verifiable elements.",
+      "related_terms": [
+        "element-package",
+        "element-type",
+        "verifiable-element"
+      ],
+      "status": "stable-draft"
+    },
+    {
+      "definition": "A claim shape or verification behavior supplied by a domain, local,\nproprietary, or profile-specific implementation when declarative Accountable\nRecord claim shapes are insufficient.",
+      "id": "custom-check",
+      "label": "Custom Check",
+      "plain_language": "A check supplied by a specific domain or tool because the standard shapes are\nnot enough.",
+      "related_terms": [
+        "claim-shape",
+        "verifier",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A domain-specific profile that defines domain record types, domain claims,\ndomain traits, field mappings, transformation kinds, and profile-specific\nrequirements.",
+      "id": "domain-profile",
+      "label": "Domain Profile",
+      "plain_language": "A domain-specific way of using Accountable Records.",
+      "related_terms": [
+        "profile",
+        "claim",
+        "trait"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A concrete occurrence of an element type within an Accountable Record.",
+      "id": "element-instance",
+      "label": "Element Instance",
+      "plain_language": "One actual verifiable element inside a record.",
+      "related_terms": [
+        "element-type",
+        "verifiable-element"
+      ],
+      "status": "stable-draft"
+    },
+    {
+      "definition": "A reusable distribution unit that packages one or more verifiable element\ntypes with their schemas, checks, examples, mappings, verifier expectations,\ncompatibility fixtures, expected reports, dependencies, and rationale.",
+      "id": "element-package",
+      "label": "Element Package",
+      "plain_language": "A reusable package of related verifiable elements and the files needed to\ncheck and use them.",
+      "related_terms": [
+        "element-package-dependency",
+        "element-type",
+        "profile",
+        "verifiable-element"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared requirement that an element package depends on another element\npackage, element type, contract feature, schema, mapping, or compatibility\nfixture.",
+      "id": "element-package-dependency",
+      "label": "Element Package Dependency",
+      "plain_language": "Something an element package needs in order to work correctly.",
+      "related_terms": [
+        "element-package",
+        "element-type",
+        "profile-selection"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A canonical example input, bundle, element instance, profile, report, or test\ncase distributed with an element package to demonstrate and test its expected\nbehavior.",
+      "id": "element-package-fixture",
+      "label": "Element Package Fixture",
+      "plain_language": "A test example included with an element package.",
+      "related_terms": [
+        "compatibility-fixture",
+        "element-package",
+        "expected-report",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared kind of verifiable element that defines structure, checks,\nexamples, exports, and compatibility expectations.",
+      "id": "element-type",
+      "label": "Element Type",
+      "plain_language": "A reusable kind of verifiable element.",
+      "related_terms": [
+        "element-instance",
+        "verifiable-element"
+      ],
+      "status": "stable-draft"
+    },
+    {
+      "definition": "A legacy or upstream-facing category used to describe the kind of accountable\nentity or record subject a record concerns.",
+      "id": "entity-kind",
+      "label": "Entity Kind",
+      "plain_language": "An older or external term for the kind of thing a record is about.",
+      "related_terms": [
+        "record-subject"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "Structured support used in verification, review, or conformance checking.",
+      "id": "evidence",
+      "label": "Evidence",
+      "plain_language": "Material used to support or check a claim.",
+      "related_terms": [
+        "claim",
+        "source",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A canonical report expected from running a specified verifier, profile, claim\nset, or element package against a specified fixture.",
+      "id": "expected-report",
+      "label": "Expected Report",
+      "plain_language": "The report a verifier should produce for a given test example.",
+      "related_terms": [
+        "compatibility-fixture",
+        "element-package-fixture",
+        "report",
+        "verification",
+        "verifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A recurrent structural failure pattern that makes records harder to inspect,\nverify, transform, compare, or preserve under disagreement.",
+      "id": "failure-mode",
+      "label": "Failure Mode",
+      "plain_language": "A common way records become unreliable or hard to inspect.",
+      "related_terms": [
+        "collapse-pattern",
+        "structural-collapse"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared mapping between a field, path, property, column, key, or local data\nshape in a source system and the structural role expected by an Accountable\nRecord element type, package, profile, or verifier.",
+      "id": "field-mapping",
+      "label": "Field Mapping",
+      "plain_language": "A rule that says which local field plays which Accountable Record role.",
+      "related_terms": [
+        "field-role",
+        "mapping-guide",
+        "profile",
+        "verifier-expectation"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A named structural role that a field or value may play within an Accountable\nRecord, element type, element package, mapping guide, profile, or verifier\nrun.",
+      "id": "field-role",
+      "label": "Field Role",
+      "plain_language": "The job a field performs in an Accountable Record.",
+      "related_terms": [
+        "field-mapping",
+        "mapping-guide",
+        "profile"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A stable name, key, URI, compact ID, persistent ID, or instance ID used to\nrefer to an Accountable Record artifact or verifiable element.",
+      "id": "identifier",
+      "label": "Identifier",
+      "plain_language": "A stable name used to refer to something in an Accountable Record.",
+      "related_terms": [
+        "element-instance",
+        "element-type",
+        "record-subject",
+        "verifiable-element"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The Accountable Record contract that defines how authorities, project spaces,\nelement types, element instances, packages, schemas, exported artifacts, and\nlock entries are identified.",
+      "id": "identity-contract",
+      "label": "Identity Contract",
+      "plain_language": "The rules for naming things so they stay stable and do not collide.",
+      "related_terms": [
+        "namespace-authority",
+        "package-contract"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A claim that must be run and satisfied for a declared maturity level,\nconformance profile, element package, or verifier run.",
+      "id": "mandatory-claim",
+      "label": "Mandatory Claim",
+      "plain_language": "A claim that must be checked and satisfied.",
+      "related_terms": [
+        "claim",
+        "conformance-profile",
+        "maturity-level"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "aliases": [
+        "adoption-level"
+      ],
+      "definition": "An incremental Accountable Record adoption level that specifies which\nrequirements, checks, structures, and verification expectations apply at a\ngiven stage of conformance.",
+      "id": "maturity-level",
+      "label": "Maturity Level",
+      "plain_language": "A step in how fully a system has adopted Accountable Records.",
+      "related_terms": [
+        "adoption-level",
+        "conformance-profile",
+        "level-check",
+        "level-requirement"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "An organization, domain, registry, or owner responsible for assigning stable\nnames within a project space.",
+      "id": "namespace-authority",
+      "label": "Namespace Authority",
+      "plain_language": "The organization or authority responsible for a set of names.",
+      "related_terms": [
+        "authority-alias",
+        "project-space"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A transformation behavior used when an operation does not raise an identity\nquestion for the represented subject.",
+      "id": "no-identity-question",
+      "label": "No Identity Question",
+      "plain_language": "A change-like operation that does not affect the identity of the subject.",
+      "related_terms": [
+        "transformation-behavior"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A claim that may be run when selected by a bundle, profile, element package,\nor verifier configuration but does not block an achieved maturity level unless\na profile explicitly makes it mandatory.",
+      "id": "optional-claim",
+      "label": "Optional Claim",
+      "plain_language": "A claim that can be checked but does not block the level unless a profile says\nit must.",
+      "related_terms": [
+        "claim",
+        "profile-selection",
+        "verifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The Accountable Record contract that defines what an element package\nguarantees to downstream systems and how packages are composed, versioned,\nresolved, locked, and trusted across project boundaries.",
+      "id": "package-contract",
+      "label": "Package Contract",
+      "plain_language": "The rules for reusable AR packages and how other systems can safely depend on\nthem.",
+      "related_terms": [
+        "change-contract",
+        "element-package",
+        "identity-contract"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "An optional non-HTTP durable identifier used for archival, private,\nproprietary, internal, or non-web Accountable Record contexts.",
+      "id": "persistent-id",
+      "label": "Persistent ID",
+      "plain_language": "A durable identifier that does not have to be a public web address.",
+      "related_terms": [
+        "canonical-uri",
+        "compact-id",
+        "identifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared set of claims, traits, mappings, requirements, or checks used to\ndescribe or evaluate a class of Accountable Record artifacts.",
+      "id": "profile",
+      "label": "Profile",
+      "plain_language": "A declared way to check or describe a type of accountable record.",
+      "related_terms": [
+        "bundle",
+        "domain-profile",
+        "report"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A domain-specific failure mode defined by a profile and composed with AR core\nfailure modes.",
+      "id": "profile-failure-mode",
+      "label": "Profile Failure Mode",
+      "plain_language": "A failure mode specific to a domain profile.",
+      "related_terms": [
+        "failure-mode",
+        "profile"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The process by which a profile declares the element packages, element types,\nclaims, traits, checks, mappings, requirements, or adoption levels that apply\nto a verifier run or exported bundle.",
+      "id": "profile-selection",
+      "label": "Profile Selection",
+      "plain_language": "The profile's declaration of what should be loaded and checked.",
+      "related_terms": [
+        "adoption-level",
+        "element-package",
+        "element-package-dependency",
+        "profile",
+        "verifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A stable project, package, repository, product, standard, or domain space\nwithin a namespace authority.",
+      "id": "project-space",
+      "label": "Project Space",
+      "plain_language": "The project area where a namespace authority defines related identifiers.",
+      "related_terms": [
+        "namespace-authority"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The thing, event, decision, action, condition, artifact, or referent that an\nAccountable Record is about.",
+      "id": "record-subject",
+      "label": "Record Subject",
+      "plain_language": "The thing the record is about.",
+      "related_terms": [
+        "accountable-record",
+        "entity-kind",
+        "subject"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A record design failure in which two or more distinct structures that AR\nrequires to remain separable are fused into one field, assertion, identifier,\nstatus, claim, or record.",
+      "id": "structural-collapse",
+      "label": "Structural Collapse",
+      "plain_language": "When a record mixes separate things together so they can no longer be checked\ncleanly.",
+      "related_terms": [
+        "collapse-pattern",
+        "failure-mode"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A classification assigned to a record subject by a profile, domain vocabulary,\nexternal vocabulary, mapping guide, or verifier.",
+      "id": "subject-classification",
+      "label": "Subject Classification",
+      "plain_language": "A category used to describe the subject of a record.",
+      "related_terms": [
+        "record-subject",
+        "subject-kind",
+        "subject-kind-mapping"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared kind or category for the subject of a record, owned by a profile,\ndomain, authority, external vocabulary, or mapping guide rather than by AR as\na universal ontology.",
+      "id": "subject-kind",
+      "label": "Subject Kind",
+      "plain_language": "The kind of thing the record is about.",
+      "related_terms": [
+        "record-subject",
+        "subject-kind-declaration",
+        "subject-kind-mapping"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declaration that a record, record type, profile, or package uses a specified\nsubject kind under a specified vocabulary or mapping context.",
+      "id": "subject-kind-declaration",
+      "label": "Subject Kind Declaration",
+      "plain_language": "A statement declaring which subject kind is being used.",
+      "related_terms": [
+        "record-type-subject-binding",
+        "subject-kind",
+        "subject-kind-mapping"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A machine-readable mapping between a profile, domain, institutional, or\nexternal subject vocabulary and AR subject structure.",
+      "id": "subject-kind-mapping",
+      "label": "Subject Kind Mapping",
+      "plain_language": "A mapping from someone else's subject vocabulary into AR subject structure.",
+      "related_terms": [
+        "mapping-guide",
+        "subject-kind",
+        "subject-mapping-guide"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A machine-readable and human-readable guide that helps a profile map local,\ndomain, institutional, or external subject vocabulary into AR subject\nstructure.",
+      "id": "subject-mapping-guide",
+      "label": "Subject Mapping Guide",
+      "plain_language": "A guide for connecting existing subject terms to AR subject structure.",
+      "related_terms": [
+        "mapping-guide",
+        "subject-kind-mapping"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declaration that binds a profile-defined record type to the subject\nstructure expected for records of that type.",
+      "id": "record-type-subject-binding",
+      "label": "Record Type Subject Binding",
+      "plain_language": "A rule saying what kind of subject a record type is about.",
+      "related_terms": [
+        "record-subject",
+        "subject-kind",
+        "subject-kind-declaration"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A verifier-emitted artifact that records claim outcomes, evidence, and\nstructured verification results for a bundle.",
+      "id": "report",
+      "label": "Report",
+      "plain_language": "The result produced after checking a bundle.",
+      "related_terms": [
+        "bundle",
+        "claim-outcome",
+        "profile",
+        "verification",
+        "verifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declarative commitment or structural guarantee made by a record type or\nverifiable element type.",
+      "id": "trait",
+      "label": "Trait",
+      "plain_language": "A declared property or guarantee that a record type says it has.",
+      "related_terms": [
+        "claim",
+        "record-subject",
+        "verifiable-element"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared relationship between records describing a change, correction,\nsuccessor relation, reclassification, re-encoding, or other operation whose\neffect on subject identity may be checked.",
+      "id": "transformation",
+      "label": "Transformation",
+      "plain_language": "A declared change or change-like relationship between records.",
+      "related_terms": [
+        "transformation-behavior",
+        "transformation-declaration",
+        "transformation-kind"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A rule determining whether a claimed transformation behavior is possible for\nthe declared subject structure, subject mapping, transformation kind, and\nprofile context.",
+      "id": "transformation-admissibility",
+      "label": "Transformation Admissibility",
+      "plain_language": "A rule saying whether a claimed transformation behavior is allowed in context.",
+      "related_terms": [
+        "subject-kind",
+        "subject-kind-mapping",
+        "transformation-behavior"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "The AR-defined identity behavior claimed by a declared transformation.",
+      "id": "transformation-behavior",
+      "label": "Transformation Behavior",
+      "plain_language": "What a declared change does to subject identity.",
+      "related_terms": [
+        "identity-breaking",
+        "identity-inheriting",
+        "identity-preserving",
+        "no-identity-question"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A bundle-level declaration connecting a source record, target record,\nprofile-defined transformation kind, AR-defined transformation behavior, and\noptional evidence or lineage metadata.",
+      "id": "transformation-declaration",
+      "label": "Transformation Declaration",
+      "plain_language": "A statement that one record is related to another by a declared change.",
+      "related_terms": [
+        "transformation",
+        "transformation-behavior",
+        "transformation-kind"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "Evidence used to support or verify a declared transformation behavior,\nlineage relation, or profile-specific transformation kind.",
+      "id": "transformation-evidence",
+      "label": "Transformation Evidence",
+      "plain_language": "Evidence used to check a declared transformation.",
+      "related_terms": [
+        "evidence",
+        "transformation",
+        "transformation-behavior"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A profile-defined label for the domain-specific kind of transformation being\ndeclared.",
+      "id": "transformation-kind",
+      "label": "Transformation Kind",
+      "plain_language": "The domain-specific name for a declared transformation.",
+      "related_terms": [
+        "profile",
+        "transformation",
+        "transformation-behavior"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared successor or accountability-lineage relation preserved by an\nidentity-inheriting transformation.",
+      "id": "transformation-lineage",
+      "label": "Transformation Lineage",
+      "plain_language": "The lineage that connects a prior subject to a successor subject.",
+      "related_terms": [
+        "identity-inheriting",
+        "transformation",
+        "transformation-behavior"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A profile-defined rule constraining recognized transformation kinds, connected\nrecord types, required evidence, admissible behaviors, or lineage requirements.",
+      "id": "transformation-profile-rule",
+      "label": "Transformation Profile Rule",
+      "plain_language": "A profile rule for how transformations work in a domain.",
+      "related_terms": [
+        "profile",
+        "transformation-admissibility",
+        "transformation-kind"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "aliases": [
+        "element"
+      ],
+      "definition": "An independently identifiable part of an Accountable Record that can be\nclaimed about, sourced, related, verified, exported, and reviewed.",
+      "deprecated_aliases": [
+        "verifiable-unit"
+      ],
+      "id": "verifiable-element",
+      "label": "Verifiable Element",
+      "plain_language": "A part of an Accountable Record that can be checked on its own.",
+      "related_terms": [
+        "accountable-record",
+        "component-group",
+        "element-instance",
+        "element-type"
+      ],
+      "status": "stable-draft"
+    },
+    {
+      "definition": "The process of checking claims, elements, bundles, profiles, or reports using\ndefined methods, evidence, checks, and outcomes.",
+      "id": "verification",
+      "label": "Verification",
+      "plain_language": "The act of checking something in an Accountable Record.",
+      "related_terms": [
+        "claim",
+        "claim-outcome",
+        "evidence",
+        "report",
+        "verifier"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A tool, system, process, or reviewer that loads a bundle, applies an\napplicable profile or claim set, runs checks, and emits a report.",
+      "id": "verifier",
+      "label": "Verifier",
+      "plain_language": "Something or someone that checks a bundle and produces a report.",
+      "related_terms": [
+        "bundle",
+        "profile",
+        "report",
+        "verification"
+      ],
+      "status": "working-draft"
+    },
+    {
+      "definition": "A declared hint, requirement, or compatibility expectation describing how a\nverifier should load, interpret, check, or report on an element type or\nelement package.",
+      "id": "verifier-expectation",
+      "label": "Verifier Expectation",
+      "plain_language": "A statement about what a verifier needs to do to use an element faithfully.",
+      "related_terms": [
+        "element-package",
+        "profile",
+        "verification",
+        "verifier"
+      ],
+      "status": "working-draft"
+    }
+  ]
+}

@@ -122,20 +122,11 @@ data/export/
 
 ## Documentation
 
-Documentation lives under `docs/en/`.
-Good entry points include:
+Zensical: docs/en/\*.md -> site
 
-- `scope.md`
-- `when-to-use-ar.md`
-- `non-goals.md`
-- `subjects.md`
-- `claims.md`
-- `traits.md`
-- `conformance.md`
-- `verification.md`
-- `exports.md`
-- `transformations.md`
-- `failure-modes.md`
+render-docs: data/**/\*.toml or data/export/**/_.json -> generated docs/en/reference/_.md
+
+Documentation lives under `docs/en/`.
 
 ## Companion Implementations
 
@@ -177,26 +168,26 @@ uvx pre-commit install
 git add -A
 uvx pre-commit run --all-files
 
-# scaffold (only at start)
+# scaffold repository structure, only used during initial repo creation
 uv run python tools/scaffold_ar_repo.py
 
-# run self-consistency checks
+# validate authored source artifacts
 uv run accountable-record check --strict
 uv run accountable-record validate-source --strict
-uv run accountable-record verify-lock --strict
 
-# run self-consistency checks (todo)
-uv run accountable-record validate-generated
+# generate derived artifacts
 uv run accountable-record export
-uv run accountable-record render-docs
 uv run accountable-record build-catalog
 uv run accountable-record resolve-packages
 uv run accountable-record write-lock
-
 uv run accountable-record digest
 
-# scaffold any missing files
-uv run accountable-record scaffold-missing
+# validate generated artifacts and lock
+uv run accountable-record validate-generated
+uv run accountable-record verify-lock
+
+# not yet implemented
+uv run accountable-record render-docs
 
 uv run python -m pyright
 uv run python -m pytest

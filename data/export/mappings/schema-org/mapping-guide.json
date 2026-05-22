@@ -1,0 +1,14 @@
+{
+  "id": "schema-org-to-accountable-record",
+  "label": "schema-org to Accountable Record",
+  "schema": "ar-mapping-guide-1",
+  "source_standard": {
+    "id": "schema-org",
+    "label": "schema-org"
+  },
+  "status": "working-draft",
+  "target": {
+    "id": "accountable-record",
+    "label": "Accountable Record"
+  }
+}

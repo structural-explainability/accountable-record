@@ -1,0 +1,59 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "exports"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.identity.identifier >=0.1.0",
+      "se.accountable-record.identity.version >=0.1.0",
+      "se.accountable-record.conformance.conformance-declaration >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "The required top-level structure of an exported Accountable Record artifact,\nincluding required fields, reserved fields, extension rules, schema\nidentifier, artifact identifier, version declarations, conformance\ndeclarations, and artifact-specific payload fields.",
+    "plain_language": "The required outer shape of an exported AR file."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/exports/export-envelope",
+    "compact_id": "se.accountable-record.exports.export-envelope",
+    "label": "Export Envelope",
+    "local_name": "export-envelope",
+    "persistent_id": "urn:ar:se:accountable-record:exports:export-envelope"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

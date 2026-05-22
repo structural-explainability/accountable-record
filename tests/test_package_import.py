@@ -1,7 +1,5 @@
 """Smoke tests for the accountable_record package."""
 
-from __future__ import annotations
-
 import accountable_record
 
 

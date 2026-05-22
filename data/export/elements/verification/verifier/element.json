@@ -1,0 +1,60 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "verification"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.conformance.claim-selection >=0.1.0",
+      "se.accountable-record.conformance.conformance-report >=0.1.0",
+      "se.accountable-record.verification.verifier-identity >=0.1.0",
+      "se.accountable-record.verification.report-production >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A tool, system, process, or reviewer that loads a bundle, identifies the\nselected claim set, runs selected applicable claims, and emits a report whose\nemissions can be inspected by identifier.",
+    "plain_language": "Something or someone that checks a bundle and produces a report."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/verification/verifier",
+    "compact_id": "se.accountable-record.verification.verifier",
+    "label": "Verifier",
+    "local_name": "verifier",
+    "persistent_id": "urn:ar:se:accountable-record:verification:verifier"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "groups": [
+    "identity",
+    "subjects",
+    "claims",
+    "traits",
+    "sources",
+    "references",
+    "relations",
+    "provenance",
+    "verification",
+    "status",
+    "disagreement",
+    "conformance",
+    "maturity",
+    "mappings",
+    "exports",
+    "governance"
+  ],
+  "schema": "ar-component-group-index-1"
+}

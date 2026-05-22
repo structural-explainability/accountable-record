@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "description": "A claim-shape instance must identify the element type it conforms to.",
+      "id": "claim_shape.has-element-type-id",
+      "label": "Has element type ID",
+      "level": "required"
+    },
+    {
+      "description": "A claim-shape instance must have a stable element instance identifier.",
+      "id": "claim_shape.has-instance-id",
+      "label": "Has instance ID",
+      "level": "required"
+    },
+    {
+      "description": "A claim-shape instance must declare the machine-readable shape value.",
+      "id": "claim_shape.has-shape-value",
+      "label": "Has shape value",
+      "level": "required"
+    }
+  ],
+  "element_type_id": "se.accountable-record.claims.claim-shape",
+  "schema": "ar-element-checks-1"
+}

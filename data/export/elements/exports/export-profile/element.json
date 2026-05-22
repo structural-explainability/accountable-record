@@ -1,0 +1,59 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "exports"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.conformance.conformance-profile >=0.1.0",
+      "se.accountable-record.conformance.claim-selection >=0.1.0",
+      "se.accountable-record.exports.export-envelope >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A machine-readable profile artifact exported by an Accountable Record project,\ndomain system, local system, proprietary system, or external package to define\nthe claim set, structural commitments, selected element packages, record\ntypes, field mappings, transformations, and profile-specific conformance rules\nfor a verification run.",
+    "plain_language": "A profile file that tells a verifier what to load, what to check, and what\nrules apply."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/exports/export-profile",
+    "compact_id": "se.accountable-record.exports.export-profile",
+    "label": "Export Profile",
+    "local_name": "export-profile",
+    "persistent_id": "urn:ar:se:accountable-record:exports:export-profile"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

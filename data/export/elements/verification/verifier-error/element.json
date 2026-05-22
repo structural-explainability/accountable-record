@@ -1,0 +1,58 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "verification"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.verification.verifier >=0.1.0",
+      "se.accountable-record.conformance.claim-outcome >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A verifier-level error that prevents verification from producing an AR report,\nsuch as unreadable input, parse failure, missing external profile, or invalid\nverifier configuration. Verifier-level errors are not claim outcomes.",
+    "plain_language": "An error that stops the verifier before it can produce a report."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/verification/verifier-error",
+    "compact_id": "se.accountable-record.verification.verifier-error",
+    "label": "Verifier Error",
+    "local_name": "verifier-error",
+    "persistent_id": "urn:ar:se:accountable-record:verification:verifier-error"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

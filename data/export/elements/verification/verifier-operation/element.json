@@ -1,0 +1,58 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "verification"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.verification.verifier >=0.1.0",
+      "se.accountable-record.verification.verifier-expectation >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A declared verifier operation, such as inspection or validation, that describes\nwhether the verifier summarizes structure, runs claims, produces an AR report,\nor performs another contract-recognized operation.",
+    "plain_language": "A named action a verifier can perform, such as inspect or validate."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/verification/verifier-operation",
+    "compact_id": "se.accountable-record.verification.verifier-operation",
+    "label": "Verifier Operation",
+    "local_name": "verifier-operation",
+    "persistent_id": "urn:ar:se:accountable-record:verification:verifier-operation"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

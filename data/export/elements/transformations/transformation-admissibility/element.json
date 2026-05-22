@@ -1,0 +1,60 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "transformations"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.transformations.transformation-behavior >=0.1.0",
+      "se.accountable-record.transformations.transformation-kind >=0.1.0",
+      "se.accountable-record.subjects.subject-kind-mapping >=0.1.0",
+      "se.accountable-record.conformance.conformance-profile >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A rule determining whether a claimed transformation behavior is possible for\nthe declared subject structure, subject mapping, transformation kind, profile,\nand source and target record context. Admissibility does not prove that a\nspecific transformation is valid.",
+    "plain_language": "A rule saying whether a claimed transformation behavior is allowed in context."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/transformations/transformation-admissibility",
+    "compact_id": "se.accountable-record.transformations.transformation-admissibility",
+    "label": "Transformation Admissibility",
+    "local_name": "transformation-admissibility",
+    "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-admissibility"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

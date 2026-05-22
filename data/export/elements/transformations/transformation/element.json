@@ -1,0 +1,58 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "transformations"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.transformations.transformation-declaration >=0.1.0",
+      "se.accountable-record.transformations.transformation-behavior >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A declared relationship between records describing a change, correction,\nsuccessor relation, reclassification, re-encoding, or other operation whose\neffect on subject identity may be checked.",
+    "plain_language": "A declared change or change-like relationship between records."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/transformations/transformation",
+    "compact_id": "se.accountable-record.transformations.transformation",
+    "label": "Transformation",
+    "local_name": "transformation",
+    "persistent_id": "urn:ar:se:accountable-record:transformations:transformation"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

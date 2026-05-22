@@ -1,0 +1,59 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "conformance"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.identity.version >=0.1.0",
+      "se.accountable-record.maturity.maturity-level >=0.1.0",
+      "se.accountable-record.conformance.conformance-profile >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A declaration made by a bundle, profile, package, system, or exported artifact\nabout its intended AR contract version, target maturity level, profile,\nproducing system version, or related conformance target. A conformance\ndeclaration is a target claim, not proof of achieved conformance.",
+    "plain_language": "A statement about what level, profile, or contract version something is trying\nto satisfy."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/conformance/conformance-declaration",
+    "compact_id": "se.accountable-record.conformance.conformance-declaration",
+    "label": "Conformance Declaration",
+    "local_name": "conformance-declaration",
+    "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-declaration"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

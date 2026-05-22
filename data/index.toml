@@ -17,6 +17,7 @@ records = "data/records/"
 [export]
 index = "data/export/index.json"
 vocabulary = "data/export/vocabulary/"
+namespace = "data/export/namespace/"
 component_groups = "data/export/component-groups/"
 elements = "data/export/elements/"
 mappings = "data/export/mappings/"

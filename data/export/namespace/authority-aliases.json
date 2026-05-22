@@ -1,0 +1,16 @@
+{
+  "alias_rules": {
+    "aliases_are_registry_scoped": true,
+    "canonical_uri_is_authoritative": true,
+    "compact_id_requires_alias_resolution": true
+  },
+  "aliases": [
+    {
+      "alias": "se",
+      "authority": "structural-explainability.org",
+      "label": "Structural Explainability",
+      "status": "active"
+    }
+  ],
+  "schema": "ar-authority-aliases-1"
+}

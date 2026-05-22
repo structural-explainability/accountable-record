@@ -1,0 +1,57 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "failure-modes"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.failure-modes.structural-collapse >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A recurrent form of structural collapse in which a record fuses things that\nAR requires to remain separable for inspection, verification, transformation,\ncomparison, or disagreement-preserving review.",
+    "plain_language": "A recurring pattern where a record mixes things that should stay separate."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/failure-modes/collapse-pattern",
+    "compact_id": "se.accountable-record.failure-modes.collapse-pattern",
+    "label": "Collapse Pattern",
+    "local_name": "collapse-pattern",
+    "persistent_id": "urn:ar:se:accountable-record:failure-modes:collapse-pattern"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

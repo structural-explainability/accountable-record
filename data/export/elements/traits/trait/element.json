@@ -1,0 +1,59 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "traits"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.traits.trait-declaration >=0.1.0",
+      "se.accountable-record.traits.trait-requirement >=0.1.0",
+      "se.accountable-record.traits.trait-conformance-binding >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "A declarative commitment or structural guarantee that a record type, profile,\nor element package can declare and that a verifier can assess through\ntrait-conformance checks.",
+    "plain_language": "A guarantee that a record type says it supports."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/traits/trait",
+    "compact_id": "se.accountable-record.traits.trait",
+    "label": "Trait",
+    "local_name": "trait",
+    "persistent_id": "urn:ar:se:accountable-record:traits:trait"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

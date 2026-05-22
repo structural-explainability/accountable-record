@@ -1,0 +1,57 @@
+{
+  "classification": {
+    "artifact_kind": "element-type",
+    "component_group": "subjects"
+  },
+  "compatibility": {
+    "breaking_changes_require_new_major": true,
+    "requires": [
+      "se.accountable-record.identity.identifier >=0.1.0"
+    ]
+  },
+  "definition": {
+    "description": "The subject that an Accountable Record, record type, bundle entry, profile\ndeclaration, or verifiable element is about. A record subject preserves what\nthe record concerns without requiring AR to own a universal domain ontology.",
+    "plain_language": "The thing, event, decision, action, condition, artifact, or referent that a\nrecord is about."
+  },
+  "deprecation": {
+    "deprecated": false,
+    "successor": ""
+  },
+  "hosting": {
+    "organization": "structural-explainability",
+    "provider": "github",
+    "repository": "accountable-record",
+    "url": "https://github.com/structural-explainability/accountable-record"
+  },
+  "identity": {
+    "canonical_uri": "https://structural-explainability.org/accountable-record/elements/subjects/record-subject",
+    "compact_id": "se.accountable-record.subjects.record-subject",
+    "label": "Record Subject",
+    "local_name": "record-subject",
+    "persistent_id": "urn:ar:se:accountable-record:subjects:record-subject"
+  },
+  "identity_rules": {
+    "element_instance_id_field": "element_instance_id",
+    "element_type_id_field": "element_type_id"
+  },
+  "namespace": {
+    "authority": "structural-explainability.org",
+    "authority_alias": "se",
+    "project": "accountable-record"
+  },
+  "release": {
+    "immutable": false,
+    "status": "working-draft",
+    "version": "0.1.0"
+  },
+  "schema": "ar-element-type-1",
+  "stewardship": {
+    "maintainer": "Structural Explainability",
+    "status": "active"
+  },
+  "structure": {
+    "checks": "checks.toml",
+    "examples": "examples/",
+    "schema": "schema.schema.json"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "authorities": [
+    {
+      "authority": "structural-explainability.org",
+      "authority_alias": "se",
+      "canonical_url": "https://structural-explainability.org",
+      "label": "Structural Explainability",
+      "projects": [
+        {
+          "canonical_uri_base": "https://structural-explainability.org/accountable-record",
+          "compact_id_base": "se.accountable-record",
+          "hosting": {
+            "organization": "structural-explainability",
+            "provider": "github",
+            "repository": "accountable-record",
+            "url": "https://github.com/structural-explainability/accountable-record"
+          },
+          "label": "Accountable Record",
+          "project": "accountable-record"
+        },
+        {
+          "canonical_uri_base": "https://structural-explainability.org/judicial-record-us-federal-supreme",
+          "compact_id_base": "se.judicial-record-us-federal-supreme",
+          "hosting": {
+            "organization": "structural-explainability",
+            "provider": "github",
+            "repository": "judicial-record-us-federal-supreme",
+            "url": "https://github.com/structural-explainability/judicial-record-us-federal-supreme"
+          },
+          "label": "Judicial Record: US Federal Supreme",
+          "project": "judicial-record-us-federal-supreme"
+        },
+        {
+          "canonical_uri_base": "https://structural-explainability.org/civic-record",
+          "compact_id_base": "se.civic-record",
+          "hosting": {
+            "organization": "structural-explainability",
+            "provider": "github",
+            "repository": "civic-record",
+            "url": "https://github.com/structural-explainability/civic-record"
+          },
+          "label": "Compliance Intelligence Record",
+          "project": "civic-record"
+        }
+      ],
+      "status": "active"
+    }
+  ],
+  "schema": "ar-namespace-authorities-1"
+}
