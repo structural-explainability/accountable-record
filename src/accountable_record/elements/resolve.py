@@ -1,1 +1,0 @@
-"""Element resolution helpers."""

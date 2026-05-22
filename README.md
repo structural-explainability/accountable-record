@@ -173,7 +173,6 @@ uv run python tools/scaffold_ar_repo.py
 
 # validate authored source artifacts
 uv run accountable-record check --strict
-uv run accountable-record validate-source --strict
 
 # generate derived artifacts
 uv run accountable-record export
@@ -181,13 +180,12 @@ uv run accountable-record build-catalog
 uv run accountable-record resolve-packages
 uv run accountable-record write-lock
 uv run accountable-record digest
+uv run accountable-record render-docs
 
 # validate generated artifacts and lock
 uv run accountable-record validate-generated
 uv run accountable-record verify-lock
 
-# not yet implemented
-uv run accountable-record render-docs
 
 uv run python -m pyright
 uv run python -m pytest

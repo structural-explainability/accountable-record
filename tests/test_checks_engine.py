@@ -493,15 +493,6 @@ def test_root_validate_source_alias(capsys: pytest.CaptureFixture[str]) -> None:
     assert code == 0
 
 
-def test_root_not_implemented_command(
-    capsys: pytest.CaptureFixture[str],
-) -> None:
-    """A not-yet-implemented command exits 2 with a clear message."""
-    code = root_main(["export"])
-    assert code == 2
-    assert "not yet implemented" in capsys.readouterr().err
-
-
 def test_root_no_command_runs_check(monkeypatch: pytest.MonkeyPatch) -> None:
     """No subcommand defaults to running check against the cwd."""
     # WHY: argparse subparsers reject a bare '--root X' with no subcommand, so

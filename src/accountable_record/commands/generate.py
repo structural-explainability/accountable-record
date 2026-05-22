@@ -11,6 +11,7 @@ from pathlib import Path
 
 from accountable_record.exporters.data_export import run_export
 from accountable_record.generators.artifacts import write_catalog
+from accountable_record.generators.docs import render_reference_docs
 from accountable_record.generators.lock import verify_lock, write_lock
 from accountable_record.resolvers.packages import resolve_packages
 from accountable_record.resolvers.versions import digest_toml_file
@@ -152,6 +153,22 @@ def _digest_main(argv: list[str]) -> int:
     return 0
 
 
+def _render_docs_main(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="accountable-record render-docs",
+        description="Render generated reference Markdown from contract data.",
+    )
+    parser.parse_args(argv)
+
+    result = render_reference_docs(Path.cwd())
+    if result.errors:
+        _print_errors(result.errors)
+        return 1
+
+    print(f"Rendered {len(result.written)} reference docs.")
+    return 0
+
+
 _COMMANDS: dict[str, CommandMain] = {
     "export": _export_main,
     "validate-generated": _validate_generated_main,
@@ -160,6 +177,7 @@ _COMMANDS: dict[str, CommandMain] = {
     "verify-lock": _verify_lock_main,
     "build-catalog": _build_catalog_main,
     "digest": _digest_main,
+    "render-docs": _render_docs_main,
 }
 
 

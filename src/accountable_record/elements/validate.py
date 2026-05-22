@@ -1,1 +1,0 @@
-"""TODO: elements validate.py."""

@@ -13,7 +13,7 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
-## [0.1.0] - 2026-05-21
+## [0.1.0] - 2026-05-22
 
 Initial public working-draft release of the Accountable Record contract.
 
@@ -200,45 +200,50 @@ disagreement.
 
 - Provides Python package surface under `src/accountable_record/`.
 - Provides the public CLI entry point `accountable-record`.
-- Provides initial package areas for:
-  - loaders,
-  - validators,
+- Provides implemented package areas for:
   - checks,
+  - commands,
   - exporters,
-  - renderers,
   - generators,
   - resolvers,
-  - locks,
-  - catalog,
-  - schemas,
-  - source-area modules.
-- Provides scaffold tooling for creating missing repository source files.
-- Provides initial tests for:
+  - validators.
+- Provides scaffold tooling for initial repository construction.
+- Provides a real check engine validating the `data/` and `docs/en/` layout.
+- Wires `accountable-record` CLI to the contract-check engine:
+  - `check` validates authored source artifacts.
+  - `check --strict` validates authored source artifacts plus strict repository
+    hygiene checks.
+  - `validate-source` is available as an alias for `check`.
+- Implements the generated artifact chain:
+  - `export` converts authored TOML source artifacts to canonical JSON exports.
+  - `validate-generated` regenerates canonical JSON in memory and compares it
+    against committed generated output.
+  - `build-catalog` generates the flat element catalog.
+  - `resolve-packages` resolves package composition to a unique element graph.
+  - `write-lock` writes the resolved package and element lock with canonical
+    JSON digests.
+  - `verify-lock` verifies the committed lock against a fresh resolution.
+  - `digest` prints canonical JSON SHA-256 digests for package and element
+    sources.
+  - `render-docs` generates reference Markdown from contract data.
+- Establishes canonical JSON serialization for stable export, digest, lock, and
+  generated-output comparison behavior.
+- Generates 300 canonical JSON export artifacts from authored source data.
+- Generates a catalog of 142 verifiable elements.
+- Resolves 3 packages to 33 unique package-included elements.
+- Provides generated reference documentation under `docs/en/reference/`.
+- Provides tests for:
   - conformance outcome semantics,
   - data source coverage,
   - export metadata,
   - namespace and identifier discipline,
+  - generated artifact validation,
+  - package resolution,
+  - catalog generation,
+  - lock generation and verification,
+  - CLI dispatch,
   - package import behavior.
-- Provides a real check engine validating the `data/` and `docs/en/` layout.
-- Wires `accountable-record` CLI to the real contract-check engine:
-  - `check` and `check --strict` validate the repository layout and pass
-    against the current contract data.
-  - `check` runs 15 base checks.
-  - `check --strict` runs 18 checks, including strict repository hygiene checks.
-  - `validate-source` is available as an alias for `check`.
-  - `verify-lock` is implemented.
-- Registers generation commands with explicit not-yet-implemented exits:
-  - `export`,
-  - `render-docs`,
-  - `build-catalog`,
-  - `resolve-packages`,
-  - `write-lock`,
-  - `digest`,
-  - `validate-generated`,
-  - `scaffold-missing`.
-- Adds lock-file validation coverage in `tests/test_element_lock_valid.py`.
-- Adds positive and negative test coverage for the check engine, check command,
-  root command dispatch, and implemented check modules.
+- Current release validation passes with 63 tests.
 
 ## Notes on Versioning and Releases
 
@@ -268,23 +273,34 @@ Follow these steps exactly when creating a new release.
 uv sync --extra dev --extra docs --upgrade
 git add -A
 uvx pre-commit run --all-files
-uv run python -m pyright
-uv run python -m pytest
-uv run python -m zensical build
 
-# run AR checks
+# validate authored source artifacts
 uv run accountable-record check --strict
 
-# generate derived artifacts as implemented
+# generate derived artifacts
 uv run accountable-record export
+uv run accountable-record build-catalog
+uv run accountable-record resolve-packages
+uv run accountable-record write-lock
+uv run accountable-record digest
 uv run accountable-record render-docs
+
+# validate generated artifacts and lock
+uv run accountable-record validate-generated
+uv run accountable-record verify-lock
+
+# do chores
+uv run python -m pytest
+uv run python -m pyright
+uvx pre-commit run --all-files
+uv run python -m zensical build
 ```
 
 ### Task 3. Commit, tag, push
 
 ```shell
 git add -A
-git commit -m "Prep X.Y.Z"
+git commit -m "Prepare X.Y.Z"
 git push -u origin main
 ```
 

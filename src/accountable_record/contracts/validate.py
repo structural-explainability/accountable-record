@@ -1,1 +1,0 @@
-"""TODO: contracts validate.py."""
