@@ -1,7 +1,7 @@
 # ============================================================
 # .github/workflows/ci-python-zensical.yml (Continuous Integration)
 # ============================================================
-# Updated: 2026-05-21
+# Updated: 2026-05-21 REPO SPECIFIC CHECKS
 #
 # WHY-FILE: Validate repository hygiene, Python correctness, and documentation builds.
 # REQ: CI MUST NOT introduce arbitrary rules that are not reproducible locally.
@@ -126,3 +126,10 @@ jobs:
         # OBS: Build only; deployment is handled by a separate workflow if needed.
         # OBS: Conditional on zensical.toml so this workflow is reusable across
         #      repos that may not yet have docs configured.
+
+      # ============================================================
+      # E) Execution checks (contract self-consistency)
+      # ============================================================
+
+      - name: E1) Run contract self-consistency checks
+        run: uv run accountable-record check --strict
