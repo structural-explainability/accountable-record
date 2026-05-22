@@ -181,18 +181,18 @@ uvx pre-commit run --all-files
 uv run python tools/scaffold_ar_repo.py
 
 # run self-consistency checks
-uv run accountable-record check
 uv run accountable-record check --strict
+uv run accountable-record validate-source --strict
+uv run accountable-record verify-lock --strict
 
 # run self-consistency checks (todo)
-uv run accountable-record validate-source
 uv run accountable-record validate-generated
 uv run accountable-record export
 uv run accountable-record render-docs
 uv run accountable-record build-catalog
 uv run accountable-record resolve-packages
 uv run accountable-record write-lock
-uv run accountable-record verify-lock
+
 uv run accountable-record digest
 
 # scaffold any missing files

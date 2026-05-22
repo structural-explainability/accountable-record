@@ -219,8 +219,26 @@ disagreement.
   - export metadata,
   - namespace and identifier discipline,
   - package import behavior.
-
----
+- Provides a real check engine validating the `data/` and `docs/en/` layout.
+- Wires `accountable-record` CLI to the real contract-check engine:
+  - `check` and `check --strict` validate the repository layout and pass
+    against the current contract data.
+  - `check` runs 15 base checks.
+  - `check --strict` runs 18 checks, including strict repository hygiene checks.
+  - `validate-source` is available as an alias for `check`.
+  - `verify-lock` is implemented.
+- Registers generation commands with explicit not-yet-implemented exits:
+  - `export`,
+  - `render-docs`,
+  - `build-catalog`,
+  - `resolve-packages`,
+  - `write-lock`,
+  - `digest`,
+  - `validate-generated`,
+  - `scaffold-missing`.
+- Adds lock-file validation coverage in `tests/test_element_lock_valid.py`.
+- Adds positive and negative test coverage for the check engine, check command,
+  root command dispatch, and implemented check modules.
 
 ## Notes on Versioning and Releases
 
