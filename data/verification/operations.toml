@@ -1,0 +1,27 @@
+schema = "ar-verifier-operations-1"
+
+[[operations]]
+id = "inspect"
+label = "Inspect"
+runs_claims = false
+produces_report = false
+description = """
+Inspection summarizes a bundle's declared level, profile, record types, record
+counts, subject kinds, traits, and transformations. Inspection does not run
+claims and does not produce an AR report.
+"""
+
+[[operations]]
+id = "validate"
+label = "Validate"
+runs_claims = true
+produces_report = true
+description = """
+Validation runs applicable claims and produces an AR report.
+"""
+
+[implementation_surface]
+description = """
+The AR contract defines validation semantics and describes common verifier
+operations. Implementations choose their own CLI, API, or library surface.
+"""

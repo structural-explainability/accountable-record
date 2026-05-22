@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/report-1.json",
+  "title": "AR Verification Report",
+  "description": "Deterministic JSON output of running a profile's claims against a bundle. Reproducible up to timestamps. Includes partial-conformance findings for trait checks.",
+  "type": "object",
+  "required": [
+    "schema",
+    "report_id",
+    "verifier",
+    "bundle",
+    "summary",
+    "results"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "accountable-record-report-1" },
+    "report_id": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "verifier": {
+      "type": "object",
+      "required": ["id", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" },
+        "profile_id": { "type": "string" },
+        "profile_version": { "type": "string" }
+      }
+    },
+    "bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "bundle_id": { "type": "string" },
+        "bundle_schema": { "type": "string" },
+        "versions": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "checks_run",
+        "checks_passed",
+        "checks_failed",
+        "checks_partial",
+        "checks_cannot_verify"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "checks_run": { "type": "integer" },
+        "checks_passed": { "type": "integer" },
+        "checks_failed": { "type": "integer" },
+        "checks_partial": { "type": "integer" },
+        "checks_cannot_verify": { "type": "integer" },
+        "trait_conformance": {
+          "type": "object",
+          "description": "Aggregate trait-conformance picture across declared record types.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "fully_conforming_record_types": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "partially_conforming_record_types": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "non_conforming_record_types": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check_id", "outcome"],
+        "additionalProperties": false,
+        "properties": {
+          "check_id": { "type": "string" },
+          "check_class": { "type": "string" },
+          "derives_from": { "type": "array", "items": { "type": "string" } },
+          "outcome": {
+            "type": "string",
+            "enum": ["pass", "fail", "partial", "cannot-verify"]
+          },
+          "records_examined": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "ir": {
+            "type": "object",
+            "description": "IR coordinates of the finding, when available.",
+            "additionalProperties": true
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["finding_kind", "condition"],
+              "additionalProperties": false,
+              "properties": {
+                "finding_kind": {
+                  "type": "string",
+                  "enum": ["failure", "partial_satisfaction", "cannot_verify"]
+                },
+                "condition": { "type": "string" },
+                "records_involved": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "details": { "type": "string" },
+                "ir": { "type": "object", "additionalProperties": true }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

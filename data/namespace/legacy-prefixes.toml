@@ -1,0 +1,37 @@
+schema = "ar-legacy-prefixes-1"
+
+[[prefixes]]
+prefix = "AR"
+status = "deprecated"
+replacement = "se.accountable-record"
+description = """
+Earlier drafts used `AR.*` identifiers for AR-owned claims, traits, profiles,
+transformation behaviors, and artifacts.
+"""
+
+[[prefixes]]
+prefix = "JR"
+status = "legacy-domain-prefix"
+replacement = "se.judicial-record-us-federal-supreme"
+description = """
+Earlier drafts used `JR.*` for judicial-record domain identifiers.
+"""
+
+[[prefixes]]
+prefix = "CIR"
+status = "legacy-domain-prefix"
+replacement = "se.compliance-intelligence-record"
+description = """
+Earlier drafts used `CIR.*` for compliance-intelligence-record domain
+identifiers.
+"""
+
+[[prefixes]]
+prefix = "AE"
+status = "upstream-reference"
+replacement = ""
+description = """
+Earlier drafts referenced upstream accountable-entity identifiers using
+`AE.*`. AR now treats these as upstream mappings or referenced concepts rather
+than AR-owned identifiers.
+"""

@@ -1,0 +1,81 @@
+schema = "ar-identifier-rules-1"
+
+[canonical_uri]
+pattern = "https://<authority>/<project>/elements/<component-group>/<element-type>"
+preferred = true
+version_included = false
+description = """
+Canonical URIs provide durable public identifiers for verifiable element types.
+They are based on a namespace authority, project space, component group, and
+element type.
+"""
+
+[persistent_id]
+pattern = "urn:ar:<authority-alias>:<project>:<component-group>:<element-type>"
+required = false
+version_included = false
+description = """
+Persistent IDs provide optional non-HTTP identifiers for archival,
+proprietary, internal, or non-web contexts.
+"""
+
+[compact_id]
+pattern = "<authority-alias>.<project>.<component-group>.<element-type>"
+required = true
+version_included = false
+description = """
+Compact IDs provide human-readable and tool-friendly identifiers. Authority
+aliases must be resolved through the namespace authority registry.
+"""
+
+[versioned_reference]
+pattern = "<compact-id>@<version>"
+description = """
+Versioned references identify a specific released version of an element type,
+element package, schema, or compatible artifact.
+"""
+
+[segments]
+case = "lowercase"
+character_set = "ascii"
+word_separator = "hyphen"
+segment_separator = "dot"
+element_type_number = "singular"
+component_group_number = "plural"
+
+[identity]
+identifiers_are_semantic = true
+identifiers_are_not_positional = true
+identifiers_are_language_agnostic = true
+identifiers_are_stable_across_versions = true
+identifiers_must_not_be_renamed = true
+identifiers_must_not_be_repurposed = true
+
+[ownership]
+ar_authority = "structural-explainability.org"
+ar_authority_alias = "se"
+domain_profiles_own_their_own_authorities = true
+domain_profiles_must_not_redefine_ar_identifiers = true
+
+[hosting]
+hosting_location_is_not_identity = true
+description = """
+Hosting metadata may identify GitHub, GitLab, institutional repositories,
+private registries, or other locations. Hosting changes must not change
+canonical identity.
+"""
+
+[stability]
+published_element_ids_are_immutable = true
+breaking_changes_require_new_major = true
+deprecated_ids_must_not_be_reused = true
+deprecated_ids_remain_citable = true
+replacement_ids_must_be_explicit = true
+
+[cross_artifact_consistency]
+drift_is_contract_defect = true
+description = """
+Each AR-owned identifier should have exactly one authoritative definition.
+Prose documents, schemas, examples, exports, and implementations may cite
+identifiers, but those references must not create competing definitions.
+"""

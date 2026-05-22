@@ -1,0 +1,26 @@
+schema = "ar-component-group-1"
+
+id = "failure-modes"
+label = "Failure Modes"
+status = "working-draft"
+
+definition = """
+The component group for structural collapses, recurrent failure patterns,
+detection rules, remediation guidance, and profile-specific failure modes.
+"""
+
+plain_language = """
+Failure modes describe ways records collapse things that AR needs to keep
+separate.
+"""
+
+element_directory = "data/elements/failure-modes"
+
+expected_elements = [
+  "failure-mode",
+  "structural-collapse",
+  "collapse-pattern",
+  "collapse-detection",
+  "collapse-remediation",
+  "profile-failure-mode",
+]

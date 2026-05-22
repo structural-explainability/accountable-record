@@ -1,0 +1,36 @@
+schema = "ar-verification-aggregation-1"
+
+[summary]
+aggregates_by = [
+  "claim shape",
+  "level",
+  "overall",
+]
+
+severity_order = [
+  "fail",
+  "partial",
+  "cannot-verify",
+  "pass",
+]
+
+severity_order_changes_outcome_meanings = false
+
+[achieved_level]
+description = """
+The achieved level is the highest level such that every mandatory AR claim for
+that level and all lower levels produced pass.
+"""
+requires_all_mandatory_claims_for_level_and_lower_to_pass = true
+
+[profile_rules]
+profiles_may_define_acceptance_rules_for_profile_specific_claims = true
+profiles_do_not_redefine_ar_achieved_level_semantics = true
+
+[inspection]
+description = """
+A reader can inspect why an achieved level is lower than a declared level by
+looking at the outcomes for mandatory claims at the missing level and lower
+levels.
+"""
+separate_editorial_why_field_required = false

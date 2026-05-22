@@ -1,0 +1,18 @@
+schema = "ar-component-group-1"
+
+id = "status"
+label = "Status"
+status = "working-draft"
+
+definition = """
+The component group for lifecycle, review, publication, validity, dispute, and
+deprecation states associated with Accountable Record artifacts and verifiable
+elements.
+"""
+
+plain_language = """
+Status records the current state of something, such as whether it is draft,
+reviewed, valid, disputed, published, deprecated, or superseded.
+"""
+
+element_directory = "data/elements/status"

@@ -1,0 +1,34 @@
+schema = "ar-component-group-1"
+
+id = "exports"
+label = "Exports"
+status = "working-draft"
+
+definition = """
+The component group for exported artifact types, export indexes, bundles,
+profiles, reports, envelopes, schemas, extension rules, forbidden extensions,
+release contracts, compatibility manifests, lock files, and other structures
+used to publish Accountable Record artifacts for inspection.
+"""
+
+plain_language = """
+Exports define what systems, profiles, and verifiers publish so other people
+and tools can inspect them.
+"""
+
+element_directory = "data/elements/exports"
+
+expected_elements = [
+  "export-artifact",
+  "export-index",
+  "export-bundle",
+  "export-profile",
+  "export-report",
+  "export-envelope",
+  "export-schema",
+  "export-extension",
+  "forbidden-extension",
+  "release-contract",
+  "compatibility-manifest",
+  "lock-file",
+]

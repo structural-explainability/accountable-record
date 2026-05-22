@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/ar-conformance-report-semantics.schema.json",
+  "title": "ar-conformance-report-semantics",
+  "type": "object",
+  "additionalProperties": true
+}

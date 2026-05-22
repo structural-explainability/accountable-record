@@ -1,0 +1,41 @@
+schema = "ar-verifier-errors-1"
+
+[semantics]
+verifier_level_errors_are_not_claim_outcomes = true
+
+[[errors]]
+id = "input-cannot-be-parsed"
+label = "Input Cannot Be Parsed"
+description = """
+The input cannot be parsed.
+"""
+
+[[errors]]
+id = "input-not-readable-document"
+label = "Input Is Not a Readable Document"
+description = """
+The input is not a readable document.
+"""
+
+[[errors]]
+id = "required-external-profile-cannot-be-loaded"
+label = "Required External Profile Cannot Be Loaded"
+description = """
+A required external profile cannot be loaded.
+"""
+
+[[errors]]
+id = "verifier-configuration-invalid"
+label = "Verifier Configuration Invalid"
+description = """
+The verifier configuration is invalid.
+"""
+
+[boundary]
+readable_bundle_missing_required_ar_fields_is_claim_outcome = true
+if_bundle_can_be_read_and_claims_can_run_report_should_be_produced = true
+description = """
+If the verifier can read the bundle and run claims, it should produce a
+report. If a readable bundle is missing required AR fields, that is a claim
+outcome, not a verifier-level error.
+"""

@@ -1,0 +1,60 @@
+schema = "ar-failure-mode-remediation-1"
+
+[semantics]
+remediation_is_guidance = true
+remediation_does_not_rewrite_records = true
+remediation_may_require_profile_rules = true
+description = """
+Remediation describes how records, profiles, mappings, or checks can be
+structured to avoid or repair a collapse. It does not itself change record
+content or decide final domain meaning.
+"""
+
+[[remediations]]
+failure_mode = "context-vs-claim"
+guidance = """
+Keep context separate and citable. Claims may cite their context, scope,
+environment, observation conditions, or applicability boundary, but they
+should not absorb that context in a way that makes the claim appear stronger
+or more general than it is.
+"""
+
+[[remediations]]
+failure_mode = "content-vs-status"
+guidance = """
+Keep content separable from status. Express repeal, supersession, limitation,
+current status, or other status changes as separate status structure, status
+history, linked records, or declared transformations.
+"""
+
+[[remediations]]
+failure_mode = "event-vs-record"
+guidance = """
+Treat the event and the record describing the event as distinct. Corrections,
+additions, and reinterpretations should be new records or declared
+transformations that reference the original record.
+"""
+
+[[remediations]]
+failure_mode = "name-vs-identity"
+guidance = """
+Use stable identifiers for records and subjects. Treat names, titles,
+addresses, display labels, section numbers, and other designations as mutable
+fields rather than identity.
+"""
+
+[[remediations]]
+failure_mode = "provenance-vs-authority"
+guidance = """
+Record provenance as information about how the record came to be. Treat
+authority as a separate interpretive, profile-specific, institutional, or
+downstream claim rather than as something AR infers from provenance.
+"""
+
+[[remediations]]
+failure_mode = "source-vs-interpretation"
+guidance = """
+Keep source-bearing fields faithful to source material. Express
+interpretation in separate records, profile-specific interpretive records,
+claims, annotations, or cross-referenced structures.
+"""

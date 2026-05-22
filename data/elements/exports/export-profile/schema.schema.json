@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/exports/export-profile.schema.json",
+  "title": "Export Profile",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.exports.export-profile"
+    },
+    "element_instance_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

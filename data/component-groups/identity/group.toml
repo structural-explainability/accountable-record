@@ -1,0 +1,15 @@
+schema = "ar-component-group-1"
+
+id = "identity"
+label = "Identity"
+status = "working-draft"
+
+definition = """
+TODO: Define the identity component group.
+"""
+
+plain_language = """
+TODO: Explain this component group in plain language.
+"""
+
+element_directory = "data/elements/identity"

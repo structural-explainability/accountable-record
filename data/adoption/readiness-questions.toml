@@ -1,0 +1,63 @@
+schema = "ar-readiness-questions-1"
+
+[[questions]]
+id = "exports-needed"
+question = """
+Does the system need to export records for review outside the original
+application?
+"""
+
+[[questions]]
+id = "incremental-adoption-needed"
+question = """
+Does the system need a path that starts with bundle shape and grows toward
+stronger conformance?
+"""
+
+[[questions]]
+id = "meaning-and-status-separable"
+question = """
+Do content, status, interpretation, source, scope, or provenance need to
+remain separable?
+"""
+
+[[questions]]
+id = "records-questioned-later"
+question = """
+Will these records be questioned later by people or systems that may disagree?
+"""
+
+[[questions]]
+id = "source-inspection-needed"
+question = """
+Does a reader need to inspect records against sources, citations, provenance,
+or evidence?
+"""
+
+[[questions]]
+id = "verification-report-needed"
+question = """
+Would a verifier report showing pass, fail, partial, cannot-verify, and
+not-run information be useful?
+"""
+
+[interpretation]
+description = """
+The readiness questions help a team decide whether AR is a good fit and which
+maturity level to target first. They are adoption guidance, not conformance
+claims.
+"""
+
+[guidance]
+mostly_yes = """
+AR is likely worth considering, especially if the system must preserve records
+under persistent disagreement or external inspection.
+"""
+mostly_no = """
+AR may be more structure than the system needs. Ordinary schema validation,
+documentation, or local export conventions may be enough.
+"""
+mixed = """
+A limited AR maturity target may be appropriate. Start with bundle shape and
+source traceability before adopting stronger profile conformance.
+"""

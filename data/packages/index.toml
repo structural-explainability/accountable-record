@@ -1,0 +1,7 @@
+schema = "ar-element-package-index-1"
+
+packages = [
+  "core",
+  "source-traceability",
+  "verification-core",
+]

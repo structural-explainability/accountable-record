@@ -1,0 +1,32 @@
+schema = "ar-component-group-1"
+
+id = "mappings"
+label = "Mappings"
+status = "working-draft"
+
+definition = """
+The component group for crosswalks, mapping guides, mapping questions,
+candidate targets, field roles, field mappings, warnings, examples, and rules
+that help external systems connect their own terms and structures to
+Accountable Record elements.
+"""
+
+plain_language = """
+Mappings help people and tools connect the words and fields they already use
+to Accountable Record structure.
+"""
+
+element_directory = "data/elements/mappings"
+
+expected_elements = [
+  "external-standard",
+  "mapping-guide",
+  "mapping-question",
+  "mapping-answer",
+  "mapping-rule",
+  "candidate-target",
+  "mapping-warning",
+  "mapping-example",
+  "field-role",
+  "field-mapping",
+]

@@ -1,0 +1,79 @@
+schema = "ar-subject-kind-map-1"
+
+[identity]
+id = "identity-regimes-subject-kind-map"
+label = "Identity Regimes Subject Kind Map"
+status = "working-draft"
+
+[semantics]
+description = """
+This file maps identity-regime vocabulary into AR subject structure. The
+external identifiers remain owned by their publishing authority.
+"""
+external_vocabulary_is_not_ar_canonical = true
+ar_owns_subject_structure = true
+
+[[mappings]]
+external_id = "OBL"
+external_label = "Obligation-Bearing Entity"
+ar_subject_kind = "obligation-bearing-subject"
+mapping_status = "candidate"
+notes = """
+Maps an obligation-bearing referent into AR subject structure when a profile
+needs to preserve obligations, permissions, prohibitions, commitments, or
+similar responsibility-bearing content.
+"""
+
+[[mappings]]
+external_id = "NOR"
+external_label = "Normative Structure"
+ar_subject_kind = "normative-subject"
+mapping_status = "candidate"
+notes = """
+Maps a normative referent into AR subject structure when a profile needs to
+preserve rule, policy, standard, requirement, or norm-related content without
+making AR itself a normative ontology.
+"""
+
+[[mappings]]
+external_id = "OCC"
+external_label = "Time-Indexed Occurrence"
+ar_subject_kind = "occurrence-subject"
+mapping_status = "candidate"
+notes = """
+Maps an occurrence into AR subject structure when a profile needs to preserve
+something that happened at a time or over an interval.
+"""
+
+[[mappings]]
+external_id = "CTX"
+external_label = "Applicability Context"
+ar_subject_kind = "context-subject"
+mapping_status = "candidate"
+notes = """
+Maps a context into AR subject structure when a profile needs to preserve
+scope, setting, applicability, jurisdiction, domain, program, boundary, or
+surrounding conditions.
+"""
+
+[[mappings]]
+external_id = "REC"
+external_label = "Descriptive Record"
+ar_subject_kind = "record-subject"
+mapping_status = "candidate"
+notes = """
+Maps a descriptive record into AR subject structure when a profile needs to
+preserve a source, document, dataset row, citation, observation log, file, or
+other record artifact.
+"""
+
+[[mappings]]
+external_id = "ENR"
+external_label = "Enduring Non-Normative Referent"
+ar_subject_kind = "enduring-referent-subject"
+mapping_status = "candidate"
+notes = """
+Maps an enduring non-normative referent into AR subject structure when a
+profile needs to preserve a durable thing, place, asset, instrument, system,
+organization, or other referent without making AR own the classification.
+"""

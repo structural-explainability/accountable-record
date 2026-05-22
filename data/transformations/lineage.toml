@@ -1,0 +1,42 @@
+schema = "ar-transformation-lineage-1"
+
+[semantics]
+required_for_identity_inheriting = true
+description = """
+Identity-inheriting transformations preserve accountability lineage from the
+source subject to the successor subject.
+"""
+
+[required_for_identity_inheriting]
+fields = [
+  "source_record_id",
+  "target_record_id",
+  "lineage_relation",
+]
+
+[recommended_for_identity_inheriting]
+fields = [
+  "lineage_evidence",
+  "profile_context",
+  "subject_mapping",
+]
+
+[reference_behavior]
+profile_may_permit_successor_resolution = true
+silent_redirect_without_declared_lineage_forbidden = true
+description = """
+A profile may permit references to resolve through a declared successor
+relation. A system must not silently redirect references without declared
+lineage.
+"""
+
+[boundary]
+description = """
+Lineage records successor accountability. It does not make the source and
+target the same subject.
+"""
+
+[verification]
+identity_inheriting_without_required_lineage_outcome = "fail"
+missing_lineage_evidence_when_required_outcome = "cannot-verify"
+lineage_preservation_claim = "se.accountable-record.claims.transformation-lineage-preserved"

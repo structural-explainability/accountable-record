@@ -1,0 +1,8 @@
+schema = "ar-verification-index-1"
+
+contract = "data/verification/verifier-contract.toml"
+operations = "data/verification/operations.toml"
+evidence = "data/verification/evidence-semantics.toml"
+aggregation = "data/verification/aggregation.toml"
+identity = "data/verification/verifier-identity.toml"
+errors = "data/conformance/verifier-errors.toml"

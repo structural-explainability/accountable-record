@@ -1,0 +1,18 @@
+schema = "ar-component-group-1"
+
+id = "provenance"
+label = "Provenance"
+status = "working-draft"
+
+definition = """
+The component group for origin, creation, derivation, authorship, custody,
+revision, publication, and tool-use history associated with Accountable Record
+artifacts and verifiable elements.
+"""
+
+plain_language = """
+Provenance records where something came from, how it changed, and who or what
+was involved.
+"""
+
+element_directory = "data/elements/provenance"

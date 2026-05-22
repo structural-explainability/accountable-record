@@ -1,0 +1,56 @@
+schema = "ar-transformation-admissibility-1"
+
+[semantics]
+admissibility_is_subject_mapping_sensitive = true
+admissibility_is_profile_sensitive = true
+admissibility_is_not_validity_proof = true
+description = """
+Admissibility states whether a claimed behavior is possible for the declared
+subject structure and mapping context. It does not prove that a specific
+transformation is valid.
+"""
+
+[inputs]
+fields = [
+  "source_record_id",
+  "target_record_id",
+  "source_subject_kind",
+  "target_subject_kind",
+  "subject_mapping",
+  "transformation_kind",
+  "claimed_behavior",
+  "profile",
+]
+
+[default_policy]
+unknown_subject_mapping = "cannot-verify"
+unknown_transformation_kind = "cannot-verify"
+missing_required_subject_information = "cannot-verify"
+inadmissible_behavior = "fail"
+
+[behavior_constraints]
+description = """
+AR defines the behavior vocabulary. Profiles define transformation kinds and
+may constrain which behaviors are admissible for their record types, subject
+structures, and mappings.
+"""
+
+[profile_rules]
+profiles_may_constrain_admissibility = true
+profiles_may_not_redefine_ar_behaviors = true
+profiles_may_not_claim_behavior_outside_ar_vocabulary = true
+profiles_may_add_evidence_requirements = true
+
+[subject_mapping_rules]
+external_vocabularies_are_mapping_contexts = true
+external_vocabularies_are_not_ar_canonical = true
+profile_must_declare_subject_mapping_when_required = true
+
+[verification]
+inadmissible_claimed_behavior_produces_claim_outcome = "fail"
+unverifiable_mapping_or_missing_required_information_produces_claim_outcome = "cannot-verify"
+description = """
+A verifier checks whether the claimed behavior is admissible in the declared
+subject and profile context. An inadmissible behavior is a failed claim. A
+missing or unresolved mapping prevents verification and yields cannot-verify.
+"""

@@ -1,0 +1,105 @@
+schema = "ar-subject-kind-map-1"
+
+[identity]
+id = "accountable-entities-subject-kind-map"
+label = "Accountable Entities Subject Kind Map"
+status = "working-draft"
+
+[semantics]
+description = """
+This file maps accountable-entity profile vocabulary into AR subject
+structure. The external identifiers remain owned by their publishing
+authority. AR uses the mappings only when selected by a profile.
+"""
+external_vocabulary_is_not_ar_canonical = true
+ar_owns_subject_structure = true
+
+[[mappings]]
+external_id = "AE.OBL"
+external_label = "Obligation"
+ar_subject_kind = "obligation-bearing-subject"
+mapping_status = "candidate"
+notes = """
+Maps a subject involving something required, permitted, prohibited, committed,
+or otherwise obligation-bearing into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.NOR_C"
+external_label = "Rule Content"
+ar_subject_kind = "normative-content-subject"
+mapping_status = "candidate"
+notes = """
+Maps the content of a rule, policy, standard, contract term, or requirement
+into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.NOR_S"
+external_label = "Rule Scope"
+ar_subject_kind = "normative-scope-subject"
+mapping_status = "candidate"
+notes = """
+Maps the scope, applicability, boundary, addressee, place, time, or condition
+of a rule into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.OCC"
+external_label = "Event"
+ar_subject_kind = "occurrence-subject"
+mapping_status = "candidate"
+notes = """
+Maps something that happened at a time or over an interval into AR subject
+structure.
+"""
+
+[[mappings]]
+external_id = "AE.CTX_E"
+external_label = "Environment Context"
+ar_subject_kind = "environment-context-subject"
+mapping_status = "candidate"
+notes = """
+Maps surrounding conditions that affect interpretation or applicability into
+AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.CTX_S"
+external_label = "Scope Context"
+ar_subject_kind = "scope-context-subject"
+mapping_status = "candidate"
+notes = """
+Maps a jurisdiction, domain, program, area, or boundary within which something
+is considered into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.REC"
+external_label = "Source"
+ar_subject_kind = "source-subject"
+mapping_status = "candidate"
+notes = """
+Maps a record, document, dataset row, citation, file, observation log, source
+artifact, or similar descriptive record into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.ENR_L"
+external_label = "Place or Asset"
+ar_subject_kind = "locus-subject"
+mapping_status = "candidate"
+notes = """
+Maps a durable location, site, asset, object, facility, dataset, or resource
+into AR subject structure.
+"""
+
+[[mappings]]
+external_id = "AE.ENR_I"
+external_label = "Instrument"
+ar_subject_kind = "instrument-subject"
+mapping_status = "candidate"
+notes = """
+Maps a durable non-normative referent such as an organization, vendor, named
+body, system, or identifiable instrument into AR subject structure.
+"""

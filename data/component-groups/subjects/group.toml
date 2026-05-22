@@ -1,0 +1,28 @@
+schema = "ar-component-group-1"
+
+id = "subjects"
+label = "Subjects"
+status = "working-draft"
+
+definition = """
+The component group for record subjects, subject kinds, subject scopes,
+subject classifications, subject-kind declarations, subject-kind mappings,
+and bindings between record types and subject structure.
+"""
+
+plain_language = """
+Subjects describe what a record is about without requiring AR to own a
+universal domain ontology.
+"""
+
+element_directory = "data/elements/subjects"
+
+expected_elements = [
+  "record-subject",
+  "subject-kind",
+  "subject-scope",
+  "subject-classification",
+  "subject-kind-declaration",
+  "subject-kind-mapping",
+  "record-type-subject-binding",
+]

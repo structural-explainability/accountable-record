@@ -1,0 +1,46 @@
+schema = "ar-element-checks-1"
+
+element_type_id = "se.accountable-record.conformance.expected-report"
+
+[[checks]]
+id = "expected_report.has-element-type-id"
+label = "Has element type ID"
+level = "required"
+description = """
+An expected-report instance must identify the element type it conforms to.
+"""
+
+[[checks]]
+id = "expected_report.has-instance-id"
+label = "Has instance ID"
+level = "required"
+description = """
+An expected-report instance must have a stable element instance identifier.
+"""
+
+[[checks]]
+id = "expected_report.has-fixture-reference"
+label = "Has fixture reference"
+level = "required"
+description = """
+An expected-report instance must identify the fixture, bundle, element
+instance, or test input it applies to.
+"""
+
+[[checks]]
+id = "expected_report.has-expected-outcomes"
+label = "Has expected outcomes"
+level = "required"
+description = """
+An expected-report instance must declare the expected verification,
+conformance, or claim outcomes.
+"""
+
+[[checks]]
+id = "expected_report.has-comparison-scope"
+label = "Has comparison scope"
+level = "recommended"
+description = """
+An expected-report instance should declare which report fields are required
+for compatibility comparison and which fields may vary across implementations.
+"""

@@ -1,0 +1,226 @@
+schema = "ar-core-claim-set-1"
+
+[[claims]]
+legacy_id = "AR.CLAIM.BUNDLE_ENVELOPE_VALID"
+compact_id = "se.accountable-record.claims.bundle-envelope-valid"
+label = "Bundle Envelope Valid"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.SCHEMA_DECLARED"
+compact_id = "se.accountable-record.claims.schema-declared"
+label = "Schema Declared"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.BUNDLE_ID_PRESENT"
+compact_id = "se.accountable-record.claims.bundle-id-present"
+label = "Bundle ID Present"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.VERSIONING"
+compact_id = "se.accountable-record.claims.versioning"
+label = "Versioning"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.CONFORMANCE_BLOCK_PRESENT"
+compact_id = "se.accountable-record.claims.conformance-block-present"
+label = "Conformance Block Present"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.MANIFEST_PRESENT"
+compact_id = "se.accountable-record.claims.manifest-present"
+label = "Manifest Present"
+shape = "bundle_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.RECORD_ID_STABLE"
+compact_id = "se.accountable-record.claims.record-id-stable"
+label = "Record ID Stable"
+shape = "record_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.RECORD_TYPE_DECLARED"
+compact_id = "se.accountable-record.claims.record-type-declared"
+label = "Record Type Declared"
+shape = "record_field_predicate"
+level = "level-0"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.SOURCE_TRACEABILITY"
+compact_id = "se.accountable-record.claims.source-traceability"
+label = "Source Traceability"
+shape = "record_field_predicate"
+level = "level-1"
+mandatory = true
+package = "se.accountable-record.packages.source-traceability"
+
+[[claims]]
+legacy_id = "AR.CLAIM.SOURCE_REFERENCES_RESOLVABLE"
+compact_id = "se.accountable-record.claims.source-references-resolvable"
+label = "Source References Resolvable"
+shape = "cross_reference_predicate"
+level = "level-1"
+mandatory = true
+package = "se.accountable-record.packages.source-traceability"
+
+[[claims]]
+legacy_id = "AR.CLAIM.PROVENANCE_PRESENT"
+compact_id = "se.accountable-record.claims.provenance-present"
+label = "Provenance Present"
+shape = "record_field_predicate"
+level = "level-1"
+mandatory = true
+package = "se.accountable-record.packages.source-traceability"
+
+[[claims]]
+legacy_id = "AR.CLAIM.ENTITY_KIND_DECLARED"
+compact_id = "se.accountable-record.claims.subject-kind-declared"
+label = "Subject Kind Declared"
+shape = "record_field_predicate"
+level = "level-2"
+mandatory = true
+package = "se.accountable-record.packages.core"
+legacy_note = "Earlier drafts called this entity-kind-declared."
+
+[[claims]]
+legacy_id = "AR.CLAIM.ENTITY_KIND_VALID"
+compact_id = "se.accountable-record.claims.subject-kind-valid"
+label = "Subject Kind Valid"
+shape = "record_field_predicate"
+level = "level-2"
+mandatory = true
+package = "se.accountable-record.packages.core"
+legacy_note = "Earlier drafts called this entity-kind-valid."
+
+[[claims]]
+legacy_id = "AR.CLAIM.TRAIT_DECLARATIONS_PRESENT"
+compact_id = "se.accountable-record.claims.trait-declarations-present"
+label = "Trait Declarations Present"
+shape = "record_field_predicate"
+level = "level-3"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.FIELD_MAPPINGS_PRESENT"
+compact_id = "se.accountable-record.claims.field-mappings-present"
+label = "Field Mappings Present"
+shape = "record_field_predicate"
+level = "level-3"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.TRAIT_CONFORMANCE"
+compact_id = "se.accountable-record.claims.trait-conformance"
+label = "Trait Conformance"
+shape = "trait_conformance"
+level = "level-3"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.TRANSFORMATION_DECLARATIONS_VALID"
+compact_id = "se.accountable-record.claims.transformation-declarations-valid"
+label = "Transformation Declarations Valid"
+shape = "bundle_field_predicate"
+level = "level-4"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.TRANSFORMATION_BEHAVIOR_VALID"
+compact_id = "se.accountable-record.claims.transformation-behavior-valid"
+label = "Transformation Behavior Valid"
+shape = "cross_reference_predicate"
+level = "level-4"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.TRANSFORMATION_LINEAGE_PRESERVED"
+compact_id = "se.accountable-record.claims.transformation-lineage-preserved"
+label = "Transformation Lineage Preserved"
+shape = "cross_reference_predicate"
+level = "level-4"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.PROFILE_DECLARED"
+compact_id = "se.accountable-record.claims.profile-declared"
+label = "Profile Declared"
+shape = "bundle_field_predicate"
+level = "level-5"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.PROFILE_COMPONENTS_SELECTED"
+compact_id = "se.accountable-record.claims.profile-components-selected"
+label = "Profile Components Selected"
+shape = "bundle_field_predicate"
+level = "level-5"
+mandatory = true
+package = "se.accountable-record.packages.core"
+legacy_note = "Earlier drafts used component language; enduring AR may render this as profile packages selected."
+
+[[claims]]
+legacy_id = "AR.CLAIM.PROFILE_MANDATORY_CLAIMS_SATISFIED"
+compact_id = "se.accountable-record.claims.profile-mandatory-claims-satisfied"
+label = "Profile Mandatory Claims Satisfied"
+shape = "bundle_field_predicate"
+level = "level-5"
+mandatory = true
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.MANIFEST_CONSISTENT"
+compact_id = "se.accountable-record.claims.manifest-consistent"
+label = "Manifest Consistent"
+shape = "bundle_field_predicate"
+mandatory = false
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.RECORD_TYPE_COUNTS_ACCURATE"
+compact_id = "se.accountable-record.claims.record-type-counts-accurate"
+label = "Record Type Counts Accurate"
+shape = "bundle_field_predicate"
+mandatory = false
+package = "se.accountable-record.packages.core"
+
+[[claims]]
+legacy_id = "AR.CLAIM.NO_ORPHAN_RECORDS"
+compact_id = "se.accountable-record.claims.no-orphan-records"
+label = "No Orphan Records"
+shape = "cross_reference_predicate"
+mandatory = false
+package = "se.accountable-record.packages.source-traceability"

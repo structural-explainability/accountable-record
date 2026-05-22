@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/mappings/field-mapping.schema.json",
+  "title": "Field Mapping",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.mappings.field-mapping"
+    },
+    "element_instance_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,6 @@
+schema = "ar-subject-mapping-index-1"
+
+mapping_guides = [
+  "identity-regimes",
+  "accountable-entities",
+]

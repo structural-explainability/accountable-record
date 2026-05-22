@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/profile-1.json",
+  "title": "AR Profile",
+  "description": "A profile is a domain's commitment: which claims it runs, which record types it defines, which traits each record type conforms to, and which bindings parameterize generic claims. Profiles compose claims; they do not own check implementations. Each domain (JR, hydrogen, medical, ...) ships its own profile.",
+  "type": "object",
+  "required": ["profile", "claims"],
+  "additionalProperties": false,
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": ["id", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Profile identifier (e.g. AR.PROFILE.CORE, JR.PROFILE.JUDICIAL, HYD.PROFILE.HYDROGEN)."
+        },
+        "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "depends_on_profiles": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Other profiles whose claims are inherited. JR depends on AR.PROFILE.CORE for substrate claims."
+        },
+        "ir_version": {
+          "type": "string",
+          "description": "IR vocabulary version this profile pins. May be omitted by IR-naive profiles."
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "description": "Claim identifier to include."},
+          "version_constraint": {"type": "string", "description": "Optional version constraint, e.g. '>=0.1.0, <0.2.0'."},
+          "bindings": {
+            "type": "object",
+            "description": "Parameters supplied to generic claims that need profile-specific bindings (e.g. which record types are source-dependent).",
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    "record_types": {
+      "type": "array",
+      "description": "Record types this profile declares. Each may compose zero or more AR traits.",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "description": "Record type identifier (e.g. JR.RECORD.HOLDING_RECORD)."},
+          "schema_name": {"type": "string", "description": "Short name used in bundle records' record_type field (e.g. 'holding_record')."},
+          "conforms_to": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Trait identifiers this record type claims to conform to. Conformance is verifiable; partial conformance is meaningful."
+          },
+          "required_fields": {"type": "array", "items": {"type": "string"}},
+          "forbidden_fields": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

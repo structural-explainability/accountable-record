@@ -1,0 +1,63 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/verification/finding"
+persistent_id = "urn:ar:se:accountable-record:verification:finding"
+compact_id = "se.accountable-record.verification.finding"
+local_name = "finding"
+label = "Finding"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "verification"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A structured verifier emission that records what was checked, what was found,
+which identifiers or records were involved, and what evidence supports the
+reported result.
+"""
+plain_language = """
+A structured finding from a verifier explaining what it found during a check.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.verification.evidence >=0.1.0",
+  "se.accountable-record.verification.result >=0.1.0",
+  "se.accountable-record.conformance.claim-outcome >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

@@ -1,0 +1,88 @@
+schema = "ar-governance-boundaries-1"
+
+[[boundaries]]
+id = "analytics"
+label = "Analytics"
+description = """
+AR does not define analytic models, optimization, prediction, recommendation,
+or scoring.
+"""
+
+[[boundaries]]
+id = "authority"
+label = "Authority"
+description = """
+AR does not decide whether a record, source, claim, profile, institution, or
+process is authoritative.
+"""
+
+[[boundaries]]
+id = "causal-explanation"
+label = "Causal Explanation"
+description = """
+AR does not decide causal explanation.
+"""
+
+[[boundaries]]
+id = "cryptographic-attestation"
+label = "Cryptographic Attestation"
+description = """
+AR does not require cryptographic attestation. Attestation may be layered
+outside the core contract.
+"""
+
+[[boundaries]]
+id = "epistemic-evaluation"
+label = "Epistemic Evaluation"
+description = """
+AR does not decide credibility, certainty, belief, knowledge, or epistemic
+warrant.
+"""
+
+[[boundaries]]
+id = "institutional-legitimacy"
+label = "Institutional Legitimacy"
+description = """
+AR does not decide whether an institution, process, decision, actor, or
+record is legitimate.
+"""
+
+[[boundaries]]
+id = "legal-effect"
+label = "Legal Effect"
+description = """
+AR does not decide legal effect, enforceability, legal validity, or legal
+authority.
+"""
+
+[[boundaries]]
+id = "obligation-enforcement"
+label = "Obligation Enforcement"
+description = """
+AR does not enforce obligations, permissions, prohibitions, duties, sanctions,
+or remedies.
+"""
+
+[[boundaries]]
+id = "operational-deployment"
+label = "Operational Deployment"
+description = """
+AR does not define databases, APIs, authentication, authorization, access
+control, hosting, workflow, or runtime deployment.
+"""
+
+[[boundaries]]
+id = "truth"
+label = "Truth"
+description = """
+AR does not decide whether a statement is true.
+"""
+
+[semantics]
+boundaries_are_contractual = true
+boundaries_preserve_ar_neutrality = true
+description = """
+Governance boundaries define what AR does not decide or provide. They keep AR
+focused on inspectable record structure rather than domain adjudication or
+operational deployment.
+"""

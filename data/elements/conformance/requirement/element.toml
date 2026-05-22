@@ -1,0 +1,57 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/conformance/requirement"
+persistent_id = "urn:ar:se:accountable-record:conformance:requirement"
+compact_id = "se.accountable-record.conformance.requirement"
+local_name = "requirement"
+label = "Requirement"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "conformance"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+TODO: Define this verifiable element type.
+"""
+plain_language = """
+TODO: Explain this element in plain language.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = []
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

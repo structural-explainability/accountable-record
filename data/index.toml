@@ -1,0 +1,26 @@
+schema = "ar-data-index-1"
+
+[repo]
+id = "accountable-record"
+label = "Accountable Record"
+version = "0.1.0"
+status = "working-draft"
+
+[source]
+vocabulary = "data/vocabulary/terms.toml"
+namespace = "data/namespace/"
+component_groups = "data/component-groups/index.toml"
+elements = "data/elements/"
+mappings = "data/mappings/"
+records = "data/records/"
+
+[export]
+index = "data/export/index.json"
+vocabulary = "data/export/vocabulary/"
+component_groups = "data/export/component-groups/"
+elements = "data/export/elements/"
+mappings = "data/export/mappings/"
+records = "data/export/records/"
+
+[schemas]
+directory = "data/schemas/"

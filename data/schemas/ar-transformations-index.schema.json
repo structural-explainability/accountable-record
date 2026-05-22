@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/ar-transformations-index.schema.json",
+  "title": "ar-transformations-index",
+  "type": "object",
+  "additionalProperties": true
+}

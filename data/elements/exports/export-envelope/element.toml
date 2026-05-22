@@ -1,0 +1,64 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/exports/export-envelope"
+persistent_id = "urn:ar:se:accountable-record:exports:export-envelope"
+compact_id = "se.accountable-record.exports.export-envelope"
+local_name = "export-envelope"
+label = "Export Envelope"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "exports"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+The required top-level structure of an exported Accountable Record artifact,
+including required fields, reserved fields, extension rules, schema
+identifier, artifact identifier, version declarations, conformance
+declarations, and artifact-specific payload fields.
+"""
+plain_language = """
+The required outer shape of an exported AR file.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.identity.identifier >=0.1.0",
+  "se.accountable-record.identity.version >=0.1.0",
+  "se.accountable-record.conformance.conformance-declaration >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

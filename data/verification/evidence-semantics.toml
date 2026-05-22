@@ -1,0 +1,51 @@
+schema = "ar-evidence-semantics-1"
+
+[evidence]
+structured_data_collected_while_running_claim = true
+may_be_attached_to_result = true
+
+[required_for_outcomes]
+outcomes = [
+  "fail",
+  "partial",
+  "cannot-verify",
+]
+
+[must_identify]
+items = [
+  "what failed",
+  "what was partially satisfied",
+  "what evidence was missing",
+  "which records were involved",
+]
+
+[cannot_verify]
+evidence_describes_missing_information = true
+description = """
+A cannot-verify outcome's evidence describes what required evidence was
+missing.
+"""
+
+[partial]
+evidence_describes_split = true
+sub_results_required_when_individually_citable = true
+description = """
+A partial outcome's evidence describes which requirements passed, which failed,
+and which records or identifiers were involved.
+"""
+
+[sub_results]
+used_when_parent_claim_has_individually_citable_sub_checks = true
+description = """
+A claim that produces partial includes sub-results when the sub-checks are
+individually citable.
+"""
+
+[explanation]
+separate_editorial_why_field_required = false
+explanation_carried_by = [
+  "claim identifiers",
+  "outcomes",
+  "findings",
+  "evidence",
+]

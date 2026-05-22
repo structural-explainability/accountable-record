@@ -1,0 +1,63 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/failure-modes/structural-collapse"
+persistent_id = "urn:ar:se:accountable-record:failure-modes:structural-collapse"
+compact_id = "se.accountable-record.failure-modes.structural-collapse"
+local_name = "structural-collapse"
+label = "Structural Collapse"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "failure-modes"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A record design failure in which two or more distinct structures that AR
+requires to remain separable are fused into one field, assertion, identifier,
+status, claim, record, or interpretation.
+"""
+plain_language = """
+When a record mixes separate things together so they can no longer be checked
+cleanly.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.claims.claim >=0.1.0",
+  "se.accountable-record.traits.trait >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

@@ -1,0 +1,64 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/exports/export-extension"
+persistent_id = "urn:ar:se:accountable-record:exports:export-extension"
+compact_id = "se.accountable-record.exports.export-extension"
+local_name = "export-extension"
+label = "Export Extension"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "exports"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A permitted extension to an exported Accountable Record artifact that adds
+profile-specific, domain-specific, local, proprietary, or implementation-
+specific fields without replacing the required AR envelope or redefining AR
+semantics.
+"""
+plain_language = """
+An allowed extra field or structure added by a profile, domain, or tool
+without changing the required AR shape.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.exports.export-envelope >=0.1.0",
+  "se.accountable-record.exports.forbidden-extension >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

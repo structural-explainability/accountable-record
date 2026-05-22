@@ -1,0 +1,63 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/verification/sub-result"
+persistent_id = "urn:ar:se:accountable-record:verification:sub-result"
+compact_id = "se.accountable-record.verification.sub-result"
+local_name = "sub-result"
+label = "Sub Result"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "verification"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+An individually citable result within a parent claim result, used when a claim
+has multiple sub-checks and those sub-checks should remain inspectable without
+rerunning the parent claim.
+"""
+plain_language = """
+A smaller result inside a larger claim result.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.claims.claim >=0.1.0",
+  "se.accountable-record.verification.result >=0.1.0",
+  "se.accountable-record.conformance.claim-outcome >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

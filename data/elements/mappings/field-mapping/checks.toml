@@ -1,0 +1,37 @@
+schema = "ar-element-checks-1"
+
+element_type_id = "se.accountable-record.mappings.field-mapping"
+
+[[checks]]
+id = "field_mapping.has-element-type-id"
+label = "Has element type ID"
+level = "required"
+description = """
+A field-mapping instance must identify the element type it conforms to.
+"""
+
+[[checks]]
+id = "field_mapping.has-instance-id"
+label = "Has instance ID"
+level = "required"
+description = """
+A field-mapping instance must have a stable element instance identifier.
+"""
+
+[[checks]]
+id = "field_mapping.has-source-field"
+label = "Has source field"
+level = "required"
+description = """
+A field-mapping instance must identify the source-system field, path, column,
+key, property, or local data shape being mapped.
+"""
+
+[[checks]]
+id = "field_mapping.has-target-role"
+label = "Has target field role"
+level = "required"
+description = """
+A field-mapping instance must identify the Accountable Record field role or
+structural role the source field satisfies.
+"""

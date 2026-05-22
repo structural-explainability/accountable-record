@@ -1,0 +1,9 @@
+schema = "ar-exports-index-1"
+
+artifact_types = "data/export-contract/artifact-types.toml"
+bundle = "data/export-contract/bundle-envelope.toml"
+profile = "data/export-contract/profile-envelope.toml"
+report = "data/export-contract/report-envelope.toml"
+schemas = "data/export-contract/schemas.toml"
+extensions = "data/export-contract/extensions.toml"
+operations = "data/export-contract/operations.toml"

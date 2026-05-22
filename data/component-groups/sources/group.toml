@@ -1,0 +1,16 @@
+schema = "ar-component-group-1"
+
+id = "sources"
+label = "Sources"
+status = "working-draft"
+
+definition = """
+The component group for originating, evidentiary, normative, documentary,
+generated, or reference materials used by an Accountable Record.
+"""
+
+plain_language = """
+Sources are the materials a record uses, cites, derives from, or relies on.
+"""
+
+element_directory = "data/elements/sources"

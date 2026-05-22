@@ -1,0 +1,158 @@
+schema = "ar-package-contract-1"
+
+[scope]
+description = """
+The package contract defines what an Accountable Record element package
+guarantees to downstream systems and how packages may be composed across
+authority and project boundaries.
+"""
+
+[principles]
+packages_are_versioned = true
+released_package_versions_are_immutable = true
+packages_may_depend_on_other_packages = true
+packages_may_depend_on_element_types = true
+packages_are_resolved_before_validation = true
+validation_uses_resolved_dependencies = true
+
+[package_identity]
+required_fields = [
+  "canonical_uri",
+  "persistent_id",
+  "compact_id",
+  "local_name",
+  "label",
+  "version",
+]
+
+[package_contents]
+may_include = [
+  "element types",
+  "schemas",
+  "checks",
+  "examples",
+  "mappings",
+  "fixtures",
+  "expected reports",
+  "verifier expectations",
+  "claim sets",
+  "trait libraries",
+  "documentation targets",
+  "rationale",
+]
+
+[dependencies]
+supports_version_ranges = true
+supports_exact_versions = true
+supports_transitive_dependencies = true
+conflicts_must_be_reported = true
+
+[resolution]
+authoring_may_use_version_ranges = true
+resolution_produces_exact_versions = true
+resolution_produces_digests = true
+validation_uses_lock_file = true
+range_conflicts_are_errors = true
+one_major_version_per_identity_per_graph = true
+
+[resolution.conflicts]
+when_version_ranges_do_not_intersect = "hard-fail"
+override_allowed = false
+description = """
+If two dependencies require incompatible version ranges for the same package or
+element identity, resolution fails. AR does not silently choose one, override
+the other, or allow ambiguous mixed semantics.
+"""
+
+[resolution.major_versions]
+coexisting_major_versions_allowed = false
+description = """
+A resolved dependency graph may contain only one major version for a given
+package or element identity. Major-version coexistence would require
+major-version-qualified identifiers, which AR does not use.
+"""
+
+[digest]
+algorithm = "sha256"
+digest_target = "canonical-generated-json"
+digest_values_may_be_blank_before_release = true
+released_artifacts_must_have_digests = true
+digest_is_published_not_resolver_computed = true
+description = """
+Package and element digests are computed over canonical generated JSON, not
+authored TOML source. Authored TOML may contain comments, formatting, ordering,
+and other non-semantic differences that must not change downstream resolution.
+
+The authoritative digest is computed by the publisher at release time and
+travels with the published package (package manifest and catalog). Resolution
+verifies that a fetched artifact reproduces its published digest; resolution
+does not originate the authoritative digest. A digest mismatch is a resolution
+error.
+"""
+
+[digest.canonical_json]
+canonicalization_scheme = "rfc8785"
+encoding = "utf-8"
+unicode_normalization = "nfc"
+line_endings = "lf"
+object_keys = "lexicographic"
+insignificant_whitespace = "omitted"
+arrays_preserve_order = true
+numbers = "rfc8785-jcs"
+absent_and_null_are_equivalent = true
+null_fields = "omitted"
+description = """
+Canonical JSON follows RFC 8785 (JSON Canonicalization Scheme). The encoding,
+key ordering, whitespace, and number serialization rules below restate RFC 8785
+for readability and are subordinate to it; where this block and RFC 8785 differ,
+RFC 8785 governs.
+
+Numbers follow the RFC 8785 / JCS serialization (the ECMAScript Number-to-string
+algorithm). Authored exports SHOULD avoid bare JSON numbers for identity-bearing
+values (versions, identifiers, enumerations are strings) so that number
+serialization is rarely on the digest path.
+
+A field that is absent and a field whose value is null are treated as identical:
+AR canonical exports do not distinguish null from absence. Null-valued fields are
+omitted from the canonical form. This makes additive changes digest-neutral for
+prior content: introducing a new optional field does not alter the canonical
+export, and therefore does not alter the digest, of content that does not set it.
+"""
+
+[digest.coverage]
+covers_package_manifest = true
+covers_included_element_exports = true
+covers_included_schema_exports = true
+covers_included_check_exports = true
+covers_included_example_exports = true
+covers_included_mapping_exports = true
+covers_included_fixture_exports = true
+covers_expected_report_exports = true
+covers_dependency_declarations = true
+covers_lock_metadata = false
+
+[digest.boundary]
+description = """
+A package digest commits to the canonical exported package closure: package
+metadata, included element type exports, schemas, checks, examples, mappings,
+fixtures, expected reports, and dependency declarations. It does not commit to
+local file paths, comments, TOML formatting, generated timestamps, or lock-file
+metadata.
+"""
+
+[lock_file]
+path = "data/locks/elements.lock.json"
+records_exact_versions = true
+records_digests = true
+records_sources = true
+
+[distribution]
+registry_required_for_initial_publication = false
+registry_compatible_metadata_required = true
+source_url_required_when_available = true
+digest_required_for_released_artifacts = true
+
+[trust]
+digests_supported = true
+signatures_supported = true
+signature_required = false

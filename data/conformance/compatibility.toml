@@ -1,0 +1,41 @@
+schema = "ar-conformance-compatibility-1"
+
+[implementations]
+must_preserve_outcome_semantics = true
+
+[equivalence]
+same_inputs_should_produce_same_claim_outcomes = true
+inputs = [
+  "bundle",
+  "profile",
+  "claims",
+  "traits",
+  "AR contract version",
+]
+
+[allowed_differences]
+not_conformance_differences = [
+  "timestamps",
+  "formatting",
+  "diagnostic wording",
+  "implementation-specific metadata",
+]
+
+[authority]
+source = "AR contract repository"
+includes = [
+  "specifications",
+  "schemas",
+  "claim definitions",
+  "trait definitions",
+  "examples",
+  "expected reports",
+]
+
+[compatibility_fixtures]
+examples_and_expected_reports_provide_compatibility_fixtures = true
+description = """
+Examples and expected reports provide compatibility fixtures for checking
+whether independent implementations preserve Accountable Record conformance
+semantics.
+"""

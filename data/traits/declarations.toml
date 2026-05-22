@@ -1,0 +1,71 @@
+schema = "ar-trait-declarations-1"
+
+[semantics]
+declarations_belong_to = [
+  "profile",
+  "record-type",
+  "element-package",
+]
+declarations_do_not_belong_to_individual_records = true
+records_of_same_record_type_share_declarations = true
+per_record_trait_overrides_supported = false
+order_independent = true
+
+[conformance]
+undeclared_trait_is_not_failure = true
+verifier_runs_trait_conformance_for_declared_traits_only = true
+partial_conformance_allowed = true
+
+[partial_conformance]
+result = "partial"
+conditions = [
+  "the trait has multiple verifiable requirements",
+  "at least one requirement is satisfied",
+  "at least one requirement fails",
+  "the required evidence is present",
+]
+
+[cannot_verify]
+result = "cannot-verify"
+conditions = [
+  "required evidence is missing",
+]
+
+[field_mappings]
+required_when_trait_needs_domain_fields = true
+description = """
+Field mappings let domains keep their own vocabulary while mapping local field
+names to Accountable Record structural roles required by a trait.
+"""
+
+[forbidden_fields]
+description = """
+Forbidden fields are declared by the trait definition or record type
+definition. They are not expressed with field-mapping sentinels.
+"""
+
+[composition]
+traits_compose_by = "intersection"
+no_ar_trait_may_weaken_another_ar_trait = true
+conflicts_must_be_resolved_by_profile = true
+
+[[declaration_examples]]
+id = "holding-record-traits"
+record_type = "holding-record"
+legacy_entity_kind = "AE.NOR_C"
+conforms_to = [
+  "se.accountable-record.traits.source-traceable",
+  "se.accountable-record.traits.content-status-separated",
+  "se.accountable-record.traits.authority-non-asserted",
+  "se.judicial-record-us-federal-supreme.traits.holding-not-dictum",
+]
+
+[declaration_examples.field_mappings]
+source_reference = "citation"
+content = "holding_text"
+status = "current_status"
+
+[declaration_examples.forbidden_fields]
+fields = [
+  "current_authority_assertion",
+]

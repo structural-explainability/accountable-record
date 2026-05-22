@@ -1,0 +1,58 @@
+schema = "ar-claim-shapes-1"
+
+[[shapes]]
+id = "bundle-field"
+value = "bundle_field_predicate"
+label = "Bundle Field Predicate"
+status = "working-draft"
+purpose = """
+Checks bundle-level fields.
+"""
+ar_core = true
+
+[[shapes]]
+id = "record-field"
+value = "record_field_predicate"
+label = "Record Field Predicate"
+status = "working-draft"
+purpose = """
+Checks fields on records or record types.
+"""
+ar_core = true
+
+[[shapes]]
+id = "cross-reference"
+value = "cross_reference_predicate"
+label = "Cross-Reference Predicate"
+status = "working-draft"
+purpose = """
+Checks references between records or sources.
+"""
+ar_core = true
+
+[[shapes]]
+id = "trait-conformance"
+value = "trait_conformance"
+label = "Trait Conformance"
+status = "working-draft"
+purpose = """
+Checks declared record-type and trait conformance.
+"""
+ar_core = true
+
+[[shapes]]
+id = "custom"
+value = "custom"
+label = "Custom"
+status = "working-draft"
+purpose = """
+Supports domain, local, proprietary, or profile-defined check logic that
+cannot be expressed cleanly with declarative AR claim shapes.
+"""
+ar_core = false
+reserved_for = [
+  "domain",
+  "local",
+  "proprietary",
+  "profile",
+]

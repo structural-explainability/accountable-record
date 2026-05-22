@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/ar-claim-selection.schema.json",
+  "title": "ar-claim-selection",
+  "type": "object",
+  "additionalProperties": true
+}

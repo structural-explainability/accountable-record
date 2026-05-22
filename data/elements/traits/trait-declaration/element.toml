@@ -1,0 +1,64 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/traits/trait-declaration"
+persistent_id = "urn:ar:se:accountable-record:traits:trait-declaration"
+compact_id = "se.accountable-record.traits.trait-declaration"
+local_name = "trait-declaration"
+label = "Trait Declaration"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "traits"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A declaration that a record type, profile, or element package claims one or
+more traits and accepts the corresponding trait-conformance requirements.
+Trait declarations belong to record types, profiles, or packages; they do not
+belong to individual record instances.
+"""
+plain_language = """
+A statement that a record type says it supports a trait.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.traits.trait >=0.1.0",
+  "se.accountable-record.traits.trait-requirement >=0.1.0",
+  "se.accountable-record.traits.trait-conformance-binding >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

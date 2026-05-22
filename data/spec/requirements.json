@@ -1,0 +1,141 @@
+{
+  "schema": "se-boundary-requirements-1",
+  "spec": {
+    "id": "AR",
+    "name": "Accountable Record",
+    "version": "0.1.0",
+    "status": "working-draft"
+  },
+  "requirements": [
+    {
+      "id": "AR.ATTESTATION",
+      "note": "Defines structural attestation records for scoped assertions about accountable records.",
+      "normative_source": "SPEC.md#AR.ATTESTATION"
+    },
+    {
+      "id": "AR.CLAIM.RECORD",
+      "note": "Defines structural claim records for assertions made within a domain.",
+      "normative_source": "SPEC.md#AR.CLAIM.RECORD"
+    },
+    {
+      "id": "AR.COLLAPSE.PROHIBITED",
+      "note": "Prohibits collapse of distinct accountable record categories.",
+      "normative_source": "SPEC.md#AR.COLLAPSE.PROHIBITED"
+    },
+    {
+      "id": "AR.CONFORMANCE.CEE.OPTIONAL",
+      "note": "Allows optional CEE conformance as an additional commitment.",
+      "normative_source": "SPEC.md#AR.CONFORMANCE.CEE.OPTIONAL"
+    },
+    {
+      "id": "AR.CONFORMANCE.GB.REQUIRED",
+      "note": "Requires preservation of Governance Boundary constraints for governance-related records and actions.",
+      "normative_source": "SPEC.md#AR.CONFORMANCE.GB.REQUIRED"
+    },
+    {
+      "id": "AR.CONFORMANCE.IB.REQUIRED",
+      "note": "Requires preservation of Interpretation Boundary constraints for interpretation records.",
+      "normative_source": "SPEC.md#AR.CONFORMANCE.IB.REQUIRED"
+    },
+    {
+      "id": "AR.CONFORMANCE.SE.REQUIRED",
+      "note": "Requires conformance with Structural Explainability.",
+      "normative_source": "SPEC.md#AR.CONFORMANCE.SE.REQUIRED"
+    },
+    {
+      "id": "AR.DEFINITION.CORE",
+      "note": "Defines Accountable Record as a shared contract for durable domain record systems.",
+      "normative_source": "SPEC.md#AR.DEFINITION.CORE"
+    },
+    {
+      "id": "AR.DEPENDENCY.RECORD",
+      "note": "Defines dependency records and prohibits treating dependency as validity or correctness.",
+      "normative_source": "SPEC.md#AR.DEPENDENCY.RECORD"
+    },
+    {
+      "id": "AR.EXPLANATION.RECORD",
+      "note": "Defines explanation records as derived views over accountable records.",
+      "normative_source": "SPEC.md#AR.EXPLANATION.RECORD"
+    },
+    {
+      "id": "AR.EXPORT.BUNDLE",
+      "note": "Defines the export bundle format required for external verification.",
+      "normative_source": "SPEC.md#AR.EXPORT.BUNDLE"
+    },
+    {
+      "id": "AR.EXTENSION.ADMISSIBILITY",
+      "note": "Defines criteria for admissible future AR extensions.",
+      "normative_source": "SPEC.md#AR.EXTENSION.ADMISSIBILITY"
+    },
+    {
+      "id": "AR.EXTENSION.VERSIONED_ONLY",
+      "note": "Requires AR extensions to occur only in a new major version.",
+      "normative_source": "SPEC.md#AR.EXTENSION.VERSIONED_ONLY"
+    },
+    {
+      "id": "AR.GOVERNANCE.RECORD",
+      "note": "Defines governance or status records and their non-authoritative constraints.",
+      "normative_source": "SPEC.md#AR.GOVERNANCE.RECORD"
+    },
+    {
+      "id": "AR.IDENTITY.RECORD",
+      "note": "Defines identity-bearing records and stable identity requirements.",
+      "normative_source": "SPEC.md#AR.IDENTITY.RECORD"
+    },
+    {
+      "id": "AR.INTERPRETATION.RECORD",
+      "note": "Defines non-mutating interpretation records attached to accountable records.",
+      "normative_source": "SPEC.md#AR.INTERPRETATION.RECORD"
+    },
+    {
+      "id": "AR.MAPPING.AE.SUPPORTED",
+      "note": "Supports explicit mapping of identity-bearing records to AE where required by profiles or verification.",
+      "normative_source": "SPEC.md#AR.MAPPING.AE.SUPPORTED"
+    },
+    {
+      "id": "AR.MAPPING.EP.SUPPORTED",
+      "note": "Supports explicit mapping of dependency, continuity, graph, state, delta, or",
+      "normative_source": "SPEC.md#AR.MAPPING.EP.SUPPORTED"
+    },
+    {
+      "id": "AR.MULTIPLICITY",
+      "note": "Requires support for multiple claims, interpretations, explanations,",
+      "normative_source": "SPEC.md#AR.MULTIPLICITY"
+    },
+    {
+      "id": "AR.PROFILE.DOMAIN",
+      "note": "Allows domain profiles to specialize AR without weakening AR constraints.",
+      "normative_source": "SPEC.md#AR.PROFILE.DOMAIN"
+    },
+    {
+      "id": "AR.PROVENANCE",
+      "note": "Defines provenance records for how accountable records or derived records were produced.",
+      "normative_source": "SPEC.md#AR.PROVENANCE"
+    },
+    {
+      "id": "AR.REVIEW.STATUS",
+      "note": "Defines review status records or fields without treating review status as correctness or authority.",
+      "normative_source": "SPEC.md#AR.REVIEW.STATUS"
+    },
+    {
+      "id": "AR.SCOPE.EXCLUSIONS",
+      "note": "Defines what AR explicitly does not specify.",
+      "normative_source": "SPEC.md#AR.SCOPE.EXCLUSIONS"
+    },
+    {
+      "id": "AR.SOURCE.RECORD",
+      "note": "Defines source records and source references as traceable origins.",
+      "normative_source": "SPEC.md#AR.SOURCE.RECORD"
+    },
+    {
+      "id": "AR.VERIFICATION.TRACE",
+      "note": "Defines verification traces linking verification results to records and constraints.",
+      "normative_source": "SPEC.md#AR.VERIFICATION.TRACE"
+    },
+    {
+      "id": "AR.VERSIONING",
+      "note": "Defines AR versioning requirements.",
+      "normative_source": "SPEC.md#AR.VERSIONING"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+schema = "ar-non-goals-1"
+
+[semantics]
+non_goals_are_contract_boundaries = true
+non_goals_do_not_prevent_external_layers = true
+description = """
+AR non-goals identify responsibilities intentionally left outside the AR
+contract. Operational systems, domain profiles, institutions, or external
+layers may provide these capabilities, but AR does not require or define them.
+"""
+
+[out_of_scope]
+items = [
+  "domain truth",
+  "domain correctness",
+  "legal authority",
+  "institutional legitimacy",
+  "obligation enforcement",
+  "causal explanation",
+  "epistemic evaluation",
+  "analytics",
+  "optimization",
+  "recommendation",
+  "database design",
+  "APIs",
+  "authentication",
+  "authorization",
+  "access control",
+  "cryptographic attestation",
+  "operational deployment",
+]
+
+[layering]
+description = """
+Out-of-scope capabilities may be layered around AR. A system may use AR
+exports while also providing databases, APIs, access control, cryptographic
+attestation, workflow, analytics, or domain adjudication outside the AR
+contract.
+"""
+
+[neutrality]
+description = """
+AR preserves record structure, source references, subject mappings, claims,
+traits, transformations, conformance results, and failure-mode findings without
+turning those structures into final judgments about truth, authority,
+legitimacy, enforcement, or domain correctness.
+"""
+
+[implementation_boundary]
+description = """
+AR defines exported artifacts and conformance semantics. It does not prescribe
+how an implementation stores data, serves APIs, authenticates users, controls
+access, schedules jobs, displays dashboards, or deploys infrastructure.
+"""

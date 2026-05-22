@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/ar-export-extensions.schema.json",
+  "title": "ar-export-extensions",
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,89 @@
+[[accountable_entity_kinds]]
+id = "AE.OBL"
+order = 1
+canonical_family = "OBL"
+canonical_profile = "OBL"
+upstream_label = "Obligation-bearing profile"
+label = "Obligation"
+full_name = "Obligation Entity"
+description = "Something required, permitted, prohibited, or committed."
+
+[[accountable_entity_kinds]]
+id = "AE.OCC"
+order = 2
+canonical_family = "OCC"
+canonical_profile = "OCC"
+upstream_label = "Time-indexed occurrence profile"
+label = "Event"
+full_name = "Event Entity"
+description = "Something that happened at a time or over an interval."
+
+[[accountable_entity_kinds]]
+id = "AE.REC"
+order = 3
+canonical_family = "REC"
+canonical_profile = "REC"
+upstream_label = "Descriptive record profile"
+label = "Source"
+full_name = "Source Entity"
+description = "A record, document, dataset row, citation, file, observation log, or source artifact."
+
+[[accountable_entity_kinds]]
+id = "AE.ENR_L"
+order = 4
+canonical_family = "ENR"
+canonical_profile = "ENR_L"
+upstream_label = "Enduring non-normative referent, locus-bound profile"
+label = "Place or Asset"
+full_name = "Place or Asset Entity"
+description = "A durable location, site, asset, object, facility, dataset, or resource."
+
+[[accountable_entity_kinds]]
+id = "AE.ENR_I"
+order = 5
+canonical_family = "ENR"
+canonical_profile = "ENR_I"
+upstream_label = "Enduring non-normative referent, instrument-bound profile"
+label = "Instrument"
+full_name = "Instrument Entity"
+description = "A durable non-normative referent, such as an organization, vendor, named body, system, or identifiable thing."
+
+[[accountable_entity_kinds]]
+id = "AE.CTX_E"
+order = 6
+canonical_family = "CTX"
+canonical_profile = "CTX_E"
+upstream_label = "Applicability context, event-bound profile"
+label = "Environment Context"
+full_name = "Environment Context Entity"
+description = "Surrounding conditions that affect interpretation or applicability."
+
+[[accountable_entity_kinds]]
+id = "AE.CTX_S"
+order = 7
+canonical_family = "CTX"
+canonical_profile = "CTX_S"
+upstream_label = "Applicability context, scope-bound profile"
+label = "Scope Context"
+full_name = "Scope Context Entity"
+description = "A jurisdiction, domain, program, area, or boundary within which something is considered."
+
+[[accountable_entity_kinds]]
+id = "AE.NOR_C"
+order = 8
+canonical_family = "NOR"
+canonical_profile = "NOR_C"
+upstream_label = "Normative structure, context-bound profile"
+label = "Rule Content"
+full_name = "Rule Content Entity"
+description = "The content of a rule, policy, standard, contract term, or requirement."
+
+[[accountable_entity_kinds]]
+id = "AE.NOR_S"
+order = 9
+canonical_family = "NOR"
+canonical_profile = "NOR_S"
+upstream_label = "Normative structure, scope-bound profile"
+label = "Rule Scope"
+full_name = "Rule Scope Entity"
+description = "Where, when, or to whom a rule applies."

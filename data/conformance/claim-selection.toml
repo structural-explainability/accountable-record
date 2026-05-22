@@ -1,0 +1,49 @@
+schema = "ar-claim-selection-1"
+
+[selection_inputs]
+inputs = [
+  "declared AR contract version",
+  "declared target maturity level",
+  "selected profile",
+  "profile adopted AR claims",
+  "profile-defined claims",
+  "verifier configuration for optional claims",
+]
+
+[mandatory_claims]
+declared_level_and_lower_are_selected = true
+description = """
+Mandatory AR claims for the declared maturity level and all lower levels are
+selected.
+"""
+
+[optional_claims]
+selected_only_when_included_by_profile_bundle_or_verifier = true
+description = """
+Optional AR claims are selected only when included by a profile, bundle, or
+verifier configuration.
+"""
+
+[profile_claims]
+selected_according_to_profile = true
+description = """
+Profile claims are selected according to the profile.
+"""
+
+[not_run]
+claims_not_run_do_not_receive_outcomes = true
+claims_not_run_may_be_listed_as_metadata = true
+reasons = [
+  "outside-selected-adoption-level",
+  "outside-selected-profile",
+  "optional-and-not-selected",
+  "preconditions-absent",
+  "not-applicable-to-bundle",
+]
+
+[not_run_meaning]
+description = """
+Not-run metadata lets readers distinguish a claim that was checked and passed,
+a claim that was checked and failed, a claim that could not be verified, and a
+claim that was not in scope.
+"""

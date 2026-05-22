@@ -1,0 +1,67 @@
+schema = "ar-element-package-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/packages/source-traceability"
+persistent_id = "urn:ar:se:accountable-record:packages:source-traceability"
+compact_id = "se.accountable-record.packages.source-traceability"
+local_name = "source-traceability"
+label = "Source Traceability"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+Element package for source, reference, provenance, and traceability structures.
+"""
+plain_language = """
+A reusable package of related Accountable Record elements.
+"""
+
+[claim_sets]
+source_traceability = "data/claims/core-claim-set.toml"
+
+[composition]
+element_types = [
+  "se.accountable-record.sources.source",
+  "se.accountable-record.sources.source-kind",
+  "se.accountable-record.sources.source-role",
+  "se.accountable-record.references.source-reference",
+  "se.accountable-record.references.citation",
+  "se.accountable-record.references.locator",
+  "se.accountable-record.references.source-span",
+  "se.accountable-record.references.uri-reference",
+  "se.accountable-record.references.hash-reference",
+  "se.accountable-record.provenance.provenance-event",
+  "se.accountable-record.provenance.derivation-event",
+  "se.accountable-record.provenance.revision-event",
+  "se.accountable-record.provenance.custody-event",
+]
+
+[dependencies]
+packages = []
+element_types = []
+
+[fixtures]
+directory = "fixtures/"
+
+[expected_reports]
+directory = "expected-reports/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"

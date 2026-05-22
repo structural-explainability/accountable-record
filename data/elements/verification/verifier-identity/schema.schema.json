@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/verification/verifier-identity.schema.json",
+  "title": "Verifier Identity",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.verification.verifier-identity"
+    },
+    "element_instance_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

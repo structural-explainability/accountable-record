@@ -1,0 +1,61 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/transformations/transformation-evidence"
+persistent_id = "urn:ar:se:accountable-record:transformations:transformation-evidence"
+compact_id = "se.accountable-record.transformations.transformation-evidence"
+local_name = "transformation-evidence"
+label = "Transformation Evidence"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "transformations"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+Evidence used to support or verify a declared transformation behavior, lineage
+relation, admissibility result, or profile-specific transformation kind.
+"""
+plain_language = """
+Evidence used to check a declared transformation.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.verification.evidence >=0.1.0",
+  "se.accountable-record.transformations.transformation-declaration >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

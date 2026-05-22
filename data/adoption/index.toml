@@ -1,0 +1,5 @@
+schema = "ar-adoption-index-1"
+
+when_to_use_ar = "data/adoption/when-to-use-ar.toml"
+readiness_questions = "data/adoption/readiness-questions.toml"
+maturity_path = "data/adoption/maturity-path.toml"

@@ -1,0 +1,103 @@
+schema = "ar-bundle-envelope-1"
+
+[artifact]
+id = "bundle"
+schema_identifier = "accountable-record-bundle-1"
+description = """
+A bundle is the artifact a conforming system exports for inspection.
+"""
+
+[required_top_level_fields]
+fields = [
+  "schema",
+  "bundle_id",
+  "versions",
+  "conformance",
+  "manifest",
+  "records",
+]
+
+[recommended_top_level_fields]
+fields = [
+  "generated_at",
+]
+
+[field_semantics.schema]
+description = """
+The bundle schema identifier. The AR native identifier is
+accountable-record-bundle-1. A domain bundle may use a domain-specific schema
+identifier only if the domain schema extends the AR envelope rather than
+replacing it.
+"""
+
+[field_semantics.bundle_id]
+description = """
+A stable non-empty identifier for the bundle. Re-issued bundles for the same
+dataset use distinct bundle IDs.
+"""
+
+[field_semantics.generated_at]
+description = """
+An ISO 8601 timestamp of bundle generation. The verifier uses this for report
+context, not for outcome decisions.
+"""
+
+[field_semantics.versions]
+description = """
+A map of version declarations.
+"""
+reserved_keys = [
+  "accountable_record",
+  "implementing_system",
+]
+profile_may_add_keys = true
+
+[field_semantics.conformance]
+description = """
+A map of conformance declarations.
+"""
+reserved_keys = [
+  "ar",
+  "se",
+  "ar_level",
+  "ar_profile",
+]
+profile_may_add_keys = true
+
+[field_semantics.manifest]
+description = """
+A summary block describing the bundle contents.
+"""
+required_fields = [
+  "record_count",
+  "record_type_counts",
+]
+profile_may_add_fields = true
+manifest_mismatch_claim = "se.accountable-record.claims.manifest-consistent"
+
+[field_semantics.records]
+description = """
+An array of record objects.
+"""
+required_fields = [
+  "id",
+  "record_type",
+]
+
+[level_1_fields]
+where_applicable = [
+  "source_reference",
+  "provenance",
+]
+
+[level_2_fields]
+fields = [
+  "subject_kind",
+]
+legacy_fields = [
+  "entity_kind",
+]
+
+[extension]
+domain_schemas_may_extend_envelope = true
+domain_schemas_must_not_replace_envelope = true

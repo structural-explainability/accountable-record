@@ -1,0 +1,65 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/conformance/claim-selection"
+persistent_id = "urn:ar:se:accountable-record:conformance:claim-selection"
+compact_id = "se.accountable-record.conformance.claim-selection"
+local_name = "claim-selection"
+label = "Claim Selection"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "conformance"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+The declared process or result by which a verifier determines which claims are
+selected for a run based on the AR contract version, target maturity level,
+profile, adopted AR claims, profile-defined claims, and optional verifier
+configuration.
+"""
+plain_language = """
+The rule for deciding which claims the verifier should check.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.claims.claim >=0.1.0",
+  "se.accountable-record.conformance.conformance-profile >=0.1.0",
+  "se.accountable-record.maturity.maturity-level >=0.1.0",
+  "se.accountable-record.verification.verifier-expectation >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

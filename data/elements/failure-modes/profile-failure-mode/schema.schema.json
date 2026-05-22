@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/failure-modes/profile-failure-mode.schema.json",
+  "title": "Profile Failure Mode",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.failure-modes.profile-failure-mode"
+    },
+    "element_instance_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

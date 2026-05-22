@@ -1,0 +1,101 @@
+schema = "ar-conformance-outcomes-1"
+
+[[outcomes]]
+id = "pass"
+label = "Pass"
+description = """
+The required evidence is present and the claim is satisfied.
+"""
+is_pass = true
+is_failure = false
+evidence_sufficient = true
+blocks_mandatory_level = false
+
+[[outcomes]]
+id = "fail"
+label = "Fail"
+description = """
+The required evidence is present and the claim is not satisfied.
+"""
+is_pass = false
+is_failure = true
+evidence_sufficient = true
+blocks_mandatory_level = true
+
+[[outcomes]]
+id = "partial"
+label = "Partial"
+description = """
+The claim has multiple verifiable requirements; at least one is satisfied, at least one fails, and required evidence for checked requirements is present.
+"""
+is_pass = false
+is_failure = false
+evidence_sufficient = true
+blocks_mandatory_level = true
+
+[[outcomes]]
+id = "cannot-verify"
+label = "Cannot Verify"
+description = """
+The claim applies, but required evidence is missing.
+"""
+is_pass = false
+is_failure = false
+evidence_sufficient = false
+blocks_mandatory_level = true
+
+[closed_vocabulary]
+only_defined_outcomes_allowed = true
+defined_outcomes = [
+  "pass",
+  "fail",
+  "partial",
+  "cannot-verify",
+]
+
+[summary_aggregation]
+severity_order = [
+  "fail",
+  "partial",
+  "cannot-verify",
+  "pass",
+]
+description = """
+The severity order is for reporting and aggregation. It does not change the
+meaning of individual outcomes. It is intentionally aligned with the
+composite_claim_rollup precedence: a determinate failure outranks missing
+evidence in both. Changing one without the other is a contract error.
+"""
+
+[composite_claim_rollup]
+failure_dominates_missing_evidence = true
+rollup_defined_over_required_requirements_only = true
+unknown_requirement_outcome_is_an_error = true
+description = """
+A claim with multiple verifiable requirements derives its outcome from its
+per-requirement outcomes, each itself one of the four defined outcomes.
+Precedence:
+
+1. If any required requirement is fail or partial, the claim outcome is fail or
+   partial. A determinate negative result is not masked by missing evidence.
+2. Otherwise, if any required requirement is cannot-verify, the claim is
+   cannot-verify.
+3. Otherwise, if every required requirement is pass, the claim is pass.
+
+Within rule 1, a mix of pass and fail (with evidence present throughout) is
+partial; an all-fail set is fail. Rollup is evaluated only over required
+requirements for the selected level. An unrecognized per-requirement outcome is
+a verifier error, not a claim outcome.
+"""
+
+[composite_claim_rollup.precedence]
+first = "fail"
+second = "partial"
+third = "cannot-verify"
+fourth = "pass"
+
+[composite_claim_rollup.rules]
+any_required_requirement_fail_makes_claim_fail = true
+mixed_pass_and_fail_with_evidence_present_makes_claim_partial = true
+otherwise_any_required_requirement_cannot_verify_makes_claim_cannot_verify = true
+all_required_requirements_pass_makes_claim_pass = true

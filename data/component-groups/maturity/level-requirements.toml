@@ -1,0 +1,239 @@
+schema = "ar-level-requirements-1"
+
+[[requirements]]
+id = "level-0.bundle-envelope-valid"
+level = "level-0"
+label = "Bundle envelope is valid"
+status = "working-draft"
+mandatory = true
+description = """
+The system exports a valid AR bundle envelope.
+"""
+related_elements = [
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.bundle-id-declared"
+level = "level-0"
+label = "Bundle ID is declared"
+status = "working-draft"
+mandatory = true
+description = """
+The bundle declares a stable bundle identifier.
+"""
+related_elements = [
+  "se.accountable-record.identity.identifier",
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.schema-identifier-declared"
+level = "level-0"
+label = "Schema identifier is declared"
+status = "working-draft"
+mandatory = true
+description = """
+The bundle declares the schema identifier it conforms to.
+"""
+related_elements = [
+  "se.accountable-record.identity.identifier",
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.version-block-present"
+level = "level-0"
+label = "Version block is present"
+status = "working-draft"
+mandatory = true
+description = """
+The bundle includes a version block.
+"""
+related_elements = [
+  "se.accountable-record.identity.version",
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.conformance-block-present"
+level = "level-0"
+label = "Conformance block is present"
+status = "working-draft"
+mandatory = true
+description = """
+The bundle includes a conformance block.
+"""
+related_elements = [
+  "se.accountable-record.conformance.conformance-profile",
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.manifest-present"
+level = "level-0"
+label = "Manifest is present"
+status = "working-draft"
+mandatory = true
+description = """
+The bundle includes a manifest.
+"""
+related_elements = [
+  "se.accountable-record.exports.export-bundle",
+]
+
+[[requirements]]
+id = "level-0.records-have-stable-ids"
+level = "level-0"
+label = "Records have stable IDs"
+status = "working-draft"
+mandatory = true
+description = """
+Records in the bundle have stable identifiers.
+"""
+related_elements = [
+  "se.accountable-record.identity.identifier",
+]
+
+[[requirements]]
+id = "level-0.records-have-record-types"
+level = "level-0"
+label = "Records have record types"
+status = "working-draft"
+mandatory = true
+description = """
+Records in the bundle declare record types.
+"""
+related_elements = [
+  "se.accountable-record.subjects.record-subject",
+]
+
+[[requirements]]
+id = "level-1.source-references-preserved"
+level = "level-1"
+label = "Source references are preserved"
+status = "working-draft"
+mandatory = true
+description = """
+The system preserves source references sufficiently for records to be inspected
+against source material.
+"""
+related_elements = [
+  "se.accountable-record.sources.source",
+  "se.accountable-record.references.source-reference",
+]
+
+[[requirements]]
+id = "level-1.provenance-links-preserved"
+level = "level-1"
+label = "Provenance links are preserved"
+status = "working-draft"
+mandatory = true
+description = """
+The system preserves provenance links sufficiently for records to be inspected
+against source material and derivation history.
+"""
+related_elements = [
+  "se.accountable-record.provenance.provenance-event",
+]
+
+[[requirements]]
+id = "level-2.subject-kinds-declared"
+level = "level-2"
+label = "Subject kinds are declared"
+status = "working-draft"
+mandatory = true
+description = """
+The system declares accountable subject kinds for relevant records.
+"""
+legacy_note = """
+Earlier drafts described this as declaring accountable entity kinds using
+canonical `AE.*` identifiers.
+"""
+related_elements = [
+  "se.accountable-record.subjects.subject-kind",
+]
+
+[[requirements]]
+id = "level-3.traits-declared"
+level = "level-3"
+label = "Traits are declared"
+status = "working-draft"
+mandatory = true
+description = """
+The system declares AR traits for record types.
+"""
+related_elements = [
+  "se.accountable-record.traits.trait",
+]
+
+[[requirements]]
+id = "level-3.field-mappings-present"
+level = "level-3"
+label = "Field mappings are present"
+status = "working-draft"
+mandatory = true
+description = """
+The system provides field mappings needed to verify trait conformance.
+"""
+related_elements = [
+  "se.accountable-record.mappings.field-mapping",
+  "se.accountable-record.mappings.field-role",
+]
+
+[[requirements]]
+id = "level-4.transformations-declared"
+level = "level-4"
+label = "Transformations are declared"
+status = "working-draft"
+mandatory = true
+description = """
+The system declares transformations.
+"""
+related_elements = [
+  "se.accountable-record.relations.derivation",
+  "se.accountable-record.provenance.derivation-event",
+]
+
+[[requirements]]
+id = "level-4.transformation-behavior-verified"
+level = "level-4"
+label = "Transformation behavior is verified"
+status = "working-draft"
+mandatory = true
+description = """
+The verifier checks whether declared transformations preserve identity, break
+identity, inherit identity, or raise no identity question under the AR
+transformation model.
+"""
+related_elements = [
+  "se.accountable-record.verification.verification-event",
+  "se.accountable-record.verification.result",
+]
+
+[[requirements]]
+id = "level-5.domain-profile-declared"
+level = "level-5"
+label = "Domain profile is declared"
+status = "working-draft"
+mandatory = true
+description = """
+The system declares the domain profile it intends to satisfy.
+"""
+related_elements = [
+  "se.accountable-record.conformance.conformance-profile",
+]
+
+[[requirements]]
+id = "level-5.domain-profile-satisfied"
+level = "level-5"
+label = "Domain profile is satisfied"
+status = "working-draft"
+mandatory = true
+description = """
+The system satisfies the declared domain profile.
+"""
+related_elements = [
+  "se.accountable-record.conformance.conformance-profile",
+  "se.accountable-record.conformance.conformance-report",
+]

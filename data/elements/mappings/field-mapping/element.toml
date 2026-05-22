@@ -1,0 +1,62 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/mappings/field-mapping"
+persistent_id = "urn:ar:se:accountable-record:mappings:field-mapping"
+compact_id = "se.accountable-record.mappings.field-mapping"
+local_name = "field-mapping"
+label = "Field Mapping"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "mappings"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A declared mapping between a field, path, property, column, key, or local data
+shape in a source system and the structural role expected by an Accountable
+Record element type, element package, profile, or verifier.
+"""
+plain_language = """
+A rule that says which local field plays which Accountable Record role.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.mappings.field-role >=0.1.0",
+  "se.accountable-record.mappings.mapping-guide >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

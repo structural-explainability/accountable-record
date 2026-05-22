@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/component-1.json",
+  "title": "AR Component",
+  "description": "A composable Accountable Record contract unit. A component keeps related claims, traits, field-mapping requirements, verifier expectations, fixtures, expected reports, and rationale together. Components are selected by profiles and loaded by verifiers; they are not a fourth exported AR artifact type.",
+  "type": "object",
+  "required": ["schema", "component", "provides"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "accountable-record-component-1"
+    },
+    "component": {
+      "type": "object",
+      "required": ["id", "version", "status", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable component identifier.",
+          "pattern": "^[A-Z][A-Z0-9_]*\\.COMPONENT\\.[A-Z][A-Z0-9_]*$",
+          "examples": [
+            "AR.COMPONENT.BUNDLE_ENVELOPE",
+            "AR.COMPONENT.SOURCE_TRACEABILITY",
+            "JR.COMPONENT.CITATION_DEPENDENCY_SEPARATED"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "description": "Component version.",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["experimental", "stable", "deprecated", "superseded"]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner": {
+          "type": "string",
+          "description": "Repository, organization, profile, or other authority that owns the component.",
+          "minLength": 1
+        },
+        "component_class": {
+          "type": "string",
+          "description": "Informative component category.",
+          "enum": [
+            "bundle-shape",
+            "source-traceability",
+            "provenance-traceability",
+            "entity-kind-validity",
+            "trait-declaration",
+            "trait-conformance",
+            "transformation-behavior",
+            "profile-conformance",
+            "domain-check",
+            "local-check",
+            "proprietary-check"
+          ]
+        }
+      }
+    },
+    "requires": {
+      "type": "object",
+      "description": "Other contract resources this component requires.",
+      "additionalProperties": false,
+      "properties": {
+        "ar_version": {
+          "type": "string",
+          "description": "AR contract version this component targets."
+        },
+        "components": {
+          "type": "array",
+          "description": "Other components required by this component.",
+          "items": {
+            "$ref": "#/$defs/component_ref"
+          },
+          "uniqueItems": true
+        },
+        "profiles": {
+          "type": "array",
+          "description": "Profiles required by this component.",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "entity_kinds": {
+          "type": "array",
+          "description": "Canonical AE.* entity-kind identifiers required or referenced by this component.",
+          "items": {
+            "$ref": "#/$defs/ae_identifier"
+          },
+          "uniqueItems": true
+        },
+        "contract_features": {
+          "type": "array",
+          "description": "Named AR contract features this component relies on.",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "provides": {
+      "type": "object",
+      "description": "Identifiers and resources provided by this component.",
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/claim_ref"
+          },
+          "uniqueItems": true
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/trait_ref"
+          },
+          "uniqueItems": true
+        },
+        "transformations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/transform_ref"
+          },
+          "uniqueItems": true
+        },
+        "field_roles": {
+          "type": "array",
+          "description": "Structural field roles this component defines or requires.",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "fixtures": {
+          "type": "array",
+          "description": "Fixture paths or fixture identifiers supplied by this component.",
+          "items": {
+            "$ref": "#/$defs/path_or_identifier"
+          },
+          "uniqueItems": true
+        },
+        "expected_reports": {
+          "type": "array",
+          "description": "Expected report paths or identifiers supplied by this component.",
+          "items": {
+            "$ref": "#/$defs/path_or_identifier"
+          },
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "adoption": {
+      "type": "object",
+      "description": "Default AR adoption-level behavior for this component.",
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "mandatory": {
+          "type": "boolean"
+        },
+        "default_selected": {
+          "type": "boolean",
+          "description": "Whether this component is selected by default at its adoption level."
+        }
+      }
+    },
+    "field_mappings": {
+      "type": "object",
+      "description": "Field-mapping requirements introduced by this component. Keys are structural roles; values describe expected local bindings.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description"],
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "allowed_entity_kinds": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/ae_identifier"
+            },
+            "uniqueItems": true
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "verifier_expectations": {
+      "type": "object",
+      "description": "Language-neutral expectations for verifier behavior when this component is selected.",
+      "additionalProperties": false,
+      "properties": {
+        "run_order": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Optional ordering hint. Verifiers must not use this to change claim semantics."
+        },
+        "requires_profile": {
+          "type": "boolean"
+        },
+        "requires_field_mappings": {
+          "type": "boolean"
+        },
+        "requires_transformations": {
+          "type": "boolean"
+        },
+        "custom_check_allowed": {
+          "type": "boolean",
+          "description": "Whether this component may require implementation-specific custom check logic."
+        },
+        "deterministic": {
+          "type": "boolean",
+          "description": "Whether verifier results for this component are expected to be deterministic for the same inputs."
+        }
+      }
+    },
+    "paths": {
+      "type": "object",
+      "description": "Optional local paths for component-owned artifacts.",
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "uniqueItems": true
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "uniqueItems": true
+        },
+        "transformations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "uniqueItems": true
+        },
+        "fixtures": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "uniqueItems": true
+        },
+        "expected_reports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "uniqueItems": true
+        },
+        "rationale": {
+          "$ref": "#/$defs/relative_path"
+        }
+      }
+    },
+    "rationale": {
+      "type": "object",
+      "description": "Human-readable rationale for the component.",
+      "additionalProperties": false,
+      "properties": {
+        "why": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "$defs": {
+      "component_ref": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*\\.COMPONENT\\.[A-Z][A-Z0-9_]*$"
+          },
+          "version_constraint": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "description": "Repository, package, local path, or other component source."
+          },
+          "required": {
+            "type": "boolean"
+          }
+        }
+      },
+      "claim_ref": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*\\.CLAIM\\.[A-Z][A-Z0-9_]*$"
+          },
+          "path": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "mandatory": {
+            "type": "boolean"
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          }
+        }
+      },
+      "trait_ref": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]*\\.TRAIT\\.[A-Z][A-Z0-9_]*$"
+          },
+          "path": {
+            "$ref": "#/$defs/relative_path"
+          },
+          "required": {
+            "type": "boolean"
+          }
+        }
+      },
+      "transform_ref": {
+        "type": "object",
+        "required": ["id"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^AR\\.TRANSFORM\\.[A-Z][A-Z0-9_]*$"
+          },
+          "path": {
+            "$ref": "#/$defs/relative_path"
+          }
+        }
+      },
+      "ae_identifier": {
+        "type": "string",
+        "pattern": "^AE\\.(OBL|OCC|REC|ENR_L|ENR_I|CTX_E|CTX_S|NOR_C|NOR_S)$"
+      },
+      "relative_path": {
+        "type": "string",
+        "minLength": 1,
+        "not": {
+          "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:"
+        }
+      },
+      "path_or_identifier": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+schema = "ar-failure-mode-detection-1"
+
+[semantics]
+detected_by = [
+  "claims",
+  "traits",
+  "field mappings",
+  "subject mappings",
+  "transformation checks",
+  "conformance checks",
+  "profile rules",
+]
+
+[detection_boundary]
+description = """
+A detector reports a structural failure, risk, or finding. It does not decide
+truth, authority, legitimacy, obligation, enforcement, or final domain meaning.
+"""
+
+[[detections]]
+failure_mode = "context-vs-claim"
+detection_sources = [
+  "scope declaration traits",
+  "context subject mappings",
+  "claim outcome vocabulary checks",
+]
+detects = """
+Whether contextual limits have been preserved separately from the claim rather
+than absorbed into a stronger or less inspectable claim.
+"""
+
+[[detections]]
+failure_mode = "content-vs-status"
+detection_sources = [
+  "content/status separation traits",
+  "status history checks",
+  "interpretation non-mutation checks",
+]
+detects = """
+Whether content has remained separable from status, history, repeal,
+supersession, limitation, or other status characterization.
+"""
+
+[[detections]]
+failure_mode = "event-vs-record"
+detection_sources = [
+  "subject mapping checks",
+  "transformation admissibility checks",
+  "record correction lineage checks",
+]
+detects = """
+Whether the event and the record describing the event remain distinct, so
+corrections and reinterpretations do not mutate the occurrence itself.
+"""
+
+[[detections]]
+failure_mode = "name-vs-identity"
+detection_sources = [
+  "stable identifier checks",
+  "subject identity checks",
+  "identity-preserving transformation checks",
+]
+detects = """
+Whether identity persists independently from names, labels, titles,
+addresses, section numbers, display names, or other mutable designations.
+"""
+
+[[detections]]
+failure_mode = "provenance-vs-authority"
+detection_sources = [
+  "authority non-assertion traits",
+  "provenance traceability checks",
+  "claim outcome checks",
+]
+detects = """
+Whether provenance is preserved as production/source history rather than
+treated as deciding authority, truth, legitimacy, or actionability.
+"""
+
+[[detections]]
+failure_mode = "source-vs-interpretation"
+detection_sources = [
+  "source traceability checks",
+  "observation non-authority traits",
+  "interpretation non-mutation checks",
+]
+detects = """
+Whether source-bearing fields remain inspectable against source material and
+interpretation is represented separately from the source.
+"""

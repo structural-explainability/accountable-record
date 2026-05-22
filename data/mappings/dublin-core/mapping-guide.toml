@@ -1,0 +1,13 @@
+schema = "ar-mapping-guide-1"
+
+id = "dublin-core-to-accountable-record"
+label = "dublin-core to Accountable Record"
+status = "working-draft"
+
+[source_standard]
+id = "dublin-core"
+label = "dublin-core"
+
+[target]
+id = "accountable-record"
+label = "Accountable Record"

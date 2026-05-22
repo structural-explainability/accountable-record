@@ -1,0 +1,7 @@
+schema = "ar-transformations-index-1"
+
+behaviors = "data/transformations/behaviors.toml"
+declarations = "data/transformations/declarations.toml"
+admissibility = "data/transformations/admissibility.toml"
+lineage = "data/transformations/lineage.toml"
+profile_responsibilities = "data/transformations/profile-responsibilities.toml"

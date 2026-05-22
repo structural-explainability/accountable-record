@@ -1,0 +1,66 @@
+schema = "ar-element-package-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/packages/core"
+persistent_id = "urn:ar:se:accountable-record:packages:core"
+compact_id = "se.accountable-record.packages.core"
+local_name = "core"
+label = "AR Core"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+Core Accountable Record element package.
+"""
+plain_language = """
+A reusable package of related Accountable Record elements.
+"""
+
+[claim_sets]
+core = "data/claims/core-claim-set.toml"
+shapes = "data/claims/shapes.toml"
+
+[composition]
+element_types = [
+  "se.accountable-record.identity.identifier",
+  "se.accountable-record.subjects.record-subject",
+  "se.accountable-record.claims.claim",
+  "se.accountable-record.traits.trait",
+  "se.accountable-record.sources.source",
+  "se.accountable-record.references.source-reference",
+  "se.accountable-record.relations.relation",
+  "se.accountable-record.provenance.provenance-event",
+  "se.accountable-record.verification.verification-event",
+  "se.accountable-record.conformance.conformance-check",
+  "se.accountable-record.maturity.maturity-level",
+]
+
+[dependencies]
+packages = []
+element_types = []
+
+[fixtures]
+directory = "fixtures/"
+
+[expected_reports]
+directory = "expected-reports/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"

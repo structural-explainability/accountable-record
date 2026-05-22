@@ -1,0 +1,24 @@
+schema = "ar-subject-mapping-questions-1"
+
+[[questions]]
+id = "subject.what-is-the-record-about"
+label = "What is the record about?"
+description = """
+Identify the subject the record preserves information about.
+"""
+
+[[questions]]
+id = "subject.which-vocabulary-is-used"
+label = "Which subject vocabulary is used?"
+description = """
+Identify whether the profile uses a local, domain, institutional, or external
+subject vocabulary.
+"""
+
+[[questions]]
+id = "subject.how-is-it-mapped"
+label = "How is the subject kind mapped?"
+description = """
+Declare the mapping from the profile's subject vocabulary to AR subject
+structure.
+"""

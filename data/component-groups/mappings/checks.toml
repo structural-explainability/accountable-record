@@ -1,0 +1,21 @@
+schema = "ar-component-group-checks-1"
+
+component_group_id = "mappings"
+
+[[checks]]
+id = "mappings.has-expected-elements"
+label = "Has expected mapping elements"
+level = "required"
+description = """
+The mappings component group must declare its expected element types.
+"""
+
+[[checks]]
+id = "mappings.has-field-role-and-field-mapping"
+label = "Includes field role and field mapping"
+level = "required"
+description = """
+The mappings component group must include field-role and field-mapping element
+types so profiles and element packages can declare how local fields satisfy
+Accountable Record structural roles.
+"""

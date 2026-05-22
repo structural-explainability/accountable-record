@@ -1,0 +1,83 @@
+schema = "ar-adoption-maturity-path-1"
+
+[semantics]
+maturity_is_incremental = true
+later_levels_extend_earlier_levels = true
+later_levels_do_not_replace_earlier_levels = true
+description = """
+AR conformance is incremental. Each maturity level preserves compatibility
+with later levels while adding stronger structure, traceability, mapping,
+verification, or profile commitments.
+"""
+
+[[steps]]
+level = "level-0"
+label = "Bundle Shape"
+starting_point = true
+description = """
+Start by exporting a valid AR bundle shape.
+"""
+primary_value = """
+The system can produce a recognizable artifact for inspection.
+"""
+
+[[steps]]
+level = "level-1"
+label = "Source Traceability"
+description = """
+Add source references and provenance links sufficient for inspection.
+"""
+primary_value = """
+Readers can inspect records against source material and understand how records
+came to be.
+"""
+
+[[steps]]
+level = "level-2"
+label = "Subject Structure"
+description = """
+Declare subject structure and subject mappings for relevant record types.
+"""
+primary_value = """
+Readers can understand what records are about without requiring AR to own a
+universal ontology.
+"""
+
+[[steps]]
+level = "level-3"
+label = "Trait Declarations"
+description = """
+Declare traits and field mappings needed for trait conformance.
+"""
+primary_value = """
+Record types make explicit structural commitments that verifiers can check.
+"""
+
+[[steps]]
+level = "level-4"
+label = "Transformation-Aware Verification"
+description = """
+Declare transformations and verify their behavior under the selected profile.
+"""
+primary_value = """
+Corrections, changes, successors, and no-identity-question operations become
+inspectable.
+"""
+
+[[steps]]
+level = "level-5"
+label = "Domain Profile Conformance"
+description = """
+Satisfy a declared domain profile.
+"""
+primary_value = """
+The bundle satisfies profile-specific claims, traits, mappings, evidence
+requirements, and conformance rules.
+"""
+
+[adoption_note]
+description = """
+A system may target a lower maturity level without being penalized for not
+satisfying higher-level claims. Higher-level claims are outside the selected
+claim set unless the profile, bundle, or verifier configuration selects them.
+"""

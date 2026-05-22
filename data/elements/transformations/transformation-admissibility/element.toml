@@ -1,0 +1,65 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/transformations/transformation-admissibility"
+persistent_id = "urn:ar:se:accountable-record:transformations:transformation-admissibility"
+compact_id = "se.accountable-record.transformations.transformation-admissibility"
+local_name = "transformation-admissibility"
+label = "Transformation Admissibility"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "transformations"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A rule determining whether a claimed transformation behavior is possible for
+the declared subject structure, subject mapping, transformation kind, profile,
+and source and target record context. Admissibility does not prove that a
+specific transformation is valid.
+"""
+plain_language = """
+A rule saying whether a claimed transformation behavior is allowed in context.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.transformations.transformation-behavior >=0.1.0",
+  "se.accountable-record.transformations.transformation-kind >=0.1.0",
+  "se.accountable-record.subjects.subject-kind-mapping >=0.1.0",
+  "se.accountable-record.conformance.conformance-profile >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

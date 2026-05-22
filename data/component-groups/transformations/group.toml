@@ -1,0 +1,29 @@
+schema = "ar-component-group-1"
+
+id = "transformations"
+label = "Transformations"
+status = "working-draft"
+
+definition = """
+The component group for declared changes, transformation kinds,
+transformation behaviors, transformation declarations, admissibility rules,
+lineage, evidence, and profile-specific transformation constraints.
+"""
+
+plain_language = """
+Transformations describe declared changes between records and what those
+changes do to subject identity.
+"""
+
+element_directory = "data/elements/transformations"
+
+expected_elements = [
+  "transformation",
+  "transformation-kind",
+  "transformation-behavior",
+  "transformation-declaration",
+  "transformation-admissibility",
+  "transformation-lineage",
+  "transformation-evidence",
+  "transformation-profile-rule",
+]

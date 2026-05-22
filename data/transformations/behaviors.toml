@@ -1,0 +1,65 @@
+schema = "ar-transformation-behaviors-1"
+
+[[behaviors]]
+id = "identity-breaking"
+label = "Identity Breaking"
+status = "working-draft"
+description = """
+The target record represents a distinct subject identity from the source
+record. References to the source subject do not silently transfer to the
+target subject.
+"""
+plain_language = """
+The changed record is about a different subject.
+"""
+
+[[behaviors]]
+id = "identity-inheriting"
+label = "Identity Inheriting"
+status = "working-draft"
+description = """
+The target record represents a successor subject whose accountability lineage
+includes the source subject.
+"""
+plain_language = """
+The target subject succeeds the source subject and keeps lineage visible.
+"""
+
+[[behaviors]]
+id = "identity-preserving"
+label = "Identity Preserving"
+status = "working-draft"
+description = """
+The target record preserves the same subject identity as the source record.
+The change is to description, representation, encoding, correction, or other
+record structure rather than to the represented subject identity.
+"""
+plain_language = """
+The changed record is still about the same subject.
+"""
+
+[[behaviors]]
+id = "no-identity-question"
+label = "No Identity Question"
+status = "working-draft"
+description = """
+The operation does not raise an identity question for the represented subject.
+"""
+plain_language = """
+The operation does not affect subject identity.
+"""
+
+[semantics]
+closed_vocabulary = true
+profiles_may_not_add_ar_behaviors = true
+profiles_may_define_transformation_kinds = true
+behavior_is_ar_defined = true
+kind_is_profile_defined = true
+
+[boundary]
+description = """
+Transformation behaviors describe the declared effect of a transformation on
+subject identity. They do not prove that a specific transformation is valid.
+Validity is determined by verifier checks against declarations, admissibility
+rules, lineage requirements, evidence, and profile rules.
+"""

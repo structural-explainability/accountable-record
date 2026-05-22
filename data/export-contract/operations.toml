@@ -1,0 +1,40 @@
+schema = "ar-export-operations-1"
+
+[[operations]]
+id = "compare"
+label = "Compare"
+produces_ar_report = false
+description = """
+Compare reads two bundles, profiles, or reports and produces an
+implementation-defined diff. Comparison is useful for implementations, but it
+is not an exported AR artifact type.
+"""
+
+[[operations]]
+id = "inspect"
+label = "Inspect"
+produces_ar_report = false
+description = """
+Inspect reads a bundle and summarizes its declared conformance, record types,
+subject kinds, traits, transformations, and related structure. Inspection does
+not run claims and does not produce an AR report.
+"""
+
+[[operations]]
+id = "validate"
+label = "Validate"
+produces_ar_report = true
+description = """
+Validate reads a bundle and profile, runs applicable claims, and emits an AR
+report.
+"""
+
+[implementation_surface]
+description = """
+Implementations define their own CLI surface, API surface, exit codes, and
+output formatting.
+"""
+
+[artifact_boundary]
+only_validation_produces_ar_report = true
+inspection_and_comparison_are_not_exported_ar_artifact_types = true

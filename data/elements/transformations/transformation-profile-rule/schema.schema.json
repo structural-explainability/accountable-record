@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/transformations/transformation-profile-rule.schema.json",
+  "title": "Transformation Profile Rule",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.transformations.transformation-profile-rule"
+    },
+    "element_instance_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

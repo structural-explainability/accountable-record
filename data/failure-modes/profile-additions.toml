@@ -1,0 +1,48 @@
+schema = "ar-profile-failure-mode-additions-1"
+
+[semantics]
+profiles_may_define_additional_failure_modes = true
+profile_failure_modes_compose_with_ar_failure_modes = true
+profile_failure_modes_must_identify_detection_sources = true
+profile_failure_modes_should_include_remediation = true
+
+[required_structure]
+fields = [
+  "id",
+  "label",
+  "collapse",
+  "where_it_shows_up",
+  "detected_by",
+  "remediation",
+]
+
+[recommended_structure]
+fields = [
+  "status",
+  "subject_mappings",
+  "traits",
+  "claims",
+  "transformation_rules",
+  "examples",
+]
+
+[profile_failure_mode_rules]
+profile_failure_modes_must_be_citable = true
+profile_failure_modes_must_not_redefine_ar_failure_modes = true
+profile_failure_modes_must_not_redefine_ar_conformance_outcomes = true
+profile_failure_modes_may_reference_ar_failure_modes = true
+profile_failure_modes_may_specialize_ar_failure_modes = true
+
+[examples]
+description = """
+A judicial-record profile might define holding-vs-dictum, citation-vs-
+dependency, or majority-claim-vs-court-endorsement collapses. A civic or
+institutional profile might define contribution-vs-influence or meeting-vs-
+decision collapses.
+"""
+
+[boundary]
+description = """
+Profile-defined failure modes may name domain-specific collapses. They compose
+with AR failure modes and must not redefine AR conformance semantics.
+"""

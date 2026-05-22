@@ -1,0 +1,62 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/conformance/expected-report"
+persistent_id = "urn:ar:se:accountable-record:conformance:expected-report"
+compact_id = "se.accountable-record.conformance.expected-report"
+local_name = "expected-report"
+label = "Expected Report"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "conformance"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A canonical report expected from running a specified verifier, profile,
+claim set, element package, or conformance check against a specified fixture.
+"""
+plain_language = """
+The report a verifier should produce for a given test example.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.conformance.conformance-report >=0.1.0",
+  "se.accountable-record.conformance.conformance-check >=0.1.0",
+  "se.accountable-record.verification.result >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

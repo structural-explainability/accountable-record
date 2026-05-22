@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/trait-1.json",
+  "title": "AR Trait",
+  "description": "A trait is a named set of structural requirements that a record type can declare conformance to. Traits are composition-based: a record type 'satisfies' a trait by meeting its requirements, not by inheriting. AR's standard trait library is derived from IR's 6 families and 9 profile kinds, but custom traits may be defined by any domain.",
+  "type": "object",
+  "required": ["trait"],
+  "additionalProperties": false,
+  "properties": {
+    "trait": {
+      "type": "object",
+      "required": ["id", "version"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable trait identifier (e.g. AR.TRAIT.NOR_S).",
+          "pattern": "^[A-Z][A-Z0-9_]*\\.TRAIT\\.[A-Z][A-Z0-9_]*$"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["experimental", "stable", "deprecated", "superseded"],
+          "default": "experimental"
+        },
+        "derives_from": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Upstream identifiers (typically IR.* for AR-shipped traits, or SE.* for SE-derived traits)."
+        },
+        "summary": {
+          "type": "string"
+        }
+      }
+    },
+    "ir": {
+      "type": "object",
+      "description": "If the trait is derived from an IR profile, declare which one. AR's standard trait library uses this field; user-defined domain traits may omit it.",
+      "additionalProperties": false,
+      "properties": {
+        "ir_family": {
+          "type": "string",
+          "enum": ["OBL", "NOR", "OCC", "CTX", "REC", "ENR"]
+        },
+        "ir_profile": {
+          "type": "string",
+          "enum": ["OBL", "OCC", "REC", "ENR_L", "ENR_I", "CTX_E", "CTX_S", "NOR_C", "NOR_S"]
+        },
+        "ir_version": {
+          "type": "string",
+          "description": "Version of the IR vocabulary this trait is derived from. AR ships a pinned IR snapshot."
+        }
+      }
+    },
+    "requirements": {
+      "type": "object",
+      "description": "Structural requirements a record type must satisfy to claim conformance to this trait. Each is independently verifiable.",
+      "additionalProperties": false,
+      "properties": {
+        "must_have_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Field names the record type must declare in every record of that type."
+        },
+        "must_not_have_fields": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Field names the record type must NOT carry. Their presence is a collapse signal."
+        },
+        "must_not_collapse_with": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Trait IDs whose simultaneous conformance violates IR non-collapse. Verifier reports cannot-verify when collapsing trait is not declared elsewhere."
+        },
+        "transformation_limits": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "IR transformation identifiers (from IR's 10-family basis) that records of this type MAY undergo. Others are forbidden."
+        },
+        "narrative": {
+          "type": "string",
+          "description": "Human-readable explanation. Useful for implementors who don't want to learn IR theory. Read this; satisfy the requirements; move on."
+        }
+      }
+    }
+  }
+}

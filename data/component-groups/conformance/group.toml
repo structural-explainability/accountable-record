@@ -1,0 +1,36 @@
+schema = "ar-component-group-1"
+
+id = "conformance"
+label = "Conformance"
+status = "working-draft"
+
+definition = """
+The component group for requirements, rules, checks, profiles, claim outcomes,
+not-run metadata, claim selection, conformance declarations, structural
+non-conformance, reports, expected reports, compatibility fixtures, and other
+structures used to determine whether Accountable Record artifacts satisfy
+declared criteria.
+"""
+
+plain_language = """
+Conformance defines what must be true, how it is checked, what result is
+reported, and what those results mean.
+"""
+
+element_directory = "data/elements/conformance"
+
+expected_elements = [
+  "requirement",
+  "rule",
+  "conformance-check",
+  "conformance-profile",
+  "conformance-outcome",
+  "claim-outcome",
+  "not-run-metadata",
+  "claim-selection",
+  "conformance-declaration",
+  "structural-non-conformance",
+  "conformance-report",
+  "expected-report",
+  "compatibility-fixture",
+]

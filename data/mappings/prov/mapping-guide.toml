@@ -1,0 +1,13 @@
+schema = "ar-mapping-guide-1"
+
+id = "prov-to-accountable-record"
+label = "prov to Accountable Record"
+status = "working-draft"
+
+[source_standard]
+id = "prov"
+label = "prov"
+
+[target]
+id = "accountable-record"
+label = "Accountable Record"

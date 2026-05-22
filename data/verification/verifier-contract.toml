@@ -1,0 +1,66 @@
+schema = "ar-verifier-contract-1"
+
+[signature]
+form = "verify(bundle, profile?, contract_version) -> report"
+
+[inputs]
+required = [
+  "bundle",
+  "contract_version",
+]
+optional = [
+  "profile",
+]
+
+[contract]
+deterministic = true
+complete_over_selected_claim_set = true
+disciplined_about_explanation = true
+
+[[rules]]
+id = "verifier.is-deterministic"
+label = "Verifier is deterministic"
+description = """
+The same inputs must produce the same outputs. Outcome nondeterminism is a
+defect.
+"""
+
+[[rules]]
+id = "verifier.complete-over-claim-set"
+label = "Verifier is complete over selected claim set"
+description = """
+Every selected applicable claim is run, regardless of whether earlier claims
+failed.
+"""
+
+[[rules]]
+id = "verifier.does-not-short-circuit-readable-bundles"
+label = "Verifier does not short-circuit readable bundles"
+description = """
+A failing bundle-envelope claim does not stop the verifier from preserving the
+rest of the report when the bundle can still be read.
+"""
+
+[[rules]]
+id = "verifier.uses-disciplined-explanation"
+label = "Verifier uses disciplined explanation"
+description = """
+The verifier reports outcomes, findings, identifiers, and structured evidence.
+It does not add uncited editorial conclusions.
+"""
+
+[claim_set]
+selected_claims_are_run_once = true
+profile_requirements_may_change_mandatory_status = true
+profile_requirements_do_not_redefine_ar_claims = true
+bundle_without_profile_uses_ar_core_claims_at_declared_level = true
+
+[report]
+every_emission_inspectable_by_identifier = true
+complete_description_not_first_finding = true
+explanation_carried_by = [
+  "claim identifiers",
+  "outcomes",
+  "findings",
+  "structured evidence",
+]

@@ -1,0 +1,61 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/subjects/record-subject"
+persistent_id = "urn:ar:se:accountable-record:subjects:record-subject"
+compact_id = "se.accountable-record.subjects.record-subject"
+local_name = "record-subject"
+label = "Record Subject"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "subjects"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+The subject that an Accountable Record, record type, bundle entry, profile
+declaration, or verifiable element is about. A record subject preserves what
+the record concerns without requiring AR to own a universal domain ontology.
+"""
+plain_language = """
+The thing, event, decision, action, condition, artifact, or referent that a
+record is about.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.identity.identifier >=0.1.0",
+]
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

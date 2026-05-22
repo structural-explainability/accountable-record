@@ -1,0 +1,343 @@
+{
+  "schema": "se-boundary-conformance-checks-1",
+  "spec": {
+    "id": "AR",
+    "name": "Accountable Record",
+    "version": "0.1.0",
+    "status": "working-draft"
+  },
+  "checks": [
+    {
+      "id": "AR.ATTESTATION",
+      "checks": [
+        "[ ] Attestation records reference the records being attested.",
+        "[ ] Attestation records identify the asserting actor.",
+        "[ ] Attestation records identify the scope of the assertion.",
+        "[ ] Attestation records remain distinguishable from the records being attested.",
+        "[ ] Attestation records do not certify correctness, authority, legitimacy, or enforcement.",
+        "[ ] Attestation records do not modify the records being attested."
+      ],
+      "failure_conditions": [
+        "attestation is treated as correctness, authority, legitimacy,"
+      ]
+    },
+    {
+      "id": "AR.CLAIM.RECORD",
+      "checks": [
+        "[ ] Claim records reference source records or source spans.",
+        "[ ] Claim records remain distinguishable from interpretation records.",
+        "[ ] Claim records remain distinguishable from explanation records.",
+        "[ ] Claim records do not assert truth, validity, correctness, or authority."
+      ],
+      "failure_conditions": [
+        "a claim is treated as truth, validity, correctness, authority, interpretation, or explanation."
+      ]
+    },
+    {
+      "id": "AR.COLLAPSE.PROHIBITED",
+      "checks": [
+        "[ ] Records identify their primary category.",
+        "[ ] Records do not collapse categories whose separation is required by AR or by domain profiles.",
+        "[ ] Records that reference other categories preserve category-specific meanings.",
+        "[ ] Domain profiles explicitly declare any permitted composition and prohibited inferences."
+      ],
+      "failure_conditions": [
+        "identity, source, dependency, governance status, interpretation,"
+      ]
+    },
+    {
+      "id": "AR.CONFORMANCE.CEE.OPTIONAL",
+      "checks": [
+        "[ ] Systems claiming CEE conformance implement interpretation,",
+        "[ ] Systems not claiming CEE conformance do not represent CEE conformance as required for AR conformance."
+      ],
+      "failure_conditions": [
+        "CEE conformance is falsely required for AR conformance or"
+      ]
+    },
+    {
+      "id": "AR.CONFORMANCE.GB.REQUIRED",
+      "checks": [
+        "[ ] Governance-related records preserve Governance Boundary constraints.",
+        "[ ] Governance or status records do not assert authority.",
+        "[ ] Governance or status records do not assert legitimacy.",
+        "[ ] Governance or status records do not assert obligation.",
+        "[ ] Governance or status records do not assert correctness.",
+        "[ ] Governance or status records do not assert enforcement."
+      ],
+      "failure_conditions": [
+        "governance or status is treated as authority, legitimacy,"
+      ]
+    },
+    {
+      "id": "AR.CONFORMANCE.IB.REQUIRED",
+      "checks": [
+        "[ ] Interpretation records preserve Interpretation Boundary constraints.",
+        "[ ] Interpretation records do not modify substrate records.",
+        "[ ] Interpretation attaches only through non-mutating mechanisms."
+      ],
+      "failure_conditions": [
+        "interpretation mutates substrate records or enters the"
+      ]
+    },
+    {
+      "id": "AR.CONFORMANCE.SE.REQUIRED",
+      "checks": [
+        "[ ] The artifact declares conformance with Structural Explainability.",
+        "[ ] The artifact does not weaken SE neutrality constraints.",
+        "[ ] The artifact does not override SE neutrality constraints.",
+        "[ ] The artifact does not reinterpret SE neutrality constraints."
+      ],
+      "failure_conditions": [
+        "AR conformance is asserted while weakening, overriding, or reinterpreting SE neutrality."
+      ]
+    },
+    {
+      "id": "AR.DEFINITION.CORE",
+      "checks": [
+        "[ ] The artifact treats AR as a shared contract for domain record systems.",
+        "[ ] The artifact limits AR to structural record, traceability, export, and verification requirements.",
+        "[ ] The artifact does not define domain correctness, truth criteria,"
+      ],
+      "failure_conditions": [
+        "AR is treated as a domain ontology, truth model, decision engine,"
+      ]
+    },
+    {
+      "id": "AR.DEPENDENCY.RECORD",
+      "checks": [
+        "[ ] Dependency records identify dependent records.",
+        "[ ] Dependency records identify depended-upon records.",
+        "[ ] Dependency records do not imply validity of the dependent record.",
+        "[ ] Dependency records do not imply correctness of either record.",
+        "[ ] Dependency records remain distinguishable from reference, citation,"
+      ],
+      "failure_conditions": [
+        "dependency is treated as validity, correctness, proof,"
+      ]
+    },
+    {
+      "id": "AR.EXPLANATION.RECORD",
+      "checks": [
+        "[ ] Explanation records reference the records they explain.",
+        "[ ] Explanation records are derived views.",
+        "[ ] Explanation records are not authoritative substrate.",
+        "[ ] Explanation records do not replace the records they explain.",
+        "[ ] Explanation records are not treated as proof, validation, or endorsement."
+      ],
+      "failure_conditions": [
+        "explanation is treated as proof, authority, validation, endorsement,"
+      ]
+    },
+    {
+      "id": "AR.EXPORT.BUNDLE",
+      "checks": [
+        "[ ] Export bundles include identifier-stable references to all included records.",
+        "[ ] Export bundles include manifests describing record types and counts.",
+        "[ ] Export bundles include source traces sufficient to inspect",
+        "[ ] Export bundles include attestation and provenance records",
+        "[ ] Export bundles identify AR and domain profile versions.",
+        "[ ] Export bundles do not embed interpretation as substrate."
+      ],
+      "failure_conditions": [
+        "the export bundle is not self-describing, cannot support"
+      ]
+    },
+    {
+      "id": "AR.EXTENSION.ADMISSIBILITY",
+      "checks": [
+        "[ ] Extensions preserve conformance with Structural Explainability.",
+        "[ ] Extensions preserve all AR constraints in effect at the prior version.",
+        "[ ] Extensions preserve separation of identity, source, dependency,",
+        "[ ] Extensions remain neutral with respect to epistemic, causal, normative, authoritative,",
+        "[ ] Extensions are explicitly versioned under a new major version."
+      ],
+      "failure_conditions": [
+        "an extension weakens AR, collapses required categories, or"
+      ]
+    },
+    {
+      "id": "AR.EXTENSION.VERSIONED_ONLY",
+      "checks": [
+        "[ ] AR extension occurs only in a new major version.",
+        "[ ] AR v1 does not permit unversioned extension."
+      ],
+      "failure_conditions": [
+        "AR is extended silently, informally, or within the same major version."
+      ]
+    },
+    {
+      "id": "AR.GOVERNANCE.RECORD",
+      "checks": [
+        "[ ] Governance or status records conform to AR.",
+        "[ ] Governance or status records identify the record or record state to which they apply.",
+        "[ ] Governance or status records do not assert correctness.",
+        "[ ] Governance or status records do not assert authority, legitimacy, obligation, or enforcement."
+      ],
+      "failure_conditions": [
+        "governance or status labels become correctness, authority, legitimacy,"
+      ]
+    },
+    {
+      "id": "AR.IDENTITY.RECORD",
+      "checks": [
+        "[ ] Identity-bearing records use stable identifiers.",
+        "[ ] Identity-bearing records are declared explicitly as identity-bearing.",
+        "[ ] Identity-bearing records distinguish identity from graph continuity.",
+        "[ ] Identity-bearing records do not derive identity persistence from record continuity alone."
+      ],
+      "failure_conditions": [
+        "identity is implicit, unstable, derived from graph continuity, or"
+      ]
+    },
+    {
+      "id": "AR.INTERPRETATION.RECORD",
+      "checks": [
+        "[ ] Interpretation records conform to IB.",
+        "[ ] Interpretation records reference the records they interpret.",
+        "[ ] Interpretation records identify the asserting actor or framework.",
+        "[ ] Interpretation records do not modify substrate records.",
+        "[ ] Interpretation records do not assert correctness, authority, or enforcement."
+      ],
+      "failure_conditions": [
+        "interpretation mutates substrate records or asserts correctness, authority, or enforcement."
+      ]
+    },
+    {
+      "id": "AR.MAPPING.AE.SUPPORTED",
+      "checks": [
+        "[ ] AR supports explicit mapping of identity-bearing records to AE where required",
+        "[ ] Identity-bearing records can declare AE kind and SE profile-kind mappings where applicable.",
+        "[ ] AR does not redefine AE kinds, SE profile kinds, identity regimes, or persistence behavior.",
+        "[ ] AR conformance does not require full AE conformance unless required by an applicable profile."
+      ],
+      "failure_conditions": [
+        "AR prevents required AE mapping, redefines AE/profile-kind semantics, or"
+      ]
+    },
+    {
+      "id": "AR.MAPPING.EP.SUPPORTED",
+      "checks": [
+        "[ ] AR supports explicit mapping of dependency, continuity, graph, state, delta, or",
+        "[ ] Dependency, continuity, and evolution records can declare EP mappings where applicable.",
+        "[ ] AR does not redefine EP graph evolution rules, persistence references, or transformation references.",
+        "[ ] AR conformance does not require full EP conformance unless required by an applicable profile."
+      ],
+      "failure_conditions": [
+        "AR prevents required EP mapping, redefines EP semantics, or"
+      ]
+    },
+    {
+      "id": "AR.MULTIPLICITY",
+      "checks": [
+        "[ ] AR supports multiple interpretations over the same accountable records.",
+        "[ ] AR supports multiple explanations over the same accountable records.",
+        "[ ] AR supports multiple claims over the same accountable records.",
+        "[ ] AR supports multiple dependencies over the same accountable records.",
+        "[ ] AR supports multiple attestations over the same accountable records.",
+        "[ ] AR supports multiple provenance records over the same accountable records.",
+        "[ ] AR supports multiple governance or status records over the same accountable records.",
+        "[ ] AR does not require reconciliation, prioritization, or resolution of"
+      ],
+      "failure_conditions": [
+        "disagreement is forced to resolve, conflicting records are collapsed, or"
+      ]
+    },
+    {
+      "id": "AR.PROFILE.DOMAIN",
+      "checks": [
+        "[ ] Domain profiles conform to AR.",
+        "[ ] Domain profiles declare profile-specific record types.",
+        "[ ] Domain profiles declare profile-specific constraints.",
+        "[ ] Domain profiles declare profile-specific prohibited collapses.",
+        "[ ] Domain profiles identify the AR version they extend.",
+        "[ ] Domain profiles do not weaken AR constraints."
+      ],
+      "failure_conditions": [
+        "a domain profile weakens AR, hides profile-specific constraints, or"
+      ]
+    },
+    {
+      "id": "AR.PROVENANCE",
+      "checks": [
+        "[ ] Provenance records reference the records whose provenance is described.",
+        "[ ] Provenance records identify sources, methods, or tools involved in production where known.",
+        "[ ] Provenance records remain distinguishable from the records they describe.",
+        "[ ] Provenance records do not modify the records they describe.",
+        "[ ] Provenance records do not assert epistemic validity, correctness, legitimacy,"
+      ],
+      "failure_conditions": [
+        "provenance is treated as correctness, authority, legitimacy, causality,"
+      ]
+    },
+    {
+      "id": "AR.REVIEW.STATUS",
+      "checks": [
+        "[ ] Review status records or fields identify review status where applicable.",
+        "[ ] Review status remains distinguishable from governance or status records",
+        "[ ] Review status does not assert truth, correctness, authority, legitimacy,",
+        "[ ] Review status is traceable to the actor, process, or mechanism that"
+      ],
+      "failure_conditions": [
+        "review status is treated as truth, correctness, authority,"
+      ]
+    },
+    {
+      "id": "AR.SCOPE.EXCLUSIONS",
+      "checks": [
+        "[ ] domain vocabularies",
+        "[ ] domain-specific ontologies",
+        "[ ] legal, civic, benefits, planning, or scientific determinations",
+        "[ ] analytics, inference, optimization, recommendation, or decision logic",
+        "[ ] causal explanations",
+        "[ ] epistemic evaluation",
+        "[ ] authority, legitimacy, obligation, or enforcement",
+        "[ ] replacements for existing domain standards or systems",
+        "[ ] automatic inference that dependency implies validity",
+        "[ ] automatic inference that relationship implies causation, endorsement, control, or agreement"
+      ],
+      "failure_conditions": [
+        "Presence of any excluded concern as an AR-defined construct constitutes non-conformance."
+      ]
+    },
+    {
+      "id": "AR.SOURCE.RECORD",
+      "checks": [
+        "[ ] Source records and source references use stable identifiers.",
+        "[ ] Source records remain distinguishable from records that interpret or derive from them.",
+        "[ ] Source records are not modified to reflect interpretation of their contents.",
+        "[ ] Source records are referenceable across record types.",
+        "[ ] Source records do not assert that source content is true, complete, current, or"
+      ],
+      "failure_conditions": [
+        "source records are modified by interpretation or treated as truth,"
+      ]
+    },
+    {
+      "id": "AR.VERIFICATION.TRACE",
+      "checks": [
+        "[ ] Verification traces identify records involved.",
+        "[ ] Verification traces identify constraints involved.",
+        "[ ] Verification traces identify check categories involved.",
+        "[ ] Verification traces distinguish passing checks from failing checks.",
+        "[ ] Verification traces are reproducible from the export bundle.",
+        "[ ] Verification traces do not assert correctness beyond the checks performed."
+      ],
+      "failure_conditions": [
+        "verification traces are not reproducible, omit records or"
+      ]
+    },
+    {
+      "id": "AR.VERSIONING",
+      "checks": [
+        "[ ] AR versioning is explicit.",
+        "[ ] AR versioning is stable.",
+        "[ ] AR versioning does not allow silent or implicit change.",
+        "[ ] Conforming systems identify the AR version they target."
+      ],
+      "failure_conditions": [
+        "AR versioning is missing, implicit, unstable, or silently changed."
+      ]
+    }
+  ]
+}

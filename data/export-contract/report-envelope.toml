@@ -1,0 +1,86 @@
+schema = "ar-report-envelope-1"
+
+[artifact]
+id = "report"
+schema_identifier = "accountable-record-report-1"
+description = """
+A report is the artifact a verifier emits after checking a bundle against the
+selected claims, profile, packages, maturity level, and verifier
+configuration.
+"""
+
+[required_top_level_fields]
+fields = [
+  "schema",
+  "report_id",
+  "verifier",
+  "bundle",
+  "declared_level",
+  "achieved_level",
+  "summary",
+  "results",
+]
+
+[recommended_top_level_fields]
+fields = [
+  "generated_at",
+  "profile",
+  "element_packages",
+]
+
+[legacy_top_level_fields]
+fields = [
+  "components",
+]
+
+[field_semantics.verifier]
+description = """
+The verifier identity block records which verifier produced the report.
+"""
+
+[field_semantics.bundle]
+description = """
+The bundle reference identifies the checked bundle, including bundle ID and
+schema when available.
+"""
+
+[field_semantics.profile]
+description = """
+The profile reference identifies the profile used for verification when a
+profile was selected.
+"""
+
+[field_semantics.declared_level]
+description = """
+The maturity level declared by the bundle.
+"""
+
+[field_semantics.achieved_level]
+description = """
+The highest AR maturity level whose mandatory AR claims and all lower-level
+mandatory AR claims produced pass.
+"""
+
+[field_semantics.summary]
+description = """
+A structured summary of outcomes by claim shape, level, and overall result.
+"""
+
+[field_semantics.results]
+description = """
+An array of per-claim results.
+"""
+required_fields = [
+  "claim_id",
+  "outcome",
+]
+optional_fields = [
+  "evidence",
+  "sub_results",
+]
+
+[semantics]
+report_is_inspectable = true
+cites_by_identifier = true
+does_not_summarize_away_evidence = true
+does_not_add_uncited_editorial_conclusions = true

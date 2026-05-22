@@ -1,0 +1,48 @@
+schema = "ar-subject-mapping-guide-1"
+
+[identity]
+id = "identity-regimes"
+label = "Identity Regimes Subject Mapping"
+status = "working-draft"
+
+[definition]
+description = """
+A mapping guide for using identity-regime vocabularies as external subject
+classification systems within Accountable Record profiles.
+"""
+plain_language = """
+A guide for mapping identity-regime terms into AR subject structure.
+"""
+
+[semantics]
+ar_owns_subject_structure = true
+external_vocabulary_is_not_ar_canonical = true
+profiles_may_map_external_vocabularies = true
+mappings_are_explicit_machine_readable_and_citable = true
+
+[scope]
+description = """
+This guide supports profiles that want to classify record subjects using an
+identity-regime vocabulary while preserving AR's subject-oriented neutrality.
+The external vocabulary may constrain profile interpretation, trait selection,
+or transformation behavior, but AR does not make that vocabulary universal.
+"""
+
+[profile_responsibilities]
+must_declare_vocabulary = true
+must_declare_mapping = true
+must_use_citable_external_identifiers = true
+must_not_redefine_external_identifiers = true
+may_use_subset_of_external_vocabulary = true
+
+[files]
+subject_kind_map = "subject-kind-map.toml"
+questions = "questions.toml"
+examples = "examples/"
+
+[boundary]
+description = """
+A profile may use identity-regime mappings to explain how its record types
+relate to subject kinds. The mapping does not make identity-regime vocabulary
+AR-owned ontology.
+"""

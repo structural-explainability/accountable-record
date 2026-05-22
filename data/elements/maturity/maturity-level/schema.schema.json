@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.org/accountable-record/schemas/elements/maturity/maturity-level.schema.json",
+  "title": "Maturity Level",
+  "type": "object",
+  "required": [
+    "element_type_id",
+    "element_instance_id",
+    "number",
+    "label",
+    "status"
+  ],
+  "properties": {
+    "element_type_id": {
+      "const": "se.accountable-record.maturity.maturity-level"
+    },
+    "element_instance_id": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "label": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "extends": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

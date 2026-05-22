@@ -1,0 +1,41 @@
+schema = "ar-conformance-report-semantics-1"
+
+[report]
+records_outcomes = true
+records_evidence = true
+records_not_run_metadata = true
+records_declared_level = true
+records_achieved_level = true
+
+[evidence]
+required_for_outcomes = [
+  "fail",
+  "partial",
+]
+missing_evidence_must_be_identified_for_outcomes = [
+  "cannot-verify",
+]
+must_identify = [
+  "what was checked",
+  "which records were involved",
+  "what failed",
+  "what was partially satisfied",
+  "what evidence was missing",
+]
+cites_bundle_elements_by_stable_identifiers = true
+does_not_decide_truth_authority_or_domain_correctness = true
+description = """
+Outcomes that report a determinate negative result (fail, partial) require
+positive evidence: the report must show what was checked and what did not hold.
+The cannot-verify outcome is the absence of a determination; it cannot carry
+positive evidence by definition, so the report must instead identify what
+required evidence was missing.
+"""
+
+[structural_non_conformance]
+mandatory_outcomes_that_block = [
+  "fail",
+  "partial",
+  "cannot-verify",
+]
+verification_should_not_stop_at_first_failure = true

@@ -1,0 +1,3 @@
+schema = "ar-trait-library-index-1"
+
+source = "data/traits/library.toml"

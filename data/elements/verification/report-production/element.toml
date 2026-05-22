@@ -1,0 +1,66 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/verification/report-production"
+persistent_id = "urn:ar:se:accountable-record:verification:report-production"
+compact_id = "se.accountable-record.verification.report-production"
+local_name = "report-production"
+label = "Report Production"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "verification"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+The verifier process by which selected applicable claims are run, outcomes,
+findings, identifiers, evidence, not-run metadata, declared level, achieved
+level, verifier identity, and summaries are assembled into an Accountable
+Record report.
+"""
+plain_language = """
+The process that turns verifier checks into a report.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.verification.verifier >=0.1.0",
+  "se.accountable-record.verification.verifier-identity >=0.1.0",
+  "se.accountable-record.conformance.conformance-report >=0.1.0",
+  "se.accountable-record.conformance.not-run-metadata >=0.1.0",
+  "se.accountable-record.conformance.claim-outcome >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

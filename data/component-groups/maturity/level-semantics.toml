@@ -1,0 +1,30 @@
+schema = "ar-level-semantics-1"
+
+[level_declarations]
+system_may_declare_target_level = true
+verifier_reports_achieved_level = true
+verifier_runs_declared_level_and_lower = true
+
+[mandatory_claims]
+lower_level_mandatory_claims_required = true
+level_is_achieved_only_if_all_lower_mandatory_claims_pass = true
+
+[optional_claims]
+optional_claims_run_only_when_selected = true
+optional_outcomes_appear_in_report = true
+optional_outcomes_block_level_only_if_profile_makes_mandatory = true
+
+[out_of_scope_claims]
+outside_declared_level_do_not_receive_outcomes = true
+outside_declared_level_may_be_listed_as_not_run_metadata = true
+
+[nesting]
+levels_are_nested = true
+later_levels_extend_earlier_levels = true
+later_levels_do_not_replace_earlier_levels = true
+
+[example]
+description = """
+A system that declares Level 3 is not penalized for failing to satisfy Level 4
+transformation claims. Those claims are outside the Level 3 claim set.
+"""

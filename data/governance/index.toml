@@ -1,0 +1,5 @@
+schema = "ar-governance-index-1"
+
+scope = "data/governance/scope.toml"
+non_goals = "data/governance/non-goals.toml"
+boundaries = "data/governance/boundaries.toml"

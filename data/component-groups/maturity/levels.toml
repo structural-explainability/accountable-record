@@ -1,0 +1,98 @@
+schema = "ar-maturity-levels-1"
+
+[semantics]
+incremental = true
+nested = true
+later_levels_extend_earlier_levels = true
+later_levels_replace_earlier_levels = false
+lower_level_requirements_remain_active = true
+
+[[levels]]
+id = "level-0"
+number = 0
+label = "Bundle Shape"
+status = "working-draft"
+summary = """
+A Level 0 system exports a valid AR bundle envelope.
+"""
+description = """
+A Level 0 system exports a valid AR bundle envelope. It declares a bundle ID,
+schema identifier, version block, conformance block, manifest, and records with
+stable IDs and record types.
+"""
+does_not_require = [
+  "source traceability",
+  "accountable entity kinds",
+  "trait declarations",
+  "transformation declarations",
+  "domain-profile conformance",
+]
+
+[[levels]]
+id = "level-1"
+number = 1
+label = "Source Traceability"
+status = "working-draft"
+summary = """
+A Level 1 system preserves source references and provenance links sufficiently
+for records to be inspected against source material.
+"""
+extends = "level-0"
+
+[[levels]]
+id = "level-2"
+number = 2
+label = "Accountable Entity Kinds"
+status = "working-draft"
+summary = """
+A Level 2 system declares accountable entity kinds for relevant records.
+"""
+description = """
+A Level 2 system declares accountable entity kinds for relevant records. Earlier
+drafts used canonical `AE.*` identifiers for these kinds; the enduring AR
+architecture treats these as upstream or mapped subject-kind identifiers rather
+than AR-owned identifiers.
+"""
+extends = "level-1"
+
+[[levels]]
+id = "level-3"
+number = 3
+label = "Trait Declarations"
+status = "working-draft"
+summary = """
+A Level 3 system declares AR traits for record types and provides field
+mappings needed to verify trait conformance.
+"""
+extends = "level-2"
+
+[[levels]]
+id = "level-4"
+number = 4
+label = "Transformation-Aware Verification"
+status = "working-draft"
+summary = """
+A Level 4 system declares transformations and supports verification of
+identity behavior under the AR transformation model.
+"""
+description = """
+A Level 4 system declares transformations. The verifier checks whether declared
+transformations preserve identity, break identity, inherit identity, or raise
+no identity question under the AR transformation model.
+"""
+extends = "level-3"
+
+[[levels]]
+id = "level-5"
+number = 5
+label = "Domain Profile Conformance"
+status = "working-draft"
+summary = """
+A Level 5 system satisfies a declared domain profile.
+"""
+description = """
+A Level 5 system satisfies a declared domain profile. A domain profile composes
+AR traits, domain traits, transformation behavior, export requirements, and
+domain-specific verification checks.
+"""
+extends = "level-4"

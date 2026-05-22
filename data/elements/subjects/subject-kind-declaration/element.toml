@@ -1,0 +1,62 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/subjects/subject-kind-declaration"
+persistent_id = "urn:ar:se:accountable-record:subjects:subject-kind-declaration"
+compact_id = "se.accountable-record.subjects.subject-kind-declaration"
+local_name = "subject-kind-declaration"
+label = "Subject Kind Declaration"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "subjects"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A declaration that a record, record type, profile, package, or exported
+artifact uses a specified subject kind under a specified vocabulary, authority,
+mapping guide, or profile context.
+"""
+plain_language = """
+A statement declaring which subject kind is being used.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.subjects.subject-kind >=0.1.0",
+  "se.accountable-record.subjects.subject-kind-mapping >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

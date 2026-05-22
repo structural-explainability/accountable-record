@@ -1,0 +1,27 @@
+schema = "ar-component-group-1"
+
+id = "traits"
+label = "Traits"
+status = "working-draft"
+
+definition = """
+The component group for declarative commitments, trait declarations, trait
+requirements, trait values, and trait-conformance bindings associated with
+Accountable Record profiles, record types, and verifiable elements.
+"""
+
+plain_language = """
+Traits are declared guarantees that a record type says it supports.
+"""
+
+element_directory = "data/elements/traits"
+
+expected_elements = [
+  "trait",
+  "trait-kind",
+  "trait-value",
+  "trait-declaration",
+  "trait-requirement",
+  "trait-conformance-binding",
+  "trait-claim-binding",
+]

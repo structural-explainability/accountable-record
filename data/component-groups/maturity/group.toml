@@ -1,0 +1,26 @@
+schema = "ar-component-group-1"
+
+id = "maturity"
+label = "Maturity"
+status = "working-draft"
+
+definition = """
+The component group for incremental Accountable Record adoption, maturity
+levels, level requirements, level checks, maturity assessments, and progression
+paths.
+"""
+
+plain_language = """
+Maturity describes how a system can adopt Accountable Records step by step
+without losing compatibility with later levels.
+"""
+
+element_directory = "data/elements/maturity"
+
+expected_elements = [
+  "maturity-level",
+  "level-requirement",
+  "level-check",
+  "maturity-assessment",
+  "progression-path",
+]

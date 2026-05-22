@@ -1,0 +1,88 @@
+schema = "ar-profile-envelope-1"
+
+[artifact]
+id = "profile"
+schema_identifier = "accountable-record-profile-1"
+description = """
+A profile defines the selected element packages, claims, traits, field
+mappings, transformations, verifier expectations, and conformance rules for a
+verification run.
+"""
+
+[required_top_level_fields]
+fields = [
+  "schema",
+  "profile_id",
+  "ar_version",
+]
+
+[recommended_top_level_fields]
+fields = [
+  "extends",
+  "element_packages",
+  "record_types",
+  "transformations",
+]
+
+[legacy_top_level_fields]
+fields = [
+  "components",
+]
+
+[field_semantics.profile_id]
+description = """
+The profile's stable identifier.
+"""
+
+[field_semantics.ar_version]
+description = """
+The Accountable Record contract version this profile is built against.
+"""
+
+[field_semantics.extends]
+description = """
+Upstream profiles this profile builds on.
+"""
+
+[composition]
+preferred_model = "element-packages"
+may_select = [
+  "AR element packages",
+  "domain element packages",
+  "local element packages",
+  "proprietary element packages",
+  "selected element types",
+]
+legacy_note = """
+Earlier drafts said profiles compose components. The enduring architecture
+uses element packages and selected element types.
+"""
+
+[profile_contents]
+may_define = [
+  "record types",
+  "traits",
+  "field mappings",
+  "transformations",
+  "claims",
+  "acceptance rules",
+  "verifier expectations",
+]
+
+[record_types]
+description = """
+Record type definitions may declare record type names, subject kinds, traits,
+field mappings, and profile-specific structural requirements.
+"""
+
+[transformations]
+description = """
+Transformation declarations define domain-specific transformation kinds and
+the AR transformation behaviors they may legitimately declare.
+"""
+
+[constraints]
+may_not_redefine_ar_outcomes = true
+may_not_redefine_ar_transformation_behaviors = true
+may_not_redefine_ar_element_identity = true
+may_not_redefine_ar_required_envelope_fields = true

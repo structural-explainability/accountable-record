@@ -1,0 +1,41 @@
+schema = "ar-transformation-profile-responsibilities-1"
+
+responsibilities = [
+  "declare recognized transformation kinds",
+  "declare which record types or subject structures may be connected",
+  "declare required evidence for each transformation kind",
+  "declare which AR transformation behavior each transformation claims",
+  "respect AR transformation behavior vocabulary",
+  "respect subject-mapping-sensitive admissibility rules",
+]
+
+[transformation_kinds]
+profiles_may_define_domain_specific_transformation_kinds = true
+profiles_must_make_transformation_kinds_citable = true
+profiles_must_not_treat_transformation_kinds_as_ar_behaviors = true
+
+[behavior_constraints]
+profiles_may_not_redefine_ar_transformation_behaviors = true
+profiles_may_not_add_ar_transformation_behaviors = true
+profiles_may_not_claim_behavior_outside_ar_vocabulary = true
+
+[admissibility]
+profiles_may_constrain_admissibility = true
+profiles_may_not_violate_admissibility_rules = true
+profiles_must_declare_subject_mapping_context_when_required = true
+
+[evidence]
+profiles_may_add_evidence_requirements = true
+profiles_should_explain_evidence_requirements = true
+
+[lineage]
+profiles_must_require_lineage_for_identity_inheriting_transformations = true
+profiles_may_define_successor_resolution_rules = true
+profiles_must_not_allow_silent_reference_redirect_without_lineage = true
+
+[boundary]
+description = """
+Profiles define domain-specific transformation kinds and constraints within
+the AR behavior vocabulary. A profile may not redefine AR transformation
+behavior meanings or make an inadmissible behavior valid by local convention.
+"""

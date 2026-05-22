@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/claim-1.json",
+  "title": "AR Claim",
+  "description": "A claim is a verifiable structural property over a bundle. Claims are the unit of composition. Each claim has a stable identifier, declares its shape (data-driven or custom), and may declare IR mapping metadata.",
+  "type": "object",
+  "required": ["claim", "check"],
+  "additionalProperties": false,
+  "properties": {
+    "claim": {
+      "type": "object",
+      "required": ["id", "version", "class"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable identifier (e.g. AR.CLAIM.VERSIONING). Identifiers are the sole normative reference for conformance.",
+          "pattern": "^[A-Z][A-Z0-9_]*(\\.[A-Z][A-Z0-9_]*)+$"
+        },
+        "version": {
+          "type": "string",
+          "description": "Semantic version of this claim. Independent of the package version.",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "class": {
+          "type": "string",
+          "enum": ["structural", "mapping", "engineering"],
+          "description": "Class per SPEC: structural (derived from formal/spec), mapping (derived from AR.MAPPING.*), engineering (export bundle integrity)."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["experimental", "stable", "deprecated", "superseded"],
+          "default": "experimental"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Claim IDs that this claim replaces."
+        },
+        "deprecated_by": {
+          "type": "string",
+          "description": "Claim ID that supersedes this one. Only set when status == 'deprecated' or 'superseded'."
+        },
+        "derives_from": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Upstream identifiers (SE.*, AR.*, JR.*, IR.*, etc.) from which this claim derives its authority."
+        },
+        "summary": {
+          "type": "string",
+          "description": "One-sentence description of what the claim verifies."
+        }
+      }
+    },
+    "ir": {
+      "type": "object",
+      "description": "Optional IR mapping. Present when the claim is about identity-regime structure. Absent claims work fine in IR-naive domains.",
+      "additionalProperties": false,
+      "properties": {
+        "applies_to_families": {
+          "type": "array",
+          "items": {"type": "string", "enum": ["OBL", "NOR", "OCC", "CTX", "REC", "ENR"]},
+          "description": "IR families this claim is about."
+        },
+        "applies_to_profiles": {
+          "type": "array",
+          "items": {"type": "string", "enum": ["OBL", "OCC", "REC", "ENR_L", "ENR_I", "CTX_E", "CTX_S", "NOR_C", "NOR_S"]},
+          "description": "IR profile kinds this claim is about."
+        },
+        "enforces_separation": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "IR profile pairs whose collapse this claim prevents (e.g. ['REC', 'NOR_S'])."
+        }
+      }
+    },
+    "check": {
+      "type": "object",
+      "description": "How the claim is verified. Either declares a shape (data-driven) OR declares custom (hand-written Python).",
+      "oneOf": [
+        {"$ref": "#/$defs/check_bundle_field"},
+        {"$ref": "#/$defs/check_record_field"},
+        {"$ref": "#/$defs/check_cross_reference"},
+        {"$ref": "#/$defs/check_trait_conformance"},
+        {"$ref": "#/$defs/check_custom"}
+      ]
+    }
+  },
+  "$defs": {
+    "check_bundle_field": {
+      "type": "object",
+      "description": "Shape A: predicate over bundle-level fields. Used for conformance declarations, version declarations, manifest presence.",
+      "required": ["shape", "rules"],
+      "properties": {
+        "shape": {"const": "bundle_field_predicate"},
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["field", "must_be_present", "failure_condition"],
+            "additionalProperties": false,
+            "properties": {
+              "field": {"type": "string", "description": "Dotted path into the bundle, e.g. 'versions.accountable_record'."},
+              "must_be_present": {"type": "boolean"},
+              "must_match_pattern": {"type": "string"},
+              "failure_condition": {"type": "string"},
+              "details_template": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "check_record_field": {
+      "type": "object",
+      "description": "Shape B: predicate over records of declared types. Used for required-field, forbidden-field, and category-separation checks.",
+      "required": ["shape", "rules"],
+      "properties": {
+        "shape": {"const": "record_field_predicate"},
+        "applies_to_record_types": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "Record types this claim applies to. If empty, applies to all records."
+        },
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["applies_to", "failure_condition"],
+            "additionalProperties": false,
+            "properties": {
+              "applies_to": {"type": "string", "description": "Record type this rule binds."},
+              "required_fields": {"type": "array", "items": {"type": "string"}},
+              "forbidden_fields": {"type": "array", "items": {"type": "string"}},
+              "field_must_match_pattern": {
+                "type": "object",
+                "additionalProperties": {"type": "string"}
+              },
+              "failure_condition": {"type": "string"},
+              "details_template": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "check_cross_reference": {
+      "type": "object",
+      "description": "Shape C: cross-record reference resolution. Used for source traceability and ref-resolvability checks.",
+      "required": ["shape", "rules"],
+      "properties": {
+        "shape": {"const": "cross_reference_predicate"},
+        "rules": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["from_record_types", "via_field", "must_resolve_to_record_types", "failure_condition"],
+            "additionalProperties": false,
+            "properties": {
+              "from_record_types": {"type": "array", "items": {"type": "string"}},
+              "via_field": {"type": "string"},
+              "via_field_is_list": {"type": "boolean", "default": false},
+              "must_resolve_to_record_types": {"type": "array", "items": {"type": "string"}},
+              "required": {"type": "boolean", "default": true, "description": "If false, missing reference is acceptable; only unresolvable references fail."},
+              "failure_condition": {"type": "string"},
+              "details_template": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "check_trait_conformance": {
+      "type": "object",
+      "description": "Trait conformance check. Verifies that record types declared to conform to a trait actually satisfy its requirements. Composition, not inheritance: partial conformance is meaningful.",
+      "required": ["shape", "trait_id"],
+      "properties": {
+        "shape": {"const": "trait_conformance"},
+        "trait_id": {
+          "type": "string",
+          "description": "Trait identifier (e.g. AR.TRAIT.NOR_S) whose conformance is checked."
+        }
+      }
+    },
+    "check_custom": {
+      "type": "object",
+      "description": "Escape hatch: claim is implemented as a Python class subclassing CustomClaim. Used when the property cannot be reduced to a declarative shape.",
+      "required": ["shape", "implementation"],
+      "properties": {
+        "shape": {"const": "custom"},
+        "implementation": {
+          "type": "string",
+          "description": "Dotted import path to a class subclassing accountable_record.claims.custom.CustomClaim."
+        }
+      }
+    }
+  }
+}

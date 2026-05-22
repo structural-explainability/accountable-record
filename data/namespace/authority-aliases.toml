@@ -1,0 +1,12 @@
+schema = "ar-authority-aliases-1"
+
+[[aliases]]
+alias = "se"
+authority = "structural-explainability.org"
+status = "active"
+label = "Structural Explainability"
+
+[alias_rules]
+aliases_are_registry_scoped = true
+canonical_uri_is_authoritative = true
+compact_id_requires_alias_resolution = true

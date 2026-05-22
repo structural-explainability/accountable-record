@@ -1,0 +1,95 @@
+schema = "ar-identity-contract-1"
+
+[scope]
+description = """
+The identity contract defines how Accountable Record authorities, project
+spaces, element types, element instances, element packages, schemas, exported
+artifacts, and lock entries are identified.
+"""
+
+[principles]
+identity_is_authority_based = true
+identity_is_not_host_based = true
+hosting_location_is_metadata = true
+canonical_identity_does_not_include_version = true
+released_identifiers_must_not_be_renamed = true
+released_identifiers_must_not_be_repurposed = true
+
+[namespace_authority]
+description = """
+A namespace authority is an organization, domain, registry, or owner
+responsible for assigning stable names within a project space.
+"""
+
+[project_space]
+description = """
+A project space is a stable project, package, repository, product, standard,
+or domain space within a namespace authority.
+"""
+
+[canonical_uri]
+pattern = "https://<authority>/<project>/elements/<component-group>/<element-type>"
+preferred_for_public_elements = true
+version_included = false
+
+[persistent_id]
+pattern = "urn:ar:<authority-alias>:<project>:<component-group>:<element-type>"
+allowed_for_private_archival_or_non_web_contexts = true
+version_included = false
+
+[compact_id]
+pattern = "<authority-alias>.<project>.<component-group>.<element-type>"
+requires_authority_alias_resolution = true
+version_included = false
+
+[versioned_reference]
+pattern = "<compact-id>@<version>"
+
+[element_identity]
+package_independent = true
+element_id_must_not_include_package_id = true
+element_id_must_include_authority = true
+element_id_must_include_project = true
+element_id_must_include_component_group = true
+element_id_must_include_element_type = true
+description = """
+A verifiable element type has stable identity independent of the element
+packages that include it. Element packages include element types by reference.
+Moving an element type from one package to another is a package composition
+change, not an element identity change.
+"""
+
+[element_instance_id]
+scope = "record-or-bundle"
+description = """
+Element instance identifiers identify concrete occurrences of element types
+inside records, bundles, reports, fixtures, or examples.
+"""
+
+[package_identity]
+separate_from_element_identity = true
+description = """
+An element package has its own identity. A package may include one or more
+element types by reference. The package does not own the element identities
+unless the same authority and project also define those element types.
+"""
+
+[catalog]
+catalog_is_required_for_package_membership = true
+description = """
+Because element identity is package-independent, package membership and current
+distribution provenance are resolved through package manifests, catalogs, and
+lock files rather than inferred from the element ID alone.
+"""
+
+[hosting]
+allowed_providers = [
+  "github",
+  "gitlab",
+  "self-hosted-git",
+  "institutional-repository",
+  "private-registry",
+  "public-registry",
+  "local",
+  "other",
+]

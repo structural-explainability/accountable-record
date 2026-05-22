@@ -1,0 +1,164 @@
+schema = "ar-trait-library-1"
+
+[[traits]]
+legacy_id = "AR.TRAIT.AUTHORITY_NON_ASSERTED"
+compact_id = "se.accountable-record.traits.authority-non-asserted"
+label = "Authority Non-Asserted"
+status = "working-draft"
+applies_to = [
+  "obligation",
+  "rule-content",
+  "rule-scope",
+  "source",
+]
+definition = """
+The record type does not assert current authority. Authority is a downstream
+interpretation or profile-specific determination. The AR record preserves the
+artifact, structure, source, and provenance.
+"""
+plain_language = """
+The record preserves the material but does not decide whether it is currently
+authoritative.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.CONTENT_STATUS_SEPARATED"
+compact_id = "se.accountable-record.traits.content-status-separated"
+label = "Content Status Separated"
+status = "working-draft"
+applies_to = [
+  "obligation",
+  "rule-content",
+  "rule-scope",
+]
+definition = """
+The record type distinguishes content from current status. Content records
+what the obligation or rule says. Status records whether it is active,
+repealed, superseded, limited, inactive, or otherwise characterized in a later
+context.
+"""
+plain_language = """
+The record keeps what something says separate from whether it is currently
+active, valid, or superseded.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.INSTRUMENT_NON_COLLAPSING"
+compact_id = "se.accountable-record.traits.instrument-non-collapsing"
+label = "Instrument Non-Collapsing"
+status = "working-draft"
+applies_to = [
+  "instrument",
+]
+definition = """
+The record type does not collapse an enduring instrument into a role,
+position, action, or status. The instrument is one referent; its roles,
+actions, and statuses are recorded separately.
+"""
+plain_language = """
+The record keeps an instrument separate from the roles it plays or actions it
+takes.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.INTERPRETATION_NON_MUTATING"
+compact_id = "se.accountable-record.traits.interpretation-non-mutating"
+label = "Interpretation Non-Mutating"
+status = "working-draft"
+applies_to = [
+  "all",
+]
+definition = """
+Interpretive updates do not mutate the prior record. They produce a new record
+or a declared transformation.
+"""
+plain_language = """
+New interpretations do not erase or rewrite the earlier record.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.LOCUS_STABLE"
+compact_id = "se.accountable-record.traits.locus-stable"
+label = "Locus Stable"
+status = "working-draft"
+applies_to = [
+  "place-or-asset",
+]
+definition = """
+The record type encodes place or asset identity in a way that can survive
+non-identity-affecting changes such as renaming, recoding, address correction,
+or identifier migration.
+"""
+plain_language = """
+The record keeps the same place or asset identifiable even when names or local
+codes change.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.OBSERVATION_NON_AUTHORITATIVE"
+compact_id = "se.accountable-record.traits.observation-non-authoritative"
+label = "Observation Non-Authoritative"
+status = "working-draft"
+applies_to = [
+  "source",
+  "domain-observation",
+]
+definition = """
+The record type marks its content as observed or recorded material, not as an
+authority claim.
+"""
+plain_language = """
+The record says this was observed or recorded, but does not treat it as an
+authority claim.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.PROVENANCE_TRACEABLE"
+compact_id = "se.accountable-record.traits.provenance-traceable"
+label = "Provenance Traceable"
+status = "working-draft"
+applies_to = [
+  "all",
+]
+definition = """
+The record type carries provenance describing how the record came to be.
+Provenance may include producer, time, inputs, process, or derivation metadata.
+"""
+plain_language = """
+The record includes information about how it was produced.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.SCOPE_DECLARED"
+compact_id = "se.accountable-record.traits.scope-declared"
+label = "Scope Declared"
+status = "working-draft"
+applies_to = [
+  "obligation",
+  "rule-content",
+]
+definition = """
+The record type declares the relevant scope of the obligation or rule. Scope
+may be represented through a linked scope record, scope context record, or
+other profile-defined field mapping.
+"""
+plain_language = """
+The record says who, where, when, or what the obligation or rule applies to.
+"""
+
+[[traits]]
+legacy_id = "AR.TRAIT.SOURCE_TRACEABLE"
+compact_id = "se.accountable-record.traits.source-traceable"
+label = "Source Traceable"
+status = "working-draft"
+applies_to = [
+  "all",
+]
+definition = """
+The record type carries a source reference adequate for inspection against
+source material. The reference is resolvable from the bundle or carries enough
+metadata for the source to be located.
+"""
+plain_language = """
+The record can be inspected against the source material it relies on.
+"""

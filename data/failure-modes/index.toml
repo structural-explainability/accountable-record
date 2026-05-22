@@ -1,0 +1,6 @@
+schema = "ar-failure-modes-index-1"
+
+patterns = "data/failure-modes/patterns.toml"
+detection = "data/failure-modes/detection.toml"
+remediation = "data/failure-modes/remediation.toml"
+profile_additions = "data/failure-modes/profile-additions.toml"

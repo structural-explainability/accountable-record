@@ -1,0 +1,63 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/exports/export-schema"
+persistent_id = "urn:ar:se:accountable-record:exports:export-schema"
+compact_id = "se.accountable-record.exports.export-schema"
+local_name = "export-schema"
+label = "Export Schema"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "exports"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A machine-readable schema that constrains the structure of an exported
+Accountable Record artifact, element type, element instance, package, mapping,
+catalog entry, lock file, bundle, profile, or report.
+"""
+plain_language = """
+A schema that tools use to check the shape of an exported AR file.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.exports.export-artifact >=0.1.0",
+  "se.accountable-record.identity.identifier >=0.1.0",
+  "se.accountable-record.identity.version >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

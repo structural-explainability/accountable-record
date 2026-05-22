@@ -1,0 +1,42 @@
+schema = "ar-export-schemas-1"
+
+[schemas]
+directory = "data/schemas"
+
+[required_current_schemas]
+files = [
+  "ar-record.schema.json",
+  "ar-export-index.schema.json",
+  "ar-element-type.schema.json",
+  "ar-element-instance.schema.json",
+  "ar-element-package.schema.json",
+  "ar-conformance-report-semantics.schema.json",
+]
+
+[export_artifact_schemas]
+bundle = "ar-bundle-envelope.schema.json"
+profile = "ar-profile-envelope.schema.json"
+report = "ar-report-envelope.schema.json"
+
+[legacy_schema_names]
+names = [
+  "bundle-1.json",
+  "profile-1.json",
+  "report-1.json",
+  "claim-1.json",
+  "trait-1.json",
+  "component-1.json",
+]
+
+[versioning]
+schema_changes_follow_contract_versioning = true
+breaking_schema_changes_require_major_version = true
+
+[semantics]
+schemas_constrain_structure = true
+schemas_do_not_create_new_authoritative_definitions = true
+description = """
+Schemas validate exported shapes. They cite authoritative data artifacts but
+do not replace the TOML source artifacts that define AR vocabulary, elements,
+packages, conformance semantics, and export semantics.
+"""

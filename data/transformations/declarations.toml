@@ -1,0 +1,82 @@
+schema = "ar-transformation-declarations-1"
+
+[semantics]
+declaration_scope = "bundle"
+not_part_of_single_source_or_target_record = true
+records_describe_subjects = true
+transformations_describe_declared_relationships_between_records = true
+
+[required_fields]
+fields = [
+  "source_record_id",
+  "target_record_id",
+  "transformation_kind",
+  "behavior",
+]
+
+[optional_fields]
+fields = [
+  "evidence",
+  "lineage",
+  "profile_context",
+  "subject_mapping",
+]
+
+[field_semantics.source_record_id]
+description = """
+The stable identifier of the source record in the declared transformation.
+"""
+
+[field_semantics.target_record_id]
+description = """
+The stable identifier of the target record in the declared transformation.
+"""
+
+[field_semantics.transformation_kind]
+profile_defined = true
+description = """
+The transformation kind is defined by the profile or package that selects the
+transformation vocabulary. Examples may include amendment, merger, migration,
+correction, reclassification, rename, or re-encoding.
+"""
+
+[field_semantics.behavior]
+ar_defined = true
+allowed_values = [
+  "identity-preserving",
+  "identity-breaking",
+  "identity-inheriting",
+  "no-identity-question",
+]
+description = """
+The transformation behavior is selected from the closed AR transformation
+behavior vocabulary.
+"""
+
+[field_semantics.evidence]
+description = """
+Optional structured evidence supporting the declared transformation behavior,
+lineage relation, or profile-specific transformation kind.
+"""
+
+[field_semantics.lineage]
+description = """
+Lineage metadata is required when the claimed behavior is identity-inheriting.
+"""
+
+[field_semantics.profile_context]
+description = """
+Profile context identifies the profile, package, or transformation rule set
+under which the declaration is interpreted.
+"""
+
+[field_semantics.subject_mapping]
+description = """
+Subject mapping identifies the subject vocabulary or mapping guide used to
+interpret the source and target subject structures.
+"""
+
+[constraints]
+transformation_kind_is_not_ar_defined = true
+behavior_is_ar_defined = true
+profile_may_not_redefine_behavior_meanings = true

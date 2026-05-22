@@ -1,0 +1,19 @@
+schema = "ar-element-checks-1"
+
+element_type_id = "se.accountable-record.traits.trait-conformance-binding"
+
+[[checks]]
+id = "trait_conformance_binding.has-element-type-id"
+label = "Has element type ID"
+level = "required"
+description = """
+An element instance must identify the element type it conforms to.
+"""
+
+[[checks]]
+id = "trait_conformance_binding.has-instance-id"
+label = "Has instance ID"
+level = "required"
+description = """
+An element instance must have a stable element instance identifier.
+"""

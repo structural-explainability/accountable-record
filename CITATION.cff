@@ -1,0 +1,47 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+type: software
+
+title: "Structural Explainability: Accountable Record"
+version: "0.1.0"
+date-released: "2026-05-19"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+
+repository-code: "https://github.com/structural-explainability/accountable-record"
+license: MIT
+
+abstract: >-
+  Accountable Record is the language-neutral contract for information systems
+  that must remain usable under persistent disagreement. It defines schemas,
+  identifiers, entity-kind mappings, traits, claims, adoption levels, bundles,
+  profiles, reports, and verification semantics for preserving distinctions
+  among sources, entities, events, rules, scopes, contexts, transformations,
+  interpretations, and provenance. The contract supports incremental adoption
+  and trait-based verification without deciding truth, authority, legitimacy,
+  obligation, enforcement, or domain correctness.
+
+keywords:
+  - structural-explainability
+  - accountable-record
+  - accountable-record
+  - persistent-disagreement
+  - information-systems
+  - trait-based-verification
+  - conformance
+  - verification
+  - provenance
+  - record-systems
+  - auditability
+  - structural-accountability
+
+message: "If using this software, please cite it as described in this file."

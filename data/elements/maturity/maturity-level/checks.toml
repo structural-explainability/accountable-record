@@ -1,0 +1,44 @@
+schema = "ar-element-checks-1"
+
+element_type_id = "se.accountable-record.maturity.maturity-level"
+
+[[checks]]
+id = "maturity_level.has-element-type-id"
+label = "Has element type ID"
+level = "required"
+description = """
+A maturity-level instance must identify the element type it conforms to.
+"""
+
+[[checks]]
+id = "maturity_level.has-instance-id"
+label = "Has instance ID"
+level = "required"
+description = """
+A maturity-level instance must have a stable element instance identifier.
+"""
+
+[[checks]]
+id = "maturity_level.has-level-number"
+label = "Has level number"
+level = "required"
+description = """
+A maturity-level instance must declare its numeric level.
+"""
+
+[[checks]]
+id = "maturity_level.has-label"
+label = "Has label"
+level = "required"
+description = """
+A maturity-level instance must have a human-readable label.
+"""
+
+[[checks]]
+id = "maturity_level.preserves-lower-levels"
+label = "Preserves lower levels"
+level = "required"
+description = """
+A maturity-level instance above Level 0 must extend, rather than replace, all
+lower levels.
+"""

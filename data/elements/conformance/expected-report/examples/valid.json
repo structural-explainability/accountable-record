@@ -1,0 +1,25 @@
+{
+  "element_type_id": "se.accountable-record.conformance.expected-report",
+  "element_instance_id": "expected-report-001",
+  "fixture": "data/elements/conformance/expected-report/examples/valid.json",
+  "profile": "se.accountable-record.conformance.conformance-profile",
+  "verifier": "se.accountable-record.verification.verifier",
+  "expected_outcomes": [
+    {
+      "id": "expected_report.has-element-type-id",
+      "outcome": "pass",
+      "evidence": [
+        "element_type_id is present and matches the expected element type."
+      ]
+    }
+  ],
+  "comparison_scope": {
+    "required_fields": [
+      "element_type_id",
+      "element_instance_id",
+      "fixture",
+      "expected_outcomes"
+    ],
+    "implementation_specific_fields_allowed": true
+  }
+}

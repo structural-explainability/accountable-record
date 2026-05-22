@@ -1,0 +1,17 @@
+schema = "ar-component-group-1"
+
+id = "references"
+label = "References"
+status = "working-draft"
+
+definition = """
+The component group for pointers, citations, locators, spans, hashes, URIs,
+and other mechanisms that identify where a source or source portion can be
+found.
+"""
+
+plain_language = """
+References point to sources or to specific parts of sources.
+"""
+
+element_directory = "data/elements/references"

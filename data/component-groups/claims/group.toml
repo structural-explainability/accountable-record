@@ -1,0 +1,25 @@
+schema = "ar-component-group-1"
+
+id = "claims"
+label = "Claims"
+status = "working-draft"
+
+definition = """
+The component group for verifier checks, claim shapes, claim kinds, claim
+statuses, claim attachments, and claim definitions preserved within or about
+an Accountable Record.
+"""
+
+plain_language = """
+Claims are checks or assertions the record keeps available for verification.
+"""
+
+element_directory = "data/elements/claims"
+
+expected_elements = [
+  "claim",
+  "claim-kind",
+  "claim-status",
+  "claim-attachment",
+  "claim-shape",
+]

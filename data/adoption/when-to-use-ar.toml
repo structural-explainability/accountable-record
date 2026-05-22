@@ -1,0 +1,103 @@
+schema = "ar-when-to-use-ar-1"
+
+[[good_fit_signals]]
+id = "cross-system-mapping"
+label = "Cross-System Mapping"
+description = """
+The system needs to map local, domain, institutional, or external vocabulary
+into durable accountable structure.
+"""
+
+[[good_fit_signals]]
+id = "inspectable-exports"
+label = "Inspectable Exports"
+description = """
+The system needs exported records that can be inspected independently of the
+producing application.
+"""
+
+[[good_fit_signals]]
+id = "persistent-disagreement"
+label = "Persistent Disagreement"
+description = """
+Records may be questioned later by parties who disagree about meaning, source,
+scope, authority, status, classification, evidence, or interpretation.
+"""
+
+[[good_fit_signals]]
+id = "record-evolution"
+label = "Record Evolution"
+description = """
+The system needs to preserve corrections, transformations, reinterpretations,
+successor relations, or status changes over time.
+"""
+
+[[good_fit_signals]]
+id = "source-traceability"
+label = "Source Traceability"
+description = """
+Readers need to inspect records against source material, citations, files,
+observations, or provenance.
+"""
+
+[[good_fit_signals]]
+id = "verification-reporting"
+label = "Verification Reporting"
+description = """
+The system needs reports showing what was checked, what passed, what failed,
+what was partial, what could not be verified, and what was not run.
+"""
+
+[[poor_fit_signals]]
+id = "no-independent-inspection-needed"
+label = "No Independent Inspection Needed"
+description = """
+No one needs to inspect exported records outside the producing system.
+"""
+
+[[poor_fit_signals]]
+id = "ordinary-schema-validation-is-enough"
+label = "Ordinary Schema Validation Is Enough"
+description = """
+The system only needs to check shape and required fields, without preserving
+disagreement, mapping, verification, or conformance context.
+"""
+
+[[poor_fit_signals]]
+id = "single-short-lived-authority"
+label = "Single Short-Lived Authority"
+description = """
+The records are short-lived and controlled by one trusted authority with no
+durable contestation burden.
+"""
+
+[[poor_fit_signals]]
+id = "workflow-platform-needed"
+label = "Workflow Platform Needed"
+description = """
+The team primarily needs forms, approvals, dashboards, APIs, authorization,
+or case management rather than export accountability.
+"""
+
+[central_question]
+question = """
+Does this system need records that remain inspectable, contestable, auditable,
+correctable, and reusable even when people disagree about what the records
+mean?
+"""
+if_yes = "AR may apply."
+if_no = "AR may be more structure than the system needs."
+
+[adoption_boundary]
+description = """
+AR is best suited for domains where persistent disagreement, source
+traceability, subject mapping, verification, and export accountability matter.
+It is not a workflow platform or a replacement for ordinary schema validation.
+"""
+
+[incremental_adoption]
+description = """
+AR can be adopted incrementally. A system may begin with bundle shape and later
+add source traceability, subject structure, trait declarations,
+transformation-aware verification, and domain-profile conformance.
+"""

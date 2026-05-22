@@ -1,0 +1,62 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/verification/verifier-expectation"
+persistent_id = "urn:ar:se:accountable-record:verification:verifier-expectation"
+compact_id = "se.accountable-record.verification.verifier-expectation"
+local_name = "verifier-expectation"
+label = "Verifier Expectation"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "verification"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A declared hint, requirement, or compatibility expectation describing how a
+verifier should load, interpret, check, or report on an element type, element
+package, profile, field mapping, fixture, bundle, or report.
+"""
+plain_language = """
+A statement about what a verifier needs to do to use something faithfully.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.verification.verifier >=0.1.0",
+  "se.accountable-record.verification.verification-event >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

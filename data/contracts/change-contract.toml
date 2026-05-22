@@ -1,0 +1,112 @@
+schema = "ar-change-contract-1"
+
+[scope]
+description = """
+The change contract defines additive, compatible, breaking, deprecated,
+superseded, and withdrawn changes for Accountable Record elements, packages,
+schemas, exported artifacts, and conformance semantics.
+"""
+
+[principles]
+released_identifiers_are_stable = true
+released_package_versions_are_immutable = true
+breaking_changes_require_major_version = true
+deprecated_identifiers_remain_citable = true
+deprecated_identifiers_must_not_be_reused = true
+successors_must_be_explicit_when_available = true
+
+[additive_changes]
+examples = [
+  "adding an optional field",
+  "adding a new optional check",
+  "adding a new example",
+  "adding a new mapping guide",
+  "adding a new element type without changing existing semantics",
+]
+
+[compatible_changes]
+examples = [
+  "clarifying documentation without changing semantics",
+  "adding non-required metadata",
+  "adding a compatible schema annotation",
+  "adding an optional package dependency",
+]
+
+[breaking_changes]
+examples = [
+  "removing a released required field",
+  "renaming a released identifier",
+  "repurposing a released identifier",
+  "changing outcome semantics",
+  "changing required claim behavior",
+  "changing an element schema incompatibly",
+  "removing a package dependency required for prior validation",
+]
+
+[major_versions]
+one_major_version_per_identity_per_resolved_graph = true
+major_version_not_in_identifier = true
+major_version_conflicts_are_resolution_errors = true
+description = """
+AR identifiers do not include major versions. Therefore, a resolved graph may
+not contain multiple major versions of the same package or element identity.
+Consumers that require incompatible major versions must resolve the conflict
+before validation.
+"""
+
+[package_version_severity]
+package_version_reflects_most_severe_included_change = true
+breaking_change_in_included_element_is_breaking_for_package = true
+description = """
+A package version must reflect the most severe change among the package manifest
+and all element exports the package includes. If an included element undergoes a
+breaking change, the package that includes it undergoes a breaking change and
+requires a major version bump. A package's version therefore always corresponds
+to its current canonical export and digest; a package's version may not remain
+unchanged while its canonical export changes.
+"""
+
+[independent_versioning]
+elements_and_packages_version_independently = true
+element_version_distinct_from_package_version = true
+description = """
+Because element identity is package-independent, element types and the packages
+that include them carry their own versions and may advance on separate timelines.
+The one-major-version-per-identity-per-graph rule applies independently to
+element identities and to package identities. The package_version_severity rule
+binds the two timelines: a package's version must move whenever the canonical
+export of any included element changes.
+"""
+
+[outcome_changes]
+closed_vocabulary = true
+adding_new_claim_outcome_is_breaking = true
+renaming_claim_outcome_is_breaking = true
+removing_claim_outcome_is_breaking = true
+changing_claim_outcome_meaning_is_breaking = true
+description = """
+Claim outcomes are a closed vocabulary. Consumers may exhaustively handle the
+defined outcomes. Adding, removing, renaming, or changing the meaning of an
+outcome is a breaking change.
+"""
+
+[deprecation]
+allowed = true
+removal_implied = false
+deprecated_items_remain_citable = true
+successor_field_required_when_successor_exists = true
+
+[supersession]
+allowed = true
+superseded_items_remain_resolvable = true
+successor_required = true
+
+[withdrawal]
+allowed = true
+withdrawn_items_must_not_be_reused = true
+reason_required = true
+
+[versioning]
+major_for_breaking = true
+minor_for_additive = true
+patch_for_corrections = true

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structural-explainability.github.io/accountable-record/schemas/bundle-1.json",
+  "title": "AR Bundle",
+  "description": "An exported accountable-record bundle. The unit the verifier operates on. Domain-neutral envelope; record contents are determined by the profile that produced the bundle.",
+  "type": "object",
+  "required": ["schema", "bundle_id", "versions", "conformance", "manifest", "records"],
+  "additionalProperties": true,
+  "properties": {
+    "schema": {"type": "string", "description": "Bundle schema identifier. 'accountable-record-bundle-1' for AR-native bundles. Domain-specific bundles may use other schemas conforming to this shape."},
+    "bundle_id": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "profile": {
+      "type": "string",
+      "description": "Profile identifier the bundle conforms to (e.g. JR.PROFILE.JUDICIAL). Verifier uses this to load claim set."
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": {"type": "string"},
+      "description": "Version declarations. accountable_record and implementing_system are required by AR.CLAIM.VERSIONING; domains add their own (e.g. judicial_record)."
+    },
+    "conformance": {
+      "type": "object",
+      "additionalProperties": {"type": "boolean"},
+      "description": "Conformance declarations. se, ar are required by AR.CLAIM.CONFORMANCE.*; domains add their own."
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "record_count": {"type": "integer"},
+        "record_type_counts": {"type": "object", "additionalProperties": {"type": "integer"}}
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "record_type"],
+        "additionalProperties": true,
+        "properties": {
+          "id": {"type": "string"},
+          "record_type": {"type": "string", "description": "Record type as declared by the profile."},
+          "ir_profile": {
+            "type": "string",
+            "enum": ["OBL", "OCC", "REC", "ENR_L", "ENR_I", "CTX_E", "CTX_S", "NOR_C", "NOR_S"],
+            "description": "Optional. If declared, the record is IR-codified; the verifier can run trait conformance against it. If absent, the record is IR-naive."
+          }
+        }
+      }
+    }
+  }
+}

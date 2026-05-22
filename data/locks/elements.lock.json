@@ -1,0 +1,31 @@
+{
+  "schema": "ar-element-lock-1",
+  "resolved_at": "",
+  "resolution_policy": {
+    "one_major_version_per_identity_per_graph": true,
+    "range_conflicts_are_errors": true
+  },
+  "packages": [
+    {
+      "compact_id": "se.accountable-record.packages.core",
+      "version": "0.1.0",
+      "canonical_uri": "https://structural-explainability.org/accountable-record/packages/core",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "digest": "",
+      "source": ""
+    }
+  ],
+  "elements": [
+    {
+      "compact_id": "se.accountable-record.claims.claim",
+      "version": "0.1.0",
+      "included_by": [
+        "se.accountable-record.packages.core@0.1.0"
+      ],
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "digest": ""
+    }
+  ]
+}

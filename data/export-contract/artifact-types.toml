@@ -1,0 +1,55 @@
+schema = "ar-export-artifact-types-1"
+
+[[artifact_types]]
+id = "bundle"
+label = "Bundle"
+schema = "accountable-record-bundle-1"
+description = """
+A machine-readable artifact exported by a conforming system for inspection,
+validation, exchange, or review.
+"""
+plain_language = """
+What a system exports so others can inspect and check its records.
+"""
+
+[[artifact_types]]
+id = "profile"
+label = "Profile"
+schema = "accountable-record-profile-1"
+description = """
+A machine-readable artifact exported by an Accountable Record project, domain
+system, local system, proprietary system, or external package to define the
+claim set, structural commitments, selected element packages, record types,
+field mappings, transformations, and profile-specific conformance rules for a
+verification run.
+"""
+plain_language = """
+What a domain or project exports to tell a verifier what to load and check.
+"""
+
+[[artifact_types]]
+id = "report"
+label = "Report"
+schema = "accountable-record-report-1"
+description = """
+A machine-readable artifact emitted by a verifier after checking a bundle
+against the selected claim set, profile, element packages, maturity level, and
+verifier configuration.
+"""
+plain_language = """
+What a verifier exports after checking a bundle.
+"""
+
+[semantics]
+exported_artifact_types = [
+  "bundle",
+  "profile",
+  "report",
+]
+composition_units_are_not_verification_artifact_types = true
+description = """
+Bundles, profiles, and reports are the exported verification artifact types.
+Element packages are composition and distribution units. They are not a fourth
+verification artifact type unless exported separately as package or catalog
+artifacts.
+"""

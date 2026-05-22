@@ -1,0 +1,44 @@
+schema = "ar-export-extensions-1"
+
+[extension_model]
+profiles_may_add_fields = true
+domain_schemas_may_extend_ar_envelope = true
+domain_schemas_must_not_replace_ar_envelope = true
+implementation_metadata_allowed = true
+
+[reserved_keys]
+reserved_prefixes = [
+  "_ar_",
+]
+description = """
+Keys beginning with _ar_ are reserved for AR contract use.
+"""
+
+[forbidden_extensions]
+rules = [
+  "must not override or redefine required fields",
+  "must not redefine AR outcome semantics",
+  "must not redefine AR transformation behaviors",
+  "must not redefine AR element identity",
+  "must not use keys beginning with _ar_",
+  "must not omit required fields because they are outside a package concern",
+]
+
+[missing_required_evidence]
+claim_outcome = "cannot-verify"
+description = """
+If a selected element package or profile requires evidence and that evidence is
+absent, the corresponding claim result is cannot-verify.
+"""
+
+[profile_extensions]
+profiles_may_add_conformance_keys = true
+profiles_may_add_version_keys = true
+profiles_may_add_manifest_fields = true
+
+[boundary]
+description = """
+Extensions may add profile-specific, domain-specific, local, proprietary, or
+implementation-specific structure. Extensions may not replace the required AR
+envelope or change AR semantics.
+"""

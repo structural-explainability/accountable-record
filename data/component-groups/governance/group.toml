@@ -1,0 +1,15 @@
+schema = "ar-component-group-1"
+
+id = "governance"
+label = "Governance"
+status = "working-draft"
+
+definition = """
+TODO: Define the governance component group.
+"""
+
+plain_language = """
+TODO: Explain this component group in plain language.
+"""
+
+element_directory = "data/elements/governance"

@@ -1,0 +1,44 @@
+{
+  "schema": "accountable-record-data-index-1",
+  "repo": {
+    "id": "AR",
+    "name": "Accountable Record",
+    "version": "0.1.0",
+    "status": "working-draft"
+  },
+  "description": "Index of machine-readable Accountable Record data artifacts.",
+  "artifacts": [
+    {
+      "id": "ar-requirements",
+      "path": "data/spec/requirements.json",
+      "kind": "requirements",
+      "generated": true,
+      "source": [
+        "SPEC.md",
+        "IDENTIFIERS.md"
+      ],
+      "description": "Generated machine-readable Accountable Record requirements."
+    },
+    {
+      "id": "ar-conformance-checks",
+      "path": "data/spec/conformance-checks.json",
+      "kind": "conformance-checks",
+      "generated": true,
+      "source": [
+        "CONFORMANCE.md",
+        "IDENTIFIERS.md"
+      ],
+      "description": "Generated machine-readable Accountable Record conformance checks."
+    },
+    {
+      "id": "ar-scope-exclusions",
+      "path": "data/spec/scope-exclusions.json",
+      "kind": "scope-exclusions",
+      "generated": true,
+      "source": [
+        "SPEC.md"
+      ],
+      "description": "Generated machine-readable Accountable Record scope exclusions."
+    }
+  ]
+}

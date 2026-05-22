@@ -1,0 +1,7 @@
+{
+  "element_type_id": "se.accountable-record.claims.claim-shape",
+  "element_instance_id": "claim-shape-bundle-field-predicate",
+  "value": "bundle_field_predicate",
+  "label": "Bundle Field Predicate",
+  "purpose": "Checks bundle-level fields."
+}

@@ -1,0 +1,36 @@
+schema = "ar-element-checks-1"
+
+element_type_id = "se.accountable-record.mappings.field-role"
+
+[[checks]]
+id = "field_role.has-element-type-id"
+label = "Has element type ID"
+level = "required"
+description = """
+A field-role instance must identify the element type it conforms to.
+"""
+
+[[checks]]
+id = "field_role.has-instance-id"
+label = "Has instance ID"
+level = "required"
+description = """
+A field-role instance must have a stable element instance identifier.
+"""
+
+[[checks]]
+id = "field_role.has-role-name"
+label = "Has role name"
+level = "required"
+description = """
+A field-role instance must declare the structural role name.
+"""
+
+[[checks]]
+id = "field_role.has-scope"
+label = "Has scope"
+level = "recommended"
+description = """
+A field-role instance should declare the element type, package, profile, or
+mapping context in which the role applies.
+"""

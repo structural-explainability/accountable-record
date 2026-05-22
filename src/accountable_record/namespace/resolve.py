@@ -1,0 +1,1 @@
+"""Namespace resolution helpers."""

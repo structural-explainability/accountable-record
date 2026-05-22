@@ -1,0 +1,63 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/transformations/transformation-declaration"
+persistent_id = "urn:ar:se:accountable-record:transformations:transformation-declaration"
+compact_id = "se.accountable-record.transformations.transformation-declaration"
+local_name = "transformation-declaration"
+label = "Transformation Declaration"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "transformations"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A bundle-level declaration connecting a source record, target record,
+profile-defined transformation kind, AR-defined transformation behavior, and
+optional evidence, lineage, profile context, or subject mapping metadata.
+"""
+plain_language = """
+A statement that one record is related to another by a declared change.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.transformations.transformation-kind >=0.1.0",
+  "se.accountable-record.transformations.transformation-behavior >=0.1.0",
+  "se.accountable-record.subjects.record-subject >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

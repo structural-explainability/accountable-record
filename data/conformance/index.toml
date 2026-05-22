@@ -1,0 +1,8 @@
+schema = "ar-conformance-index-1"
+
+outcomes = "data/conformance/outcomes.toml"
+selection = "data/conformance/claim-selection.toml"
+levels = "data/conformance/achieved-level-semantics.toml"
+reports = "data/conformance/report-semantics.toml"
+errors = "data/conformance/verifier-errors.toml"
+compatibility = "data/conformance/compatibility.toml"

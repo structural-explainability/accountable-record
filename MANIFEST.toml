@@ -1,0 +1,151 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Declaration)
+# accountable-record
+# ============================================================
+
+schema = "se-manifest-schema"
+schema_url = "https://github.com/structural-explainability/se-manifest-schema/blob/main/manifest-schema.toml"
+
+# === Identity ===
+
+[meta]
+purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to implementations, domain profiles, and downstream record systems."
+
+[repo]
+name = "accountable-record"
+org = "structural-explainability"
+class = "contract"
+kind = "accountable-record"
+status = "active"
+since = "2026"
+summary = "Defines the language-neutral Accountable Record contract for information systems that must remain usable under persistent disagreement."
+
+[layer]
+space = "application"
+role = "language-neutral-contract"
+
+[contract]
+contract_version = "0.1.0"
+contract_role = "authority"
+contract_authority = "structural-explainability/accountable-record"
+exports_verified_contract = false
+
+# === Dependencies ===
+
+[depends]
+required = [
+  "structural-explainability/se-manifest-schema@main",
+]
+
+optional = [
+  "structural-explainability/se-theory-identity-regimes@main",
+  "structural-explainability/se-theory-transformation@main",
+  "structural-explainability/se-formal-contract@main",
+]
+
+# === Provided artifacts ===
+
+[provides]
+artifacts = [
+  "README.md",
+  "SCOPE.md",
+  "WHEN_TO_USE_AR.md",
+  "NON_GOALS.md",
+  "DECISIONS.md",
+  "SPEC.md",
+  "IDENTIFIERS.md",
+  "CONFORMANCE.md",
+  "ADOPTION_LEVELS.md",
+  "ENTITY_KINDS.md",
+  "TRANSFORMATION_MODEL.md",
+  "TRAITS.md",
+  "CLAIMS.md",
+  "EXPORT_CONTRACT.md",
+  "VERIFICATION_MODEL.md",
+  "FAILURE_MODES.md",
+  "ANNOTATIONS.md",
+  "CHANGELOG.md",
+  "CITATION.cff",
+  "LICENSE",
+  "schemas/bundle-1.json",
+  "schemas/claim-1.json",
+  "schemas/profile-1.json",
+  "schemas/report-1.json",
+  "schemas/trait-1.json",
+  "data/entity-kinds/accountable_entity_kinds.toml",
+  "data/traits/",
+  "data/claims/",
+  "data/transformations/",
+  "examples/bundles/",
+  "examples/profiles/",
+  "examples/reports/expected/",
+  "docs/en/",
+]
+
+# === Scope ===
+
+[scope]
+includes = [
+  "language-neutral Accountable Record contract",
+  "information systems under persistent disagreement",
+  "AR schema definitions",
+  "AR identifier discipline",
+  "AR accountable entity kind mappings",
+  "AR trait vocabulary",
+  "AR claim vocabulary",
+  "AR adoption levels",
+  "AR bundle structure",
+  "AR profile structure",
+  "AR report structure",
+  "AR verification semantics",
+  "partial conformance semantics",
+  "source traceability requirements",
+  "provenance traceability requirements",
+  "transformation behavior vocabulary",
+  "category-collapse detection vocabulary",
+  "example bundles and expected reports",
+  "standards-integration guidance",
+]
+
+excludes = [
+  "Python implementation",
+  "Rust implementation",
+  "implementation-specific verifier behavior not required by the contract",
+  "domain vocabularies",
+  "domain-specific record models",
+  "legal, civic, benefits, planning, energy, scientific, or institutional determinations",
+  "analytics, inference, optimization, recommendation, or decision logic",
+  "claims of truth, correctness, authority, legitimacy, obligation, or enforcement",
+  "replacement of existing standards, ontologies, schemas, or data systems",
+  "storage formats",
+  "query interfaces",
+  "authentication",
+  "authorization",
+  "access control",
+  "cryptographic attestation",
+]
+
+# === Validation ===
+
+[validation]
+entrypoint = "uv run python -m se_manifest_schema validate"
+strict_entrypoint = "uv run python -m se_manifest_schema validate --strict"
+tag_entrypoint = "uv run python -m se_manifest_schema validate --strict --require-tag"
+
+# === Behavior / governance ===
+
+[naming]
+pattern = "accountable-record"
+
+[governance]
+authority = "structural-explainability"
+
+
+# === External references ===
+
+[citation]
+cff = "CITATION.cff"
+preferred = "software"
+
+[traceability]
+identifier_map = "structural-explainability/accountable-record/IDENTIFIERS.md"

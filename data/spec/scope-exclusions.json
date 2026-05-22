@@ -1,0 +1,19 @@
+{
+  "schema": "se-boundary-scope-exclusions-1",
+  "spec": {
+    "id": "AR",
+    "name": "Accountable Record",
+    "version": "0.1.0",
+    "status": "working-draft"
+  },
+  "excluded": [
+    "domain vocabularies",
+    "domain-specific ontologies",
+    "legal, civic, benefits, planning, or scientific determinations",
+    "analytics, inference, optimization, recommendation, or decision logic",
+    "causal explanations",
+    "epistemic evaluation",
+    "authority, legitimacy, obligation, or enforcement",
+    "replacements for existing domain standards or systems"
+  ]
+}

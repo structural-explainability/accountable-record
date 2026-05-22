@@ -1,0 +1,18 @@
+schema = "ar-component-group-1"
+
+id = "disagreement"
+label = "Disagreement"
+status = "working-draft"
+
+definition = """
+The component group for preserving contested claims, objections, alternative
+claims, interpretations, contested relations, and resolution states without
+requiring premature agreement.
+"""
+
+plain_language = """
+Disagreement keeps competing claims, objections, and interpretations visible
+instead of forcing the record to choose one too early.
+"""
+
+element_directory = "data/elements/disagreement"

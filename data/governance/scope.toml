@@ -1,0 +1,123 @@
+schema = "ar-scope-1"
+
+[purpose]
+description = """
+Accountable Record is a language-neutral contract for information systems
+that must remain usable under persistent disagreement.
+"""
+
+[contract_defines]
+items = [
+  "record structure requirements",
+  "exported artifact types",
+  "verification artifacts",
+  "conformance semantics",
+  "subject structure",
+  "subject mappings",
+  "traits",
+  "claims",
+  "transformation behavior",
+  "maturity levels",
+  "field mappings",
+  "failure modes",
+]
+
+[does_not_define]
+items = [
+  "domain truth",
+  "domain authority",
+  "domain correctness",
+  "legal effect",
+  "institutional legitimacy",
+  "obligation enforcement",
+  "operational deployment",
+]
+
+[preservation_goals]
+items = [
+  "inspection",
+  "contestation",
+  "audit",
+  "correction",
+  "reinterpretation",
+  "comparison",
+  "reuse over time",
+]
+
+[applicability]
+description = """
+AR applies when records may be questioned later and the system must preserve
+what was recorded, where it came from, what it refers to, how it changed, and
+what interpretation was added.
+"""
+
+[domain_examples]
+examples = [
+  "legal records",
+  "civic and institutional records",
+  "scientific or technical records",
+  "energy and infrastructure records",
+  "procurement and contract records",
+  "public data records",
+  "standards and compliance records",
+  "audit or oversight records",
+]
+
+[structural_problems]
+addresses = [
+  "collapsing a source into an interpretation",
+  "collapsing a name into an identity",
+  "collapsing content into current status",
+  "collapsing an event into a record about the event",
+  "collapsing provenance into authority",
+  "collapsing scope into meaning",
+  "mutating prior records instead of preserving transformations",
+  "losing the distinction between domain vocabulary and structural role",
+]
+
+[contract_artifacts]
+exported_artifact_types = [
+  "bundle",
+  "profile",
+  "report",
+]
+
+supporting_contract_structures = [
+  "subjects",
+  "subject mappings",
+  "traits",
+  "claims",
+  "transformation behaviors",
+  "maturity levels",
+  "outcome semantics",
+  "field mappings",
+  "failure modes",
+  "element packages",
+]
+
+[standards_integration]
+description = """
+AR is designed to work with existing standards through mappings and profiles.
+It does not replace existing standards.
+"""
+
+may_be_mapped_to_or_used_alongside = [
+  "JSON Schema",
+  "RDF",
+  "OWL",
+  "SHACL",
+  "PROV-O",
+  "DCAT",
+  "legal citation standards",
+  "archival standards",
+  "domain-specific schemas and ontologies",
+]
+
+[boundary_rule]
+question = """
+Does this system need records that remain inspectable, contestable, auditable,
+correctable, and reusable even when people disagree about what the records
+mean?
+"""
+if_yes = "AR may apply."
+if_no = "Ordinary schema validation may be enough."

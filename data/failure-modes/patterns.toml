@@ -1,0 +1,100 @@
+schema = "ar-failure-mode-patterns-1"
+
+[[patterns]]
+id = "context-vs-claim"
+label = "Context vs. Claim"
+status = "working-draft"
+collapse = """
+A record folds contextual limits, scope, environment, observation conditions,
+or applicability boundaries into a claim itself, making the claim appear
+stronger or more general than the record can support.
+"""
+where_it_shows_up = [
+  "observation records that absorb caveats into their statements",
+  "rule records whose scope is silently incorporated into content",
+  "reports that treat partial outcomes as pass because context explains the failure",
+]
+
+[[patterns]]
+id = "content-vs-status"
+label = "Content vs. Status"
+status = "working-draft"
+collapse = """
+A record mutates content to encode current status, so the record can no
+longer preserve what the content said separately from whether it is active,
+repealed, superseded, limited, inactive, or otherwise characterized.
+"""
+where_it_shows_up = [
+  "rule records where repeal is represented by deleting rule text",
+  "policy records where supersession overwrites prior policy content",
+  "records that cannot answer what the rule said before the status changed",
+]
+
+[[patterns]]
+id = "event-vs-record"
+label = "Event vs. Record"
+status = "working-draft"
+collapse = """
+A record treats a representation of an event as the event itself, so updates
+to the record are treated as changes to the event rather than changes to a
+description of the event.
+"""
+where_it_shows_up = [
+  "event records rewritten when better information arrives",
+  "audit records where correcting a logged event mutates the original entry",
+  "records that cannot distinguish the occurrence from later descriptions",
+]
+
+[[patterns]]
+id = "name-vs-identity"
+label = "Name vs. Identity"
+status = "working-draft"
+collapse = """
+A record ties identity to a name, title, address, designation, section number,
+or other mutable label rather than to an identity that can persist through
+renaming, recoding, correction, or migration.
+"""
+where_it_shows_up = [
+  "identity records keyed by current display name",
+  "place or asset records whose stable ID is a postal address",
+  "rule records identified only by the latest section number",
+]
+
+[[patterns]]
+id = "provenance-vs-authority"
+label = "Provenance vs. Authority"
+status = "working-draft"
+collapse = """
+A record treats provenance as conferring authority, so who produced a record
+or where it came from is treated as deciding whether the content is true,
+binding, legitimate, or actionable.
+"""
+where_it_shows_up = [
+  "records that omit scrutiny because of producer reputation",
+  "profiles that conflate signed-by with true",
+  "verifiers that pass trait checks because provenance is trusted",
+]
+
+[[patterns]]
+id = "source-vs-interpretation"
+label = "Source vs. Interpretation"
+status = "working-draft"
+collapse = """
+A record fuses source material with an interpretation of what the source
+means, preventing later inspection of the record against the source.
+"""
+where_it_shows_up = [
+  "holding records that paraphrase a holding into a normative claim",
+  "event records that re-characterize the event using interpretive vocabulary",
+  "source records whose content field is an extracted thesis rather than an extracted passage",
+]
+
+[semantics]
+failure_modes_are_not_exhaustive = true
+failure_modes_are_structural = true
+failure_modes_are_detected_by_claims_traits_or_profile_rules = true
+description = """
+A failure mode describes a structural collapse: a record fuses things that AR
+requires to remain separable for inspection, verification, transformation, or
+comparison.
+"""

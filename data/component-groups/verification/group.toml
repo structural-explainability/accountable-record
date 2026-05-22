@@ -1,0 +1,39 @@
+schema = "ar-component-group-1"
+
+id = "verification"
+label = "Verification"
+status = "working-draft"
+
+definition = """
+The component group for verifiers, verifier identity, verifier operations,
+verifier errors, verifier expectations, verification events, methods,
+evidence, findings, checks, reviews, results, sub-results, confidence,
+reproducibility, and report production.
+"""
+
+plain_language = """
+Verification defines how claims are checked, how evidence is recorded, and how
+reports are produced.
+"""
+
+element_directory = "data/elements/verification"
+
+expected_elements = [
+  "verifier",
+  "verifier-identity",
+  "verifier-operation",
+  "verifier-error",
+  "verifier-expectation",
+  "verification-event",
+  "verification-method",
+  "evidence",
+  "finding",
+  "check",
+  "review",
+  "reviewer",
+  "result",
+  "sub-result",
+  "confidence",
+  "reproducibility",
+  "report-production",
+]

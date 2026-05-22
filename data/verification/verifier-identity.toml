@@ -1,0 +1,33 @@
+schema = "ar-verifier-identity-1"
+
+[required_fields]
+fields = [
+  "id",
+  "version",
+]
+
+[recommended_fields]
+fields = [
+  "implementation_url",
+]
+
+[example]
+id = "accountable-record-py"
+version = "1.0.0"
+implementation_url = "https://github.com/structural-explainability/accountable-record-py"
+
+[compatibility]
+same_inputs_should_produce_same_claim_outcomes = true
+allowed_differences = [
+  "timestamps",
+  "formatting",
+  "diagnostic wording",
+  "implementation-specific metadata",
+]
+
+[reporting]
+report_records_verifier_identity = true
+description = """
+The report records which verifier produced it so readers can inspect the
+implementation identity and version associated with the emitted outcomes.
+"""

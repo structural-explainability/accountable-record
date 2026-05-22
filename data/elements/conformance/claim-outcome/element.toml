@@ -1,0 +1,62 @@
+schema = "ar-element-type-1"
+
+[identity]
+canonical_uri = "https://structural-explainability.org/accountable-record/elements/conformance/claim-outcome"
+persistent_id = "urn:ar:se:accountable-record:conformance:claim-outcome"
+compact_id = "se.accountable-record.conformance.claim-outcome"
+local_name = "claim-outcome"
+label = "Claim Outcome"
+
+[namespace]
+authority = "structural-explainability.org"
+authority_alias = "se"
+project = "accountable-record"
+
+[classification]
+artifact_kind = "element-type"
+component_group = "conformance"
+
+[release]
+version = "0.1.0"
+status = "working-draft"
+immutable = false
+
+[definition]
+description = """
+A result assigned to an applicable claim when that claim is run by a verifier
+against a bundle, profile, element package, or other selected Accountable
+Record artifact.
+"""
+plain_language = """
+The result of checking a claim.
+"""
+
+[identity_rules]
+element_type_id_field = "element_type_id"
+element_instance_id_field = "element_instance_id"
+
+[structure]
+schema = "schema.schema.json"
+checks = "checks.toml"
+examples = "examples/"
+
+[compatibility]
+breaking_changes_require_new_major = true
+requires = [
+  "se.accountable-record.claims.claim >=0.1.0",
+  "se.accountable-record.verification.result >=0.1.0",
+]
+
+[deprecation]
+deprecated = false
+successor = ""
+
+[stewardship]
+maintainer = "Structural Explainability"
+status = "active"
+
+[hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"

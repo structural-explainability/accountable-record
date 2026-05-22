@@ -1,0 +1,24 @@
+schema = "ar-achieved-level-semantics-1"
+
+[adoption_levels]
+levels_are_nested = true
+bundle_may_declare_target_level = true
+verifier_reports_achieved_level = true
+
+[achievement]
+requires_all_mandatory_claims_for_level_and_lower_to_pass = true
+composite_claim_outcomes_resolved_by_rollup = true
+fail_blocks_level = true
+partial_blocks_level = true
+cannot_verify_blocks_level = true
+description = """
+A level is achieved when every mandatory claim selected for that level and all
+lower levels resolves to pass. Composite (multi-requirement) claims resolve to a
+single outcome via the composite_claim_rollup rule in outcomes.toml before level
+achievement is evaluated. Any non-pass outcome (fail, partial, cannot-verify)
+on a mandatory claim blocks the level.
+"""
+
+[profile_rules]
+profiles_may_define_additional_profile_conformance_rules = true
+profiles_do_not_redefine_ar_achieved_level_semantics = true

@@ -1,0 +1,44 @@
+schema = "ar-namespace-authorities-1"
+
+[[authorities]]
+authority = "structural-explainability.org"
+authority_alias = "se"
+status = "active"
+label = "Structural Explainability"
+canonical_url = "https://structural-explainability.org"
+
+[[authorities.projects]]
+project = "accountable-record"
+label = "Accountable Record"
+canonical_uri_base = "https://structural-explainability.org/accountable-record"
+compact_id_base = "se.accountable-record"
+
+[authorities.projects.hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "accountable-record"
+url = "https://github.com/structural-explainability/accountable-record"
+
+[[authorities.projects]]
+project = "judicial-record-us-federal-supreme"
+label = "Judicial Record: US Federal Supreme"
+canonical_uri_base = "https://structural-explainability.org/judicial-record-us-federal-supreme"
+compact_id_base = "se.judicial-record-us-federal-supreme"
+
+[authorities.projects.hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "judicial-record-us-federal-supreme"
+url = "https://github.com/structural-explainability/judicial-record-us-federal-supreme"
+
+[[authorities.projects]]
+project = "compliance-intelligence-record"
+label = "Compliance Intelligence Record"
+canonical_uri_base = "https://structural-explainability.org/compliance-intelligence-record"
+compact_id_base = "se.compliance-intelligence-record"
+
+[authorities.projects.hosting]
+provider = "github"
+organization = "structural-explainability"
+repository = "compliance-intelligence-record"
+url = "https://github.com/structural-explainability/compliance-intelligence-record"
