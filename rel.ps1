@@ -11,15 +11,18 @@ used before tagging a release.
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
+Write-Host "Uv Syncing dependencies..."
+uv sync --extra dev --extra docs --upgrade
+
+Write-Host "Running pre-commit checks on all files..."
+git add -A
+uvx pre-commit run --all-files
+
 Write-Host "Checking Accountable Record source artifacts..."
 uv run accountable-record check --strict
 
 Write-Host "Generating derived artifacts..."
-uv run accountable-record export
-uv run accountable-record build-catalog
-uv run accountable-record resolve-packages
-uv run accountable-record write-lock
-uv run accountable-record render-docs
+uv run accountable-record run all
 
 Write-Host "Validating generated artifacts and lock..."
 uv run accountable-record validate-generated
@@ -33,5 +36,8 @@ uv run python -m pyright
 
 Write-Host "Running pre-commit checks..."
 uvx pre-commit run --all-files
+
+Write-Host "Building docs..."
+uv run python -m zensical build
 
 Write-Host "Release validation completed successfully."

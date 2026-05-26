@@ -26,7 +26,7 @@ role = "language-neutral-contract"
 # === Contract authority ===
 
 [contract]
-contract_version = "0.1.0"
+contract_version = "0.3.0"
 contract_role = "authority"
 contract_authority = "accountable-record"
 exports_verified_contract = false
@@ -35,7 +35,7 @@ exports_verified_contract = false
 
 [depends]
 required = [
-    "structural-explainability/se-manifest-schema@v0.4.0",
+    "structural-explainability/se-manifest-schema@v0.4.1",
 ]
 optional = []
 

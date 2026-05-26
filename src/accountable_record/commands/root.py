@@ -10,6 +10,7 @@ import argparse
 from accountable_record.commands.check import check_main
 from accountable_record.commands.generate import generate_main
 from accountable_record.commands.manifest import sync_main
+from accountable_record.commands.run import run_main
 
 _GENERATION_COMMANDS: set[str] = {
     "export",
@@ -47,12 +48,16 @@ def main(argv: list[str] | None = None) -> int:
         help="Check contract artifacts for internal consistency.",
     )
     subparsers.add_parser(
-        "validate-source",
-        help="Alias for check: validate authored source artifacts.",
+        "run",
+        help="Run staged Accountable Record pipeline stages.",
     )
     subparsers.add_parser(
         "sync-manifest-version",
         help="Synchronize manifest and project version metadata.",
+    )
+    subparsers.add_parser(
+        "validate-source",
+        help="Alias for check: validate authored source artifacts.",
     )
 
     for name in sorted(_GENERATION_COMMANDS):
@@ -62,6 +67,9 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.command in ("check", "validate-source") or args.command is None:
         return check_main(remaining)
+
+    if args.command == "run":
+        return run_main(remaining)
 
     if args.command == "sync-manifest-version":
         return sync_main(remaining)

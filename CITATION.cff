@@ -9,7 +9,7 @@ cff-version: "1.2.0"
 type: software
 
 title: "Structural Explainability: Accountable Record"
-version: "0.2.0"
+version: "0.3.0"
 date-released: "2026-05-25"
 
 authors:

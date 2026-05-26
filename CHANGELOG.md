@@ -13,6 +13,77 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.3.0] - 2026-05-25
+
+Third public working-draft release of the Accountable Record contract.
+
+This release adds the staged Accountable Record pipeline as the primary
+human-facing lifecycle for moving from authored contract source to generated,
+validated, and locked artifacts.
+
+### Staged Pipeline
+
+- Adds a staged pipeline under `src/accountable_record/pipeline/`.
+- Introduces explicit lifecycle stages:
+  - `s010 ID` - validate repository identity metadata,
+  - `s020 CT` - establish and validate contract context,
+  - `s030 SR` - validate repository source materials,
+  - `s040 EL` - validate verifiable element declarations,
+  - `s050 CA` - build and validate the normalized catalog,
+  - `s060 EX` - write and validate machine-readable exports,
+  - `s070 LK` - resolve packages and write lock material,
+  - `s080 GN` - validate generated artifacts,
+  - `s090 VF` - verify final contract state.
+- Adds `accountable-record run <stage>` for running individual stages.
+- Adds `accountable-record run all` for running the full staged lifecycle.
+- Makes the staged pipeline the clearer human navigation layer for the
+  repository while keeping lower-level commands available for direct debugging.
+
+### Architecture
+
+- Separates lifecycle orchestration from operational implementation.
+- Keeps pipeline stages thin and delegates implementation work to `ops/`.
+- Preserves the dependency direction:
+  - `commands` route CLI calls,
+  - `pipeline` owns lifecycle stages,
+  - `ops` owns implementation mechanics,
+  - `utils` owns low-level helpers.
+- Reduces risk of orchestration drift by aligning staged pipeline behavior with
+  the existing export, generation, resolution, validation, and lock operations.
+
+### CLI
+
+- Adds `run` to the `accountable-record` command surface.
+- Supports stage-specific execution for release debugging and partial reruns.
+- Keeps existing direct commands available:
+  - `check`,
+  - `validate-source`,
+  - `export`,
+  - `build-catalog`,
+  - `resolve-packages`,
+  - `write-lock`,
+  - `digest`,
+  - `render-docs`,
+  - `validate-generated`,
+  - `verify-lock`.
+
+### Validation
+
+- Confirms `s080 GN` validates generated artifacts against 300 generated files.
+- Confirms `s090 VF` verifies the committed lock as current.
+- Confirms `accountable-record validate-generated` reports generated artifacts
+  as current.
+- Confirms `accountable-record verify-lock` reports the lock as current.
+
+### Notes
+
+- This release keeps the lower-level commands as supported operational entry
+  points.
+- The staged pipeline is now the preferred way to understand and run the full
+  Accountable Record source-to-artifact lifecycle.
+
+---
+
 ## [0.2.0] - 2026-05-25
 
 Second public working-draft release of the Accountable Record contract.
@@ -328,6 +399,7 @@ Follow these steps exactly when creating a new release.
 1.1. `CITATION.cff` - update `version` and `date-released`
 1.2. CHANGELOG.md: add section, move unreleased entries, update links
 1.3. `SE_MANIFEST.toml` - update contract_version
+1.4. `pyproject.toml` - update `fallback-version` (near the end of the file)
 
 ### Task 2. Validate
 
@@ -340,12 +412,7 @@ uvx pre-commit run --all-files
 uv run accountable-record check --strict
 
 # generate derived artifacts
-uv run accountable-record export
-uv run accountable-record build-catalog
-uv run accountable-record resolve-packages
-uv run accountable-record write-lock
-uv run accountable-record digest
-uv run accountable-record render-docs
+uv run accountable-record run all
 
 # validate generated artifacts and lock
 uv run accountable-record validate-generated
@@ -391,7 +458,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/accountable-record/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/accountable-record/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.3.0
 [0.2.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.2.0
 [0.1.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.1.0
 

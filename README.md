@@ -182,6 +182,14 @@ uv run se-manifest validate-manifest --strict
 uv run accountable-record check --strict
 
 # generate derived artifacts
+uv run accountable-record run s050
+uv run accountable-record run s060
+uv run accountable-record run s070
+uv run accountable-record run s080
+uv run accountable-record run s090
+uv run accountable-record run all
+
+# alternatively (optional)
 uv run accountable-record export
 uv run accountable-record build-catalog
 uv run accountable-record resolve-packages
