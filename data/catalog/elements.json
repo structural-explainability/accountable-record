@@ -11,7 +11,7 @@
       "persistent_id": "urn:ar:se:accountable-record:claims:claim",
       "source": "data/elements/claims/claim/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -23,7 +23,7 @@
       "persistent_id": "urn:ar:se:accountable-record:claims:claim-attachment",
       "source": "data/elements/claims/claim-attachment/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -35,7 +35,7 @@
       "persistent_id": "urn:ar:se:accountable-record:claims:claim-kind",
       "source": "data/elements/claims/claim-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -47,7 +47,7 @@
       "persistent_id": "urn:ar:se:accountable-record:claims:claim-shape",
       "source": "data/elements/claims/claim-shape/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -59,7 +59,7 @@
       "persistent_id": "urn:ar:se:accountable-record:claims:claim-status",
       "source": "data/elements/claims/claim-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -71,7 +71,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:claim-outcome",
       "source": "data/elements/conformance/claim-outcome/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -83,7 +83,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:claim-selection",
       "source": "data/elements/conformance/claim-selection/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -95,7 +95,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:compatibility-fixture",
       "source": "data/elements/conformance/compatibility-fixture/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -107,7 +107,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-check",
       "source": "data/elements/conformance/conformance-check/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -119,7 +119,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-declaration",
       "source": "data/elements/conformance/conformance-declaration/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -131,7 +131,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-outcome",
       "source": "data/elements/conformance/conformance-outcome/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -143,7 +143,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-profile",
       "source": "data/elements/conformance/conformance-profile/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -155,7 +155,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:conformance-report",
       "source": "data/elements/conformance/conformance-report/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -167,7 +167,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:expected-report",
       "source": "data/elements/conformance/expected-report/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -179,7 +179,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:not-run-metadata",
       "source": "data/elements/conformance/not-run-metadata/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -191,7 +191,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:requirement",
       "source": "data/elements/conformance/requirement/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -203,7 +203,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:rule",
       "source": "data/elements/conformance/rule/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -215,7 +215,7 @@
       "persistent_id": "urn:ar:se:accountable-record:conformance:structural-non-conformance",
       "source": "data/elements/conformance/structural-non-conformance/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -227,7 +227,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:alternative-claim",
       "source": "data/elements/disagreement/alternative-claim/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -239,7 +239,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:contested-claim",
       "source": "data/elements/disagreement/contested-claim/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -251,7 +251,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:contested-relation",
       "source": "data/elements/disagreement/contested-relation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -263,7 +263,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:dispute",
       "source": "data/elements/disagreement/dispute/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -275,7 +275,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:interpretation",
       "source": "data/elements/disagreement/interpretation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -287,7 +287,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:objection",
       "source": "data/elements/disagreement/objection/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -299,7 +299,7 @@
       "persistent_id": "urn:ar:se:accountable-record:disagreement:resolution-status",
       "source": "data/elements/disagreement/resolution-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -311,7 +311,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:compatibility-manifest",
       "source": "data/elements/exports/compatibility-manifest/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -323,7 +323,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-artifact",
       "source": "data/elements/exports/export-artifact/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -335,7 +335,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-bundle",
       "source": "data/elements/exports/export-bundle/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -347,7 +347,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-envelope",
       "source": "data/elements/exports/export-envelope/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -359,7 +359,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-extension",
       "source": "data/elements/exports/export-extension/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -371,7 +371,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-index",
       "source": "data/elements/exports/export-index/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -383,7 +383,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-profile",
       "source": "data/elements/exports/export-profile/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -395,7 +395,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-report",
       "source": "data/elements/exports/export-report/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -407,7 +407,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:export-schema",
       "source": "data/elements/exports/export-schema/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -419,7 +419,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:forbidden-extension",
       "source": "data/elements/exports/forbidden-extension/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -431,7 +431,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:lock-file",
       "source": "data/elements/exports/lock-file/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -443,7 +443,7 @@
       "persistent_id": "urn:ar:se:accountable-record:exports:release-contract",
       "source": "data/elements/exports/release-contract/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -455,7 +455,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:collapse-detection",
       "source": "data/elements/failure-modes/collapse-detection/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -467,7 +467,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:collapse-pattern",
       "source": "data/elements/failure-modes/collapse-pattern/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -479,7 +479,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:collapse-remediation",
       "source": "data/elements/failure-modes/collapse-remediation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -491,7 +491,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:failure-mode",
       "source": "data/elements/failure-modes/failure-mode/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -503,7 +503,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:profile-failure-mode",
       "source": "data/elements/failure-modes/profile-failure-mode/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -515,7 +515,7 @@
       "persistent_id": "urn:ar:se:accountable-record:failure-modes:structural-collapse",
       "source": "data/elements/failure-modes/structural-collapse/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -527,7 +527,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:adoption-policy",
       "source": "data/elements/governance/adoption-policy/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -539,7 +539,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:change-policy",
       "source": "data/elements/governance/change-policy/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -551,7 +551,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:compatibility-policy",
       "source": "data/elements/governance/compatibility-policy/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -563,7 +563,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:decision-record",
       "source": "data/elements/governance/decision-record/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -575,7 +575,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:deprecation-policy",
       "source": "data/elements/governance/deprecation-policy/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -587,7 +587,7 @@
       "persistent_id": "urn:ar:se:accountable-record:governance:steward",
       "source": "data/elements/governance/steward/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -599,7 +599,7 @@
       "persistent_id": "urn:ar:se:accountable-record:identity:identifier",
       "source": "data/elements/identity/identifier/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -611,7 +611,7 @@
       "persistent_id": "urn:ar:se:accountable-record:identity:namespace",
       "source": "data/elements/identity/namespace/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -623,7 +623,7 @@
       "persistent_id": "urn:ar:se:accountable-record:identity:version",
       "source": "data/elements/identity/version/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -635,7 +635,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:candidate-target",
       "source": "data/elements/mappings/candidate-target/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -647,7 +647,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:external-standard",
       "source": "data/elements/mappings/external-standard/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -659,7 +659,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:field-mapping",
       "source": "data/elements/mappings/field-mapping/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -671,7 +671,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:field-role",
       "source": "data/elements/mappings/field-role/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -683,7 +683,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-answer",
       "source": "data/elements/mappings/mapping-answer/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -695,7 +695,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-example",
       "source": "data/elements/mappings/mapping-example/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -707,7 +707,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-guide",
       "source": "data/elements/mappings/mapping-guide/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -719,7 +719,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-question",
       "source": "data/elements/mappings/mapping-question/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -731,7 +731,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-rule",
       "source": "data/elements/mappings/mapping-rule/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -743,7 +743,7 @@
       "persistent_id": "urn:ar:se:accountable-record:mappings:mapping-warning",
       "source": "data/elements/mappings/mapping-warning/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -755,7 +755,7 @@
       "persistent_id": "urn:ar:se:accountable-record:maturity:level-check",
       "source": "data/elements/maturity/level-check/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -767,7 +767,7 @@
       "persistent_id": "urn:ar:se:accountable-record:maturity:level-requirement",
       "source": "data/elements/maturity/level-requirement/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -779,7 +779,7 @@
       "persistent_id": "urn:ar:se:accountable-record:maturity:maturity-assessment",
       "source": "data/elements/maturity/maturity-assessment/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -791,7 +791,7 @@
       "persistent_id": "urn:ar:se:accountable-record:maturity:maturity-level",
       "source": "data/elements/maturity/maturity-level/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -803,7 +803,7 @@
       "persistent_id": "urn:ar:se:accountable-record:maturity:progression-path",
       "source": "data/elements/maturity/progression-path/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -815,7 +815,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:contributor",
       "source": "data/elements/provenance/contributor/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -827,7 +827,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:creator",
       "source": "data/elements/provenance/creator/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -839,7 +839,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:custody-event",
       "source": "data/elements/provenance/custody-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -851,7 +851,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:derivation-event",
       "source": "data/elements/provenance/derivation-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -863,7 +863,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:generation-event",
       "source": "data/elements/provenance/generation-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -875,7 +875,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:provenance-event",
       "source": "data/elements/provenance/provenance-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -887,7 +887,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:publication-event",
       "source": "data/elements/provenance/publication-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -899,7 +899,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:revision-event",
       "source": "data/elements/provenance/revision-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -911,7 +911,7 @@
       "persistent_id": "urn:ar:se:accountable-record:provenance:tool-used",
       "source": "data/elements/provenance/tool-used/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -923,7 +923,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:citation",
       "source": "data/elements/references/citation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -935,7 +935,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:hash-reference",
       "source": "data/elements/references/hash-reference/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -947,7 +947,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:locator",
       "source": "data/elements/references/locator/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -959,7 +959,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:source-reference",
       "source": "data/elements/references/source-reference/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -971,7 +971,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:source-span",
       "source": "data/elements/references/source-span/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -983,7 +983,7 @@
       "persistent_id": "urn:ar:se:accountable-record:references:uri-reference",
       "source": "data/elements/references/uri-reference/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -995,7 +995,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:contradiction",
       "source": "data/elements/relations/contradiction/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1007,7 +1007,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:dependency",
       "source": "data/elements/relations/dependency/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1019,7 +1019,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:derivation",
       "source": "data/elements/relations/derivation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1031,7 +1031,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:equivalence",
       "source": "data/elements/relations/equivalence/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1043,7 +1043,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:mapping-relation",
       "source": "data/elements/relations/mapping-relation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1055,7 +1055,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:relation",
       "source": "data/elements/relations/relation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1067,7 +1067,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:relation-kind",
       "source": "data/elements/relations/relation-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1079,7 +1079,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:satisfaction",
       "source": "data/elements/relations/satisfaction/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1091,7 +1091,7 @@
       "persistent_id": "urn:ar:se:accountable-record:relations:support",
       "source": "data/elements/relations/support/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1103,7 +1103,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:authority-source",
       "source": "data/elements/sources/authority-source/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1115,7 +1115,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:evidence-source",
       "source": "data/elements/sources/evidence-source/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1127,7 +1127,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:normative-source",
       "source": "data/elements/sources/normative-source/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1139,7 +1139,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:source",
       "source": "data/elements/sources/source/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1151,7 +1151,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:source-kind",
       "source": "data/elements/sources/source-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1163,7 +1163,7 @@
       "persistent_id": "urn:ar:se:accountable-record:sources:source-role",
       "source": "data/elements/sources/source-role/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1175,7 +1175,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:deprecation-status",
       "source": "data/elements/status/deprecation-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1187,7 +1187,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:dispute-status",
       "source": "data/elements/status/dispute-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1199,7 +1199,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:lifecycle-status",
       "source": "data/elements/status/lifecycle-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1211,7 +1211,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:publication-status",
       "source": "data/elements/status/publication-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1223,7 +1223,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:review-status",
       "source": "data/elements/status/review-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1235,7 +1235,7 @@
       "persistent_id": "urn:ar:se:accountable-record:status:validity-status",
       "source": "data/elements/status/validity-status/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1247,7 +1247,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:record-subject",
       "source": "data/elements/subjects/record-subject/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1259,7 +1259,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:record-type-subject-binding",
       "source": "data/elements/subjects/record-type-subject-binding/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1271,7 +1271,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:subject-classification",
       "source": "data/elements/subjects/subject-classification/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1283,7 +1283,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:subject-kind",
       "source": "data/elements/subjects/subject-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1295,7 +1295,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:subject-kind-declaration",
       "source": "data/elements/subjects/subject-kind-declaration/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1307,7 +1307,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:subject-kind-mapping",
       "source": "data/elements/subjects/subject-kind-mapping/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1319,7 +1319,7 @@
       "persistent_id": "urn:ar:se:accountable-record:subjects:subject-scope",
       "source": "data/elements/subjects/subject-scope/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1331,7 +1331,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait",
       "source": "data/elements/traits/trait/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1343,7 +1343,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-claim-binding",
       "source": "data/elements/traits/trait-claim-binding/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1355,7 +1355,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-conformance-binding",
       "source": "data/elements/traits/trait-conformance-binding/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1367,7 +1367,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-declaration",
       "source": "data/elements/traits/trait-declaration/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1379,7 +1379,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-kind",
       "source": "data/elements/traits/trait-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1391,7 +1391,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-requirement",
       "source": "data/elements/traits/trait-requirement/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1403,7 +1403,7 @@
       "persistent_id": "urn:ar:se:accountable-record:traits:trait-value",
       "source": "data/elements/traits/trait-value/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1415,7 +1415,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation",
       "source": "data/elements/transformations/transformation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1427,7 +1427,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-admissibility",
       "source": "data/elements/transformations/transformation-admissibility/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1439,7 +1439,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-behavior",
       "source": "data/elements/transformations/transformation-behavior/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1451,7 +1451,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-declaration",
       "source": "data/elements/transformations/transformation-declaration/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1463,7 +1463,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-evidence",
       "source": "data/elements/transformations/transformation-evidence/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1475,7 +1475,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-kind",
       "source": "data/elements/transformations/transformation-kind/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1487,7 +1487,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-lineage",
       "source": "data/elements/transformations/transformation-lineage/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1499,7 +1499,7 @@
       "persistent_id": "urn:ar:se:accountable-record:transformations:transformation-profile-rule",
       "source": "data/elements/transformations/transformation-profile-rule/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1511,7 +1511,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:check",
       "source": "data/elements/verification/check/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1523,7 +1523,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:confidence",
       "source": "data/elements/verification/confidence/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1535,7 +1535,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:evidence",
       "source": "data/elements/verification/evidence/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1547,7 +1547,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:finding",
       "source": "data/elements/verification/finding/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1559,7 +1559,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:report-production",
       "source": "data/elements/verification/report-production/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1571,7 +1571,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:reproducibility",
       "source": "data/elements/verification/reproducibility/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1583,7 +1583,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:result",
       "source": "data/elements/verification/result/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1595,7 +1595,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:review",
       "source": "data/elements/verification/review/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1607,7 +1607,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:reviewer",
       "source": "data/elements/verification/reviewer/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1619,7 +1619,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:sub-result",
       "source": "data/elements/verification/sub-result/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1631,7 +1631,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verification-event",
       "source": "data/elements/verification/verification-event/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1643,7 +1643,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verification-method",
       "source": "data/elements/verification/verification-method/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1655,7 +1655,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verifier",
       "source": "data/elements/verification/verifier/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1667,7 +1667,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verifier-error",
       "source": "data/elements/verification/verifier-error/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1679,7 +1679,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verifier-expectation",
       "source": "data/elements/verification/verifier-expectation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1691,7 +1691,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verifier-identity",
       "source": "data/elements/verification/verifier-identity/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     },
     {
       "artifact_kind": "element-type",
@@ -1703,7 +1703,7 @@
       "persistent_id": "urn:ar:se:accountable-record:verification:verifier-operation",
       "source": "data/elements/verification/verifier-operation/element.toml",
       "status": "working-draft",
-      "version": "0.1.0"
+      "version": "0.3.0"
     }
   ],
   "schema": "ar-element-catalog-1"

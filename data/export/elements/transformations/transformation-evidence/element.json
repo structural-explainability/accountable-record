@@ -43,7 +43,7 @@
   "release": {
     "immutable": false,
     "status": "working-draft",
-    "version": "0.1.0"
+    "version": "0.3.0"
   },
   "schema": "ar-element-type-1",
   "stewardship": {

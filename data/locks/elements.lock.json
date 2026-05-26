@@ -1,6 +1,6 @@
 {
   "schema": "ar-element-lock-1",
-  "resolved_at": "2026-05-26T01:41:55Z",
+  "resolved_at": "2026-05-26T02:03:57Z",
   "resolution_policy": {
     "one_major_version_per_identity_per_graph": true,
     "range_conflicts_are_errors": true
@@ -8,367 +8,367 @@
   "packages": [
     {
       "compact_id": "se.accountable-record.packages.core",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "canonical_uri": "https://structural-explainability.org/accountable-record/packages/core",
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "d8c0364f8804397a6b052b63a12ca665851a0ed43597dfad755fa80dd30e968d",
+      "digest": "fd6a50673da7cabecf4612cb4788094afd0787116ef5d92b330dea97cc41c498",
       "source": "data/packages/core/package.toml"
     },
     {
       "compact_id": "se.accountable-record.packages.source-traceability",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "canonical_uri": "https://structural-explainability.org/accountable-record/packages/source-traceability",
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "e8a270d8593b9aeb348ab14b3b816d8ce12e460495eb675b01cfa97a63df7917",
+      "digest": "755b3a246eb3a0d9a9fbccbb3ea17469bfd06bc72b15b305d1589cd4161c9a15",
       "source": "data/packages/source-traceability/package.toml"
     },
     {
       "compact_id": "se.accountable-record.packages.verification-core",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "canonical_uri": "https://structural-explainability.org/accountable-record/packages/verification-core",
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "dd7987c77a0908cd8833a4ca9340633e36fabff1f421ad6aed5d6b6b29c7c672",
+      "digest": "bdcff1797791d0c2003b56eccd0b2b7a5e93596642c7177ebccb3632fd5cd186",
       "source": "data/packages/verification-core/package.toml"
     }
   ],
   "elements": [
     {
       "compact_id": "se.accountable-record.identity.identifier",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "d2bbce255b524dcf640fdf8c415240471548bc3aa04bd0c18495bbb0b20affd1"
+      "digest": "a76b7fef6ff2a4d6431f9d54868b7d2672d021dd62630385b76e2412ed2eafbe"
     },
     {
       "compact_id": "se.accountable-record.subjects.record-subject",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "e00d8b34c79db37284420d493958226a74e262e7393757a69662c73914d941dd"
+      "digest": "d5a9d1ced7203c0fa61a76e695c4077b064b320835b78c38ebb1f42eb29500e0"
     },
     {
       "compact_id": "se.accountable-record.claims.claim",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "daba9e4406eb6425abe79def14b3c9e2d21ff5305e5330b5a03d94621be91b89"
+      "digest": "b04ca24c0272365e5e972d0462eb9cc395c1086a2de35a1cd547398e19430e8b"
     },
     {
       "compact_id": "se.accountable-record.traits.trait",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "7edebd185ffe1e2c4f786faf6ee31b58b09a88507bab442a4cb05909b7ee8930"
+      "digest": "54fdbf0da2244dc0e4528da344596eeecfb07d652df8112863c0b9a3e0084852"
     },
     {
       "compact_id": "se.accountable-record.sources.source",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0",
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.core@0.3.0",
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "e2ce8aec8ed77e521a2a138d57264f1ef54ce1a6148e2e0b89ae1a81412aeba7"
+      "digest": "4913237d2d87eff3a38488ce54ee19e1db29f5d0f0bf7defd62936880620fe79"
     },
     {
       "compact_id": "se.accountable-record.references.source-reference",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0",
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.core@0.3.0",
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "cc2bfeed46b9975a417ae06be796117b189a53d299e02028419f4616d8ccb0f0"
+      "digest": "40840ace820d32ca96418ed86b3a1e4dc2ed3526a490d0e160075bfe3475f1fc"
     },
     {
       "compact_id": "se.accountable-record.relations.relation",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "2784e3ce60ad406cd8fd2a61073d2b7f4de158b7f33356bf0fde2dc50f1ca8e6"
+      "digest": "feff03914d6cc73b4451a3edcc39ef9bfd38cde9a55025d8c451f30e1446e318"
     },
     {
       "compact_id": "se.accountable-record.provenance.provenance-event",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0",
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.core@0.3.0",
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "13a09603f770a3cf1be6f56d367d966687829ef7e7adff32bec7203bcd82e475"
+      "digest": "878ae893e1a7e18896a4092aa86971b97e947494c3c22f16be58eb3a831b3466"
     },
     {
       "compact_id": "se.accountable-record.verification.verification-event",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0",
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0",
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "f28dc214864fe6bcc9be15ae3de5431d608ef2ff1296e888ec2e17046c98bf37"
+      "digest": "d8a2183222fa92e98fddde5570ca2d0da2a3e267fa90797dc4caf9847100f4b2"
     },
     {
       "compact_id": "se.accountable-record.conformance.conformance-check",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0",
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0",
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "363822b1081a473ad6548fea4f176ef8e65028490004653b3651f59a5aa19d23"
+      "digest": "b88fb6a477c0dcb10fe378248a560a8256ccfb3943d979a4850c913f3e1027f1"
     },
     {
       "compact_id": "se.accountable-record.maturity.maturity-level",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.core@0.1.0"
+        "se.accountable-record.packages.core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "9bc65e1cb4180d5252bdb488e48e5fdbf23584d3eae6eb586d6019fc986eae47"
+      "digest": "845a448729a23fa3365749055d6d052d3a9b5131fe4f9f5672e61b0b13d053a0"
     },
     {
       "compact_id": "se.accountable-record.sources.source-kind",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "c8fcd50e227190cc425631a0482527c00b2a3418ad4608286c118f425e4d8b11"
+      "digest": "c51c27423aae3fd731adfa0a129995692d94a1828b0723fe3db97dd02ce37e5b"
     },
     {
       "compact_id": "se.accountable-record.sources.source-role",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "390d2a794069fb73b27dce614d91198aa30dee40c65826aef4d9d2a9f80b37fa"
+      "digest": "ad473515f4383c60d07e8a8c4fb6b792c56181b2023673a848c060351eeacb85"
     },
     {
       "compact_id": "se.accountable-record.references.citation",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "72596e08e9d2f2c80f0e35c07e5b4201f55a5876de7bfe1756d9b7564b2b0290"
+      "digest": "f541f0f394da2469b6884d9657191c838a2ee28b55b46c8a5e5d5b72a86ac630"
     },
     {
       "compact_id": "se.accountable-record.references.locator",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "1039c5a9f3495da83c1148ba6c0052d7d2f2dd099ae7f1b72777ec31f5267ec2"
+      "digest": "88fb56aa8e11403dee18371ab1a340ad4e0bd1e5e08893efd1498bb737fa620e"
     },
     {
       "compact_id": "se.accountable-record.references.source-span",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "a382dcae72bdc47f90b4a1e4ca32b651e8b21bcd2f8d99c2a69608645b08bc92"
+      "digest": "3d65bab4318d341ee80bdf146b3e890cc6455419e229b4b10dcec22bc6015b29"
     },
     {
       "compact_id": "se.accountable-record.references.uri-reference",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "5e9d0efc687e6aac4c493541a2b9699c10783bd58e71353cd6ce7490739c9082"
+      "digest": "4a87bf4e08d0dd53398512b4454c421e1af70c9f1d8e4597e05c325ecb16e152"
     },
     {
       "compact_id": "se.accountable-record.references.hash-reference",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "ccce3387098fa1854050f093eef9af79237dfcdfddcc4a3ff13b6eead083c53c"
+      "digest": "724bc1988e935a1e3ba200d021f38eb2d5ce6e0093723cc2bec55fc62338528c"
     },
     {
       "compact_id": "se.accountable-record.provenance.derivation-event",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "e85d305e7dd962103742279f3824450ff6d5f9a1647b991785acccc48f46181b"
+      "digest": "d4282cf9c79a4de4734b83c9d9c71345a788968613abc6c18fa3e5de29efa318"
     },
     {
       "compact_id": "se.accountable-record.provenance.revision-event",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "9d182325befc2e06506d972a895cd794e8d918d5b966f8b9f4f48a684ae67536"
+      "digest": "e4f36f33b4147e89a48bdb58151f5aea9297b3d956582fd6a7f27a5c4eda2cc9"
     },
     {
       "compact_id": "se.accountable-record.provenance.custody-event",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.source-traceability@0.1.0"
+        "se.accountable-record.packages.source-traceability@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "fdae2c244216871812d24088008025cc578b8e2aa76406139dd55f991ddf5cf6"
+      "digest": "8c7c91c576119930902bd18917a09df1828c2fdc6df8c6464c132129aaa01324"
     },
     {
       "compact_id": "se.accountable-record.verification.verification-method",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "e4fbc0f292da837db5188a54ab4e318331afd406cf0f76affbaf6d9db74dbda1"
+      "digest": "222fcb087c30aa77aa2686111e24d450e655ca5a370da68a9573e6caddab5f82"
     },
     {
       "compact_id": "se.accountable-record.verification.evidence",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "3afd38a55a1385ddbf06c4e69530aa9454846872e4320aabbfe9b1fd8653f4bb"
+      "digest": "a0b18d65d5ad6d76f4266240edc4a2c844db14e5f58d7a9632bbc3fb58cec315"
     },
     {
       "compact_id": "se.accountable-record.verification.check",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "32b90747ffb7b0d1bf0ef36ee89ea5cbc10324916266d3241ef205ba250dfc9d"
+      "digest": "9752d112ae493ab96ac727b2111ea6a8d7e83a633687aede2674d337ffd3584b"
     },
     {
       "compact_id": "se.accountable-record.verification.review",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "844fa0117617f68c3a265daa0d04f1e0d95436decd79d20e1b5ebc6c88649f67"
+      "digest": "d0e6438862f5216fa861891e7a4863324a87455fd22e02721bff4aa4cd3aca9d"
     },
     {
       "compact_id": "se.accountable-record.verification.reviewer",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "445ff13c6a8c1ef9379d7c1cf8feced13bf91d6b49552fa14055a2400f5df3f6"
+      "digest": "77abb9ec0e985078ea83a4153b8a15b5a919500c85f277c546e0cf79a37a78ad"
     },
     {
       "compact_id": "se.accountable-record.verification.result",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "59dea1b9de93588e5d67e2279c58819916f08dcb0cada4a016d5242ffdc98ac4"
+      "digest": "40de48ecb8c068287546b20c4b90c24fd828b7ffee7fa86eacc952197231ce27"
     },
     {
       "compact_id": "se.accountable-record.verification.confidence",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "fab91219a3604669281d91400cd5f4efc22129afbdca11d8391da4f939866b23"
+      "digest": "32899bb19c2dd2e3914cea1200287f97d4da0fc380c55cc312d8de81dbebf459"
     },
     {
       "compact_id": "se.accountable-record.verification.reproducibility",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "4241c5591244409d894e7dfd5340134787652dc57e2f746d154f3f6084c45a15"
+      "digest": "74979705176ae24748e24a7f43f464b82e80c0936dd22472d8a2efd14f280d1f"
     },
     {
       "compact_id": "se.accountable-record.verification.verifier-expectation",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "f3c5a7ec3586bc99ff4d8ce486bb29bdee7717773299544654fc2d33558be9d7"
+      "digest": "d4374ff00ab23717a2dd237500af41300b1350a1d9e7e0e5dac08d3cf71003ac"
     },
     {
       "compact_id": "se.accountable-record.conformance.conformance-outcome",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "c977fb9fe77303d6be526ca781e1142139190df16dd52ab5b27f8e2ff31f4f19"
+      "digest": "f67fdca63c34ca2a5a2262108bd2a7b947df345c9eb03cd5eb623f97657bee3d"
     },
     {
       "compact_id": "se.accountable-record.conformance.conformance-report",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "4301f216ed83c56d5a32cb2410b8b0cbd0d49777b94aafd251dbe9e87b29a452"
+      "digest": "5e54f6028f2f4a8ab24330137efbe51a53cda0a55438634f28b40aca7408e505"
     },
     {
       "compact_id": "se.accountable-record.conformance.expected-report",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "included_by": [
-        "se.accountable-record.packages.verification-core@0.1.0"
+        "se.accountable-record.packages.verification-core@0.3.0"
       ],
       "digest_algorithm": "sha256",
       "digest_target": "canonical-generated-json",
-      "digest": "91ed1edcf52e8953889b8861a26b31ed23b4aea8536624ad24c6bbf5d9a524b3"
+      "digest": "ee4cba98e0b4ebee860616f103fd4f11b58772dcb660f94bb89fce020cab1ede"
     }
   ]
 }

@@ -411,6 +411,9 @@ uvx pre-commit run --all-files
 # validate authored source artifacts
 uv run accountable-record check --strict
 
+# update versions
+uv run python scripts/update_ar_versions.py x.y.z
+
 # generate derived artifacts
 uv run accountable-record run all
 

@@ -13,7 +13,7 @@ authority_alias = "se"
 project = "accountable-record"
 
 [release]
-version = "0.1.0"
+version = "0.3.0"
 status = "working-draft"
 immutable = false
 
