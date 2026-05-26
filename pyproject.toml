@@ -13,17 +13,19 @@
 [project]
 name = "accountable-record" # Package distribution name (lowercase and dashes).
 readme = "README.md"
-requires-python = ">=3.15"
+requires-python = ">=3.14"
 dynamic = ["version"] # WHY: Version is computed from git tags at build time (see [tool.hatch.version] below).
 
-dependencies = []
+dependencies = [
+    "se-manifest-schema",
+    "se-contract-kit",
+]
 
 [project.optional-dependencies]
 # WHY: Optional dependency groups keep the core install clean and focused.
 dev = [
     # REQ.DEV.DEPS: External packages used for linting, testing, type checking, etc.
     "build", # WHY: build tool required for packaging and publishing.
-    "packaging",  # WHY: Required by validate-pyproject for dependency and license validation.
     "pre-commit",
     "pyright",
     "pytest",
@@ -52,27 +54,13 @@ accountable-record = "accountable_record.cli:main"
 [tool.pyright]
 # CUSTOM: Pyright configuration for static type checking.
 # WHY: Strict type checking helps catch bugs early.
-include = ["src"] # WHY: Include both source and test code for comprehensive type checking.
-extraPaths = ["src"] # WHY: Ensure imports are resolved relative to src/ for consistent behavior across environments.
+include = ["src", "tests"] # WHY: Type-check both source and tests.
+extraPaths = ["src"] # WHY: Resolve imports relative to src/ for consistent behavior across environments.
 exclude = ["**/node_modules", "**/.*", ".venv", "**/__pycache__", "dist", "build"]
-pythonVersion = "3.13" # 3.14 stubs incomplete in current pyright
+pythonVersion = "3.14"
 reportMissingTypeStubs = "none" # WHY: Avoid warnings from third-party libraries without type stubs.
-reportMissingImports = "warning" # WHY: Warn about missing imports to catch potential issues, but allow flexibility in notebooks and dynamic code.
-reportPrivateUsage = "none" # WHY: Allow usage of private members (e.g., _version.py) without warnings, common in Python projects.
-reportUntypedClassDecorator = "none"  # @dataclass stubs incomplete in current pyright
-reportArgumentType = "none"           # len() resolves to collections.abc, pyright bug
-reportUnknownMemberType = "none"      # WHY: external lib stub gaps
-reportUnknownVariableType = "none"    # WHY: external lib stub gaps
-reportCallIssue = "none"              # WHY: @dataclass frozen interactions
+reportPrivateUsage = "none" # WHY: Allow usage of private members (e.g., _version.py), common in Python projects.
 typeCheckingMode = "basic" # strict | basic | off
-
-[[tool.pyright.executionEnvironments]]
-root = "tests"
-reportUnknownMemberType = "none"
-reportUnknownVariableType = "none"
-reportUnknownParameterType = "none"
-reportMissingParameterType = "none"
-reportUnknownArgumentType = "none"
 
 # === PYTEST (VERIFY LOGIC) ===
 
@@ -80,7 +68,7 @@ reportUnknownArgumentType = "none"
 # WHY: Consistent test discovery and coverage visibility.
 minversion = "9.0"
 testpaths = ["tests"]
-addopts = "--cov=accountable_record --cov-report=term-missing --cov-fail-under=0"
+addopts = "--cov=accountable_record --cov-report=term-missing --cov-fail-under=25"
 
 # === RUFF (PYTHON FORMATTING AND LINTING) ===
 
@@ -98,7 +86,7 @@ exclude = [
 ]
 line-length = 88 # WHY: PEP 8 standard, wrap when possible.
 preview = false # WHY: Stable features only; avoid preview features.
-target-version = "py314" # WHY: 3.14 not available yet; match latest supported Python version.
+target-version = "py314" # WHY: match latest supported Python version.
 unsafe-fixes = false # WHY: Avoid potentially unsafe automatic fixes.
 
 [tool.ruff.format]
@@ -175,13 +163,17 @@ packages = ["src/accountable_record"]  # REQ.PACKAGES: Discovery rooted at src/.
 
 [tool.hatch.build.targets.wheel.force-include]
 "data" = "accountable_record/_data"
-"MANIFEST.toml" = "accountable_record/_contract/MANIFEST.toml"
+"SE_MANIFEST.toml" = "accountable_record/_contract/SE_MANIFEST.toml"
 
 [tool.hatch.metadata]
 allow-direct-references = true # WHY: Allow direct references to git repos for dependencies, common in greenfield projects.
 
 [tool.hatch.version]
-# WHY: Version derived from git tags at build time
+# Used when no git tags present (fresh clone, CI). Keep in sync with CITATION.cff.
+fallback-version = "0.1.0"
+# WHY: Version derived from git tags at build time.
 source = "vcs"
-fallback-version = "0.1.0"        # Used when no git tags present (fresh clone, CI).
+# WHY: Allow hatch-vcs to find the Git root when built from a subdirectory,
+# temporary build directory, or isolated build env.
+search_parent_directories = true
 tag-pattern = "^(?:v)?(?P<version>\\d+\\.\\d+\\.\\d+)$"

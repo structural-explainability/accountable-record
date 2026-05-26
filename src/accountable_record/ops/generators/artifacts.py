@@ -14,7 +14,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 import tomllib
 
-from accountable_record.exporters.canonical_json import to_canonical_json
+from accountable_record.ops.exporters.canonical_json import to_canonical_json
 
 CATALOG_SCHEMA = "ar-element-catalog-1"
 

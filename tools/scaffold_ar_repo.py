@@ -470,7 +470,7 @@ ROOT_FILES = {
     "DECISIONS.md": "# Decisions\n\n## Decision: Data-first verifiable element architecture\n\nAccountable Records is a data-first specification. An Accountable Record is composed of verifiable elements.\n",
     "AGENTS.md": "# Agents\n\nFollow the repository source-of-truth boundaries. Data files define the specification. Generated files must not be hand edited.\n",
     "AGENT_CONDUCT.md": "# Agent Conduct\n\nPreserve rationale-bearing comments and source-of-truth boundaries.\n",
-    "CLAUDE.md": "# Claude\n\nRead README.md, DECISIONS.md, AGENTS.md, and MANIFEST.toml before making changes.\n",
+    "CLAUDE.md": "# Claude\n\nRead README.md, DECISIONS.md, AGENTS.md, and SE_MANIFEST.toml before making changes.\n",
 }
 
 
@@ -2779,7 +2779,7 @@ packages = [
         package_dir = packages_dir / package_id
         write_if_missing(
             package_dir / "package.toml",
-            package_manifest(package_id, package_data),
+            package_manifest(package_id, package_data),  # type: ignore
         )
         write_if_missing(package_dir / "fixtures" / ".gitkeep", "")
         write_if_missing(package_dir / "expected-reports" / ".gitkeep", "")

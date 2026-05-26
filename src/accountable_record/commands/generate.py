@@ -9,13 +9,13 @@ import argparse
 from collections.abc import Callable
 from pathlib import Path
 
-from accountable_record.exporters.data_export import run_export
-from accountable_record.generators.artifacts import write_catalog
-from accountable_record.generators.docs import render_reference_docs
-from accountable_record.generators.lock import verify_lock, write_lock
-from accountable_record.resolvers.packages import resolve_packages
-from accountable_record.resolvers.versions import digest_toml_file
-from accountable_record.validators.generated import validate_generated
+from accountable_record.ops.exporters.data_export import run_export
+from accountable_record.ops.generators.artifacts import write_catalog
+from accountable_record.ops.generators.docs import render_reference_docs
+from accountable_record.ops.generators.lock import verify_lock, write_lock
+from accountable_record.ops.resolvers.packages import resolve_packages
+from accountable_record.ops.resolvers.versions import digest_toml_file
+from accountable_record.ops.validators.generated import validate_generated
 
 CommandMain = Callable[[list[str]], int]
 

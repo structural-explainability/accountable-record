@@ -160,16 +160,23 @@ code .
 ### In a VS Code terminal
 
 ```shell
+# if strange errors, clean uv cache
+# uv cache clean
+
 uv self update
-uv python pin 3.15
+uv python pin 3.14
 uv sync --extra dev --extra docs --upgrade
+
 uvx pre-commit install
 
 git add -A
 uvx pre-commit run --all-files
+# repeat if changes were made
+git add -A
+uvx pre-commit run --all-files
 
-# scaffold repository structure, only used during initial repo creation
-uv run python tools/scaffold_ar_repo.py
+# validate manifest (all repos)
+uv run se-manifest validate-manifest --strict
 
 # validate authored source artifacts
 uv run accountable-record check --strict
@@ -186,7 +193,7 @@ uv run accountable-record render-docs
 uv run accountable-record validate-generated
 uv run accountable-record verify-lock
 
-
+# types, tests, docs
 uv run python -m pyright
 uv run python -m pytest
 uv run python -m zensical build
@@ -209,4 +216,4 @@ git push -u origin main
 
 ## Manifest
 
-[MANIFEST.toml](./MANIFEST.toml)
+[SE_MANIFEST.toml](./SE_MANIFEST.toml)

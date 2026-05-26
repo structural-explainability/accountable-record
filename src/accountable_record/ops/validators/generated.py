@@ -16,8 +16,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 import tomllib
 
-from accountable_record.exporters.canonical_json import to_canonical_json
-from accountable_record.exporters.data_export import build_plans
+from accountable_record.ops.exporters.canonical_json import to_canonical_json
+from accountable_record.ops.exporters.data_export import build_plans
 
 
 @dataclass

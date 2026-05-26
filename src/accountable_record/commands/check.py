@@ -1,18 +1,25 @@
-"""Check contract artifacts for internal consistency.
+"""Check Accountable Record contract artifacts for internal consistency.
 
-WHY: This command is the repository's self-consistency gate. It runs the check
-engine (see :mod:`accountable_record.checks.engine`) against the *actual*
-``data/`` + ``docs/en/`` layout and reports failures deterministically.
+WHY: This command is the repository's self-consistency gate. It loads the
+repository's declarations, resolves its artifacts and dependencies into a
+ResolutionContext, runs the Accountable Record check registry against it, and
+reports the result deterministically.
 
 It is not the Accountable Record verifier implementation; it validates the
-contract source in this repository, not external bundles.
+contract source in this repository, not external bundles. Manifest schema
+validation is delegated to se-manifest-schema; this command runs contract-kit
+checks plus AR-specific repository consistency checks.
 """
 
 import argparse
 from pathlib import Path
 import sys
 
-from accountable_record.checks import run_all_checks
+from se_contract_kit.declarations.config import load_repo_config
+from se_contract_kit.resolution.resolver import resolve_repo_config
+from se_contract_kit.validation import run_checks
+
+from accountable_record.ops.checks.engine import accountable_record_registry
 
 
 def check_main(argv: list[str] | None = None) -> int:
@@ -22,11 +29,11 @@ def check_main(argv: list[str] | None = None) -> int:
         argv: Arguments after the ``check`` subcommand. ``None`` uses sys.argv.
 
     Returns:
-        0 when all selected checks pass, 1 otherwise.
+        The check report exit code.
     """
     parser = argparse.ArgumentParser(
         prog="accountable-record check",
-        description="Check accountable-record contract artifacts.",
+        description="Check Accountable Record contract artifacts.",
     )
     parser.add_argument(
         "--root",
@@ -41,23 +48,35 @@ def check_main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    result = run_all_checks(args.root, strict_mode=args.strict)
+    repo_root = args.root if args.root is not None else Path.cwd()
+    config = load_repo_config(repo_root=repo_root)
+    context = resolve_repo_config(repo_root=repo_root, config=config)
 
-    if not result.ok:
-        for failure in result.failures:
-            print(f"FAIL: {failure}", file=sys.stderr)
+    registry = accountable_record_registry()
+    report = run_checks(registry=registry, context=context, strict=args.strict)
+
+    if not report.passed:
+        for failure_item in report.failures:
+            location = (
+                f" [{failure_item.artifact_id}]" if failure_item.artifact_id else ""
+            )
+            print(
+                f"FAIL ({failure_item.check_id}){location}: {failure_item.message}",
+                file=sys.stderr,
+            )
         print(
-            f"\n{len(result.failures)} failure(s) across "
-            f"{len(result.checks_run)} check(s).",
+            f"\n{len(report.failures)} failure(s) across "
+            f"{len(report.results)} result(s); overall status "
+            f"{report.overall_status.value}.",
             file=sys.stderr,
         )
-        return 1
+        return report.exit_code
 
     print(
         f"OK: Accountable Record contract checks passed "
-        f"({len(result.checks_run)} checks)."
+        f"({len(registry.checks)} checks, {len(report.results)} results)."
     )
-    return 0
+    return report.exit_code
 
 
 if __name__ == "__main__":

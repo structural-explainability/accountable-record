@@ -10,7 +10,7 @@ from pathlib import Path
 import tomllib
 from typing import Any
 
-from accountable_record.exporters.canonical_json import to_canonical_json
+from accountable_record.ops.exporters.canonical_json import to_canonical_json
 
 SCHEMA_INDEX_SCHEMA = "ar-schema-index-1"
 

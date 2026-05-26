@@ -13,6 +13,68 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
 
 ---
 
+## [0.2.0] - 2026-05-25
+
+Second public working-draft release of the Accountable Record contract.
+
+This release strengthens the repository's validation architecture and prepares
+the codebase for a clearer staged source-to-artifact pipeline. It keeps the
+contract source and generated artifact workflow intact while moving check
+execution onto the shared `se-contract-kit` validation model.
+
+### Validation Architecture
+
+- Migrates Accountable Record checks from the legacy local check-engine shape
+  to the `se-contract-kit` validation model.
+- Converts AR-specific checks to kit-compatible `Check` records.
+- Updates AR checks to operate against resolved contract context rather than
+  directly against repository paths.
+- Adds an Accountable Record check registry that extends the kit's default
+  validation registry with AR-specific domain checks.
+- Keeps check execution owned by `se-contract-kit` while AR owns its ordered
+  domain-specific check set.
+- Preserves AR's stricter release hygiene policy through AR-owned strict checks,
+  including release-sensitive TODO handling.
+
+### Package Organization
+
+- Moves operational implementation layers under `src/accountable_record/ops/`.
+- Groups behind-the-scenes implementation work into:
+  - `ops/checks/`,
+  - `ops/exporters/`,
+  - `ops/generators/`,
+  - `ops/resolvers/`,
+  - `ops/validators/`.
+- Keeps command modules focused on CLI dispatch and command adaptation.
+- Keeps `ops/__init__.py` intentionally quiet so concrete operation imports
+  remain explicit and searchable.
+
+### CLI and Source Checks
+
+- Updates `accountable-record check` to use the kit-style validation report.
+- Reports failures using check ids, optional artifact ids, failure messages,
+  result counts, and overall status.
+- Keeps `validate-source` as an alias for `check`.
+- Keeps generation commands available for:
+  - `export`,
+  - `validate-generated`,
+  - `build-catalog`,
+  - `resolve-packages`,
+  - `write-lock`,
+  - `verify-lock`,
+  - `digest`,
+  - `render-docs`.
+
+### Tests and Type Checking
+
+- Updates check-engine tests to match the new kit-compatible check API.
+- Replaces legacy `(root: Path) -> list[str]` test assumptions with
+  `ResolutionContext` and `CheckResult`-based validation.
+- Confirms the current test suite passes with 38 tests.
+- Confirms `pyright` passes with zero errors.
+
+---
+
 ## [0.1.0] - 2026-05-22
 
 Initial public working-draft release of the Accountable Record contract.
@@ -265,7 +327,7 @@ Follow these steps exactly when creating a new release.
 
 1.1. `CITATION.cff` - update `version` and `date-released`
 1.2. CHANGELOG.md: add section, move unreleased entries, update links
-1.3. `MANIFEST.toml` - update contract_version
+1.3. `SE_MANIFEST.toml` - update contract_version
 
 ### Task 2. Validate
 
@@ -329,7 +391,8 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/accountable-record/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/structural-explainability/accountable-record/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.2.0
 [0.1.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.1.0
 
 <!-- markdownlint-enable MD024 -->

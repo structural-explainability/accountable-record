@@ -1,0 +1,114 @@
+# ============================================================
+# SE_MANIFEST.toml
+# ============================================================
+
+schema = "se-manifest-schema"
+schema_url = "https://github.com/structural-explainability/se-manifest-schema/blob/main/manifest-schema.toml"
+
+# === Identity ===
+
+[meta]
+purpose = "Declares the Accountable Record contract authority for downstream domain contracts, implementations, and record systems."
+
+[repo]
+name = "accountable-record"
+org = "structural-explainability"
+class = "contract"
+kind = "accountable-record"
+status = "active"
+since = "2026"
+summary = "Language-neutral Accountable Record contract for systems that must remain usable under persistent disagreement."
+
+[layer]
+space = "application"
+role = "language-neutral-contract"
+
+# === Contract authority ===
+
+[contract]
+contract_version = "0.1.0"
+contract_role = "authority"
+contract_authority = "accountable-record"
+exports_verified_contract = false
+
+# === Dependencies ===
+
+[depends]
+required = [
+    "structural-explainability/se-manifest-schema@v0.4.0",
+]
+optional = []
+
+# === Provided artifacts ===
+
+[provides]
+artifacts = [
+    "accountable-record-contract",
+    "accountable-record-entity-kinds",
+    "accountable-record-outcomes",
+    "accountable-record-maturity-framework",
+    "accountable-record-conformance-rules",
+    "accountable-record-schemas",
+]
+
+# === Scope ===
+
+[scope]
+includes = [
+    "language-neutral Accountable Record contract",
+    "AR-owned accountable entity kinds",
+    "AR-owned closed outcome vocabulary",
+    "AR-owned maturity framework",
+    "AR conformance rules",
+    "AR schema definitions",
+    "AR record structure",
+    "AR source traceability requirements",
+    "AR provenance traceability requirements",
+    "AR transformation behavior vocabulary",
+    "AR category-collapse detection vocabulary",
+    "basis for downstream domain contracts such as judicial-record and civic-record",
+]
+
+excludes = [
+    "domain-specific subject mappings",
+    "domain-specific maturity claims",
+    "domain-specific record models",
+    "judicial-record contract content",
+    "civic-record contract content",
+    "implementation-specific verifier behavior not required by the contract",
+    "Python implementation",
+    "Rust implementation",
+    "analytics, inference, optimization, recommendation, or decision logic",
+    "claims of truth, correctness, authority, legitimacy, obligation, or enforcement",
+    "replacement of existing standards, ontologies, schemas, or data systems",
+    "storage formats",
+    "query interfaces",
+    "authentication",
+    "authorization",
+    "access control",
+    "cryptographic attestation",
+]
+
+# === Validation ===
+
+[validation]
+entrypoint = "uv run se-manifest validate-manifest --path SE_MANIFEST.toml"
+strict_entrypoint = "uv run se-manifest validate-manifest --path SE_MANIFEST.toml --strict"
+tag_entrypoint = "uv run se-manifest check-version --require-tag"
+
+# === Governance ===
+
+[naming]
+pattern = "accountable-record"
+
+[governance]
+authority = "structural-explainability"
+
+# === External references ===
+
+[citation]
+cff = "CITATION.cff"
+preferred = "software"
+
+[traceability]
+identifier_map = "structural-explainability/accountable-record/IDENTIFIERS.md"

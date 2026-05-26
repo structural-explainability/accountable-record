@@ -23,9 +23,9 @@ from datetime import UTC, datetime
 import json
 from pathlib import Path
 
-from accountable_record.exporters.canonical_json import to_canonical_json
-from accountable_record.resolvers.packages import resolve_packages
-from accountable_record.resolvers.versions import (
+from accountable_record.ops.exporters.canonical_json import to_canonical_json
+from accountable_record.ops.resolvers.packages import resolve_packages
+from accountable_record.ops.resolvers.versions import (
     digest_toml_file,
     element_source_path,
     package_source_path,

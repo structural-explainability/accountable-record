@@ -1,6 +1,6 @@
 {
   "schema": "ar-element-lock-1",
-  "resolved_at": "2026-05-22T17:12:49Z",
+  "resolved_at": "2026-05-26T01:19:28Z",
   "resolution_policy": {
     "one_major_version_per_identity_per_graph": true,
     "range_conflicts_are_errors": true
