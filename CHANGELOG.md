@@ -443,7 +443,7 @@ git push origin vX.Y.Z
 ### Task 4. Verify tag consistency
 
 ```shell
-uv run python -m se_manifest_schema validate --strict --require-tag
+uv run se-manifest validate-manifest --require-tag
 ```
 
 Confirms CITATION.cff version matches the pushed git tag.
