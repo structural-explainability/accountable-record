@@ -1,374 +1,1147 @@
 {
-  "schema": "ar-element-lock-1",
-  "resolved_at": "2026-05-26T02:03:57Z",
+  "elements": [
+    {
+      "compact_id": "se.accountable-record.claims.claim",
+      "digest": "08a66ca8a3f2d39c7cb047cda3b4c2786ecd59abc3c870a2e19926289481841a",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.claims.claim-attachment",
+      "digest": "9355823a337aba0a54cd920dd1bfa0ffd1fb5ffbb18ae1ca31c574ff22970a8d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.claims.claim-kind",
+      "digest": "5ff4828782c05adb7631ce516b4a3fc264776554e9b2ebe9aff27a41625dee4a",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.claims.claim-shape",
+      "digest": "f3a7f0fe5e6b71bc88fd811f2b49ed1eb37444c7982f53b38c4049ed7fa997f0",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.claims.claim-status",
+      "digest": "b0c603fac69287fe91a911bfa0328f6ba7ae1e6c0c9643f08226f7447e58bae0",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.claim-outcome",
+      "digest": "3ed4c4226476f52dca0ff278e5c7c23d3e9df83b0913996d4be8e0e85e9c28db",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.claim-selection",
+      "digest": "42026b3cc6fd1e3c956307136490c51725a3fb632cde935ec58a4822747d1757",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.compatibility-fixture",
+      "digest": "69cda5308be59ebb2703d036eecac29e8c0fe93a5677c78781159175ad7f6aac",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.conformance-check",
+      "digest": "b0c19a234fe246d78463e1a44c9f7ef51b22e8ad3740f0531259130ed16168a7",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.conformance-declaration",
+      "digest": "3da43ceda33cba3a604aed0b1041dbfe554dd5eec81234a21c8929c7cf1af62c",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.conformance-outcome",
+      "digest": "1fa21d168d59b3cbf637463b285ac3d4bfbda0fe9426f3f53fa3f60aa2fe20c4",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.conformance-profile",
+      "digest": "0d59a060f9a65261ff68a02e85af0a8d40c4c396f5d8526330c49b9867ab241e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.conformance-report",
+      "digest": "0592b78de835a17efc1dae0df902e43dc45fe336598d33469d9eea032d635916",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.expected-report",
+      "digest": "79982939f76d304b90f1bfa8fdd98cd6ebf80cbd1717b0410cbf032598271bba",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.not-run-metadata",
+      "digest": "24e2a09777ee24db6f4014b4b3c7458a1d0f51776c04ea4fcba964a99fe50aad",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.requirement",
+      "digest": "927a1d670809768b26ac578583828a165748dbbf1fe697193045343f12421321",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.rule",
+      "digest": "088d49884bb8b71054b26ecfa22887b6067087050d519d2dec7f6c180dedac59",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.conformance.structural-non-conformance",
+      "digest": "aee542978ed8273bbb7ed124253f565590752600f9ad10479aeda0adb8a818d8",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.alternative-claim",
+      "digest": "bab0dfa2beadf1a539100c9f6cd36475c40aa6a309039583bc94084f5d11e2e0",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.contested-claim",
+      "digest": "41105f1297e45079fb3095f9b32d5ff894b35b10768b30bf83e971044407db96",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.contested-relation",
+      "digest": "a97191e6918ad14afe74b3bd353488da71128f3de3a7e84c48f28f4f67152848",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.dispute",
+      "digest": "6526d351e38edd79ea7ed54d02e409d590436d8a405ef550e9c8b9dc427f4fec",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.interpretation",
+      "digest": "54666bb6ecd5215c8bc1fa7d45643fd294c929be320b30b3aa8d99d82608cdb8",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.objection",
+      "digest": "fd3c647e05802aa3c74c5c83c352666693d770c60154fc5f73275411ec3ea4cf",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.disagreement.resolution-status",
+      "digest": "321e21a361735f9b860286f9ac482f1cdb5a07ab63db90a4d1c5869d41478b35",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.compatibility-manifest",
+      "digest": "92f766201c3af0b711bd8d4ef5dd9a4de60b708b3124081c54614d093a0902d6",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-artifact",
+      "digest": "b75ea9adb28b65f1617bae72a5872b8905effcc4f666e435d0cf90e799bb9868",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-bundle",
+      "digest": "4a3021f700768f2499280c42773d44091d702101a30322c68adf4d92bd9e2f8d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-envelope",
+      "digest": "25f357662c4a9fde185ce9b0d3b922c4f5b26575943612469aa5f3891950d4fc",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-extension",
+      "digest": "d8f20df2a515d6c9aac8bcdf5cb92fe8f6363b1165709618135c2e22a581d3f2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-index",
+      "digest": "77f32246379d2580e432d744b45059ac9078c8f618285b754a7f6bb85c34a7b9",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-profile",
+      "digest": "e78db6aa9cc3166d4d9ae793a68dcbe706cfb75aeaae0d5c6d760e98f88c240b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-report",
+      "digest": "8af4398b661e39af6484a169f574838a1ec660f754932ddb405944162cc3a4d3",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.export-schema",
+      "digest": "934e2652542158ef75173e6e7f7ee0d99bcc8af90596c64a6a74dde3c8a1cc43",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.forbidden-extension",
+      "digest": "61f3e5459c01d12e3e730432e56fea7cd367b9eeb73cdd38cbb8dcd56ebb19e1",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.lock-file",
+      "digest": "3be9c9c66a495e0afab307aa4b2a5e96b80d6e598bef905b0bc465aaa81c5e71",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.exports.release-contract",
+      "digest": "f593044f7cff2911a52067aac8ed87428a297cf4c98fd8b1f9b54110985a73e7",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.collapse-detection",
+      "digest": "b3dc3a6a0e39c97b669decb589d39ffcecedd3f791c9dd56814e36550fa07fc2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.collapse-pattern",
+      "digest": "6449e0cd38b3cc98d6c97cc72c6d8ad6f9796695b78f13c0186f176b409f0bd3",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.collapse-remediation",
+      "digest": "cb6033a6d3a2144fbd1e1ad28de5c1df391e5819954d23093aacc25809dd5fea",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.failure-mode",
+      "digest": "54ee0b445870dc2528a1a7ffe22c80f0c8cb85d003218152c47cf121b2e5d3c4",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.profile-failure-mode",
+      "digest": "ecadff945ac915e42749fbf8de2ff2698ecb2c41ee7ccd68ab511db9c875611b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.failure-modes.structural-collapse",
+      "digest": "4f0a65c4cfc05fd039883e850eaa5eda1af92c1ffbb46d277a2c76da3b9383cd",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.adoption-policy",
+      "digest": "2b6c438e870e50ef95474bbca2f62a5649fa24f3bda6de22662ad7f5ef0eaf36",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.change-policy",
+      "digest": "4051a7a5e96dbb270fe2f30f4469bca4669c8a8f2ee7007bed7a825d4e4276e3",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.compatibility-policy",
+      "digest": "88999841575209471c8f1c139526e6e565803e74670bd60535ad31a5a2d9593d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.decision-record",
+      "digest": "e31589c15331cf2bb34d9546d94c8b68fa4217821390ed57dca387bbd08966eb",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.deprecation-policy",
+      "digest": "a5ac53968c388595aa65cb674488d052d890c7100e41b881e0f32d8d12d205f6",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.governance.steward",
+      "digest": "e053e145b96f44a77f7fa058c38fffaa3d987c564d591ed182ba0dec3f6e2527",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.identity.identifier",
+      "digest": "6265875c7a9b00b8ef61ec603bd9206ab01b6fee4a0459db08d10030de1ebd14",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.identity.namespace",
+      "digest": "a8ec48890c0dc301faeda41a22c7a065b86e6812d6aa1b38513919fd6bec50c8",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.identity.version",
+      "digest": "b2d952acf8f9587ddf0023895e1dda2faa73fe3298b22c890b529ddf842bae0b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.candidate-target",
+      "digest": "d77992832fd6bb34fd432f2e9e0ad6d6ca1089725542635babc5025cfb5aaf4a",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.external-standard",
+      "digest": "cc121d7819bc9c04e6258a2522150d25da7929f34a53e8161d671f724098f81e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.field-mapping",
+      "digest": "8179dece3d7f1fdbc61b1d41c3ed6c2ec8748b61c9f91cd168e07ff24aa62ec8",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.field-role",
+      "digest": "361f5b3c96c9380abff812511666dc32a043114ad764466f8f4de4da69580f2e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-answer",
+      "digest": "f011cbdcaa0310068210631429147edad904ea36e3dfb8cc0800d0dc3bee6b8d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-example",
+      "digest": "cbdfe7e78dee8fa07986b2e81fbc14275d780b34d73d149d72958b0c781c4f59",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-guide",
+      "digest": "01b9adcf2087249d39bb502b05f9f69b6a3565780a6892fd2de95cae6154ca08",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-question",
+      "digest": "f02a3704528b7cf057f8ffa09f5145b7d7c8006a884babc286d5bed334b96af3",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-rule",
+      "digest": "b36db7648894bd197eb802b1875be94963ea75d053d0806885952eae1459ef8c",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.mappings.mapping-warning",
+      "digest": "54e0e94b906ff79955b2a1d155362b5cdb90159da8d9bdd94e02d4d90abd1b11",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.maturity.level-check",
+      "digest": "5fb415352e97263457b72cbbcf383c6647b6649262632abf64be0d998251533f",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.maturity.level-requirement",
+      "digest": "5c9cee0b9034bb25c2fb521d5aab01ac3ca48d63aad3f51885d77c633767849b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.maturity.maturity-assessment",
+      "digest": "6b2b6a5b52f1ae4cd0111115571986a6b413639b1991dffef539de412decfdfd",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.maturity.maturity-level",
+      "digest": "240785b09026ac652e90428abe448bb09ef7b965bd6dbd2153de1de803536da4",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.maturity.progression-path",
+      "digest": "1608384861b16afbf6927442eb57400bbab06daa1d25d51f9a1b47d118c22b1b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.contributor",
+      "digest": "4295a998de10b1fc3eed006dd4dc51bf92003d727173d787b6c0f7a547a4e5c2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.creator",
+      "digest": "fb971adc3a27f53418ac6aa547b473de1207d133c97cae1f51923d08b4bc3215",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.custody-event",
+      "digest": "b58793c8ebbd474b09323bb4c6049d119b1114c71878791db8c38e239e5c5040",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.derivation-event",
+      "digest": "c12a1fafb747b9fb452a5409a6106d8dda2961e1c77b84ae77ceb062e528ac6b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.generation-event",
+      "digest": "7140eeee55c9af147792db809c8688107f4e6262958b6a910f412e71d0ad2b6a",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.provenance-event",
+      "digest": "a9536934ea7d7394aa0125df1ffaa4aa3b2fee9e59c24a0f7613461ac3d0f820",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.publication-event",
+      "digest": "3bbbe7696668a246382a439b572b308df6f6245a3122c125b1c7df193e45a089",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.revision-event",
+      "digest": "866efb4a0b092ae2889017e0d090ca65804930657d28c48ba6f3d47a594ce115",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.provenance.tool-used",
+      "digest": "c1411318fff9631b564da752ec7a3c80f0a140de7abddf3f9495aef587ec0a40",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.citation",
+      "digest": "0cc4e27da11087139104639f03ff1b6e4990db4c8043be309d1d7cc72d91b002",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.hash-reference",
+      "digest": "6edc0b31e21af1b4ec2b906f9f986ea7ad4cf24c160ad3bd9810923f380dc372",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.locator",
+      "digest": "13c7c231f657199923c79e2430f11bd79c6152cfbb32b2923849ab0091f49b68",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.source-reference",
+      "digest": "c0d431e19b0f9395388f3e975e8cc18fd89e08cc3ed30044f0d121d06ec7d4d2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.source-span",
+      "digest": "f8536f8167680c9910e991ba88d5c1ac7f6408c42cb8e5618a2f9508218b4149",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.references.uri-reference",
+      "digest": "11551a483e795a85aa63fb275def3c5baa9c3e24a0127ad1be6e4f44094a09e5",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.contradiction",
+      "digest": "3ff3d3c479bb23c72161d9963ad242c6d3b2ffc1b4f49132898864c8a79e98fe",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.dependency",
+      "digest": "a75e8ab341265152f76e05d18da9408088d2c0e0c3504340073d469729b6e6fa",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.derivation",
+      "digest": "da90bb1cd00b16fe89365ffd46871457f7eee069c70ddaf91b6421887187a9bd",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.equivalence",
+      "digest": "330ad27222fdd27b2fdea6693dbef9b5cfe32c2558a7a2ea126fa25e9de0b920",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.mapping-relation",
+      "digest": "8359c8978830f99207fc20ded5062c98cb815cdf3d1d29753852d748cad5c05e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.relation",
+      "digest": "d5ccc097a469500e7f558327c9a0aa858af34098026d443ac5b0c568641efb3f",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.relation-kind",
+      "digest": "06ca16b7220f8b3ba514002560b377fb15033bb95ffc5ba4f6e6eec1a4b9b430",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.satisfaction",
+      "digest": "b6e157c9cf432d43698d5924f538acff65c4a0a4a93c1e932160943519b3c3d1",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.relations.support",
+      "digest": "0992205adc361046a78513070940a383147672c762641ad68535684ee6bf9fad",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.authority-source",
+      "digest": "5712a537dd30a6f54ffe0a2918c6b85fbe4e7792e45046127044c5102e2044be",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.evidence-source",
+      "digest": "485cea713e926f73c6bd94f23b384b944b2c1a480b17ccfd760a2535a95e1f3f",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.normative-source",
+      "digest": "94bae8455d9cb9716f7d8b0d8e5193eb64d92199df3ba3e8b533b0a18374b399",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.source",
+      "digest": "a3193d27d4066c7bf924a19ea784c69a15348ce63ab5cfb0af586ee5b7e0a384",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.source-kind",
+      "digest": "275713fff4f19773d089fe15687699f384e8f4a13c5099a1696941c81f375636",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.sources.source-role",
+      "digest": "34b7e1ba59f65d8aba0f2d5e46571ee24f16fac4e324621bf2947fa376f97d94",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.deprecation-status",
+      "digest": "6ed9d148a689e32f391cadc8824cfa38ed05836ce9de9b36e01bc80c3919c2d7",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.dispute-status",
+      "digest": "8cb455c321e78ea7fb2ef2ef4a177752369ae4be94653481ee9df8d71f35a2f5",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.lifecycle-status",
+      "digest": "892d6f3f065c045330a57a58cc2c2f76c111830afb9b43f72dff7545a7909b9d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.publication-status",
+      "digest": "55aa0e3014440b1ed03a6d90b0876876d29085f5a62bd4b8333437149cadc47a",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.review-status",
+      "digest": "b7bb841f40a5d33a4ff0f0e7a1cf2aed44e117d1c38979d3d73eb7957ae95ad1",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.status.validity-status",
+      "digest": "2870eb5c9b1da0b17ade43322a463d4325b7c8c57b11d8430c38f06edd5b3228",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.record-subject",
+      "digest": "f09d764cf9e9724bdbd377babc7e94b89919e4a03518cafd712a4e8b3e5424cc",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.record-type-subject-binding",
+      "digest": "93ea1f4806d1bc39968adbc68d00bd3692d317ca3bbc756bffad58a3fe5a57ca",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.subject-classification",
+      "digest": "572f7a5363a3f9209fbaed03314fcfc796495fef5cc30cd85fa889302fb5b51b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.subject-kind",
+      "digest": "42a2d7065b982a08613cacb27ca3e819c6da91f5e44bb40e848ba1fe6e2801d2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.subject-kind-declaration",
+      "digest": "69af605d11fd8f57f0a8d72e84191d285bcced048fe474e3b214175fe68b67bc",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.subject-kind-mapping",
+      "digest": "97704f145550908900161f45056cfc1a886f7a23037273c0ce3e3a26335db9fd",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.subjects.subject-scope",
+      "digest": "5c2fa2218a53ca359f8f737312388f12e48e64640ece1d2afda7b607ed3c53f2",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait",
+      "digest": "7f6109c10d31b883b45d2a13fb7533ddaeffbc37dde85f0c4610450e141aad46",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-claim-binding",
+      "digest": "ac10454dc8a803d663294668295a45f6bfe3caaf1a9f07425f451a8388fd7f4d",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-conformance-binding",
+      "digest": "8264485c8c90be979694128262064e79819bf743cd4886ab11d7c2563df3547b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-declaration",
+      "digest": "1047634cbe981bdb4dc7d8fe28a6bc1fd794a52f486978922e96de0f0b25b654",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-kind",
+      "digest": "546a307f265020317bbd2992b3deaa5048090891681fd512f73e606575c851c5",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-requirement",
+      "digest": "ba9617253c40d00f5c7eb83e748b9502be4dde3e5fd95d4b4054e304406ffb46",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.traits.trait-value",
+      "digest": "55a98307693a14add9d3c1e45972421e76f59e9ac7274aea8ffe635ba602be38",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation",
+      "digest": "76b8b6cb9cad6e0147658e336f8f025e28074e086b0528b6420664332d0706fd",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-admissibility",
+      "digest": "ecc94601908f3537de619368f4303430118c30b6e0d7ddf43493663e67754d3e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-behavior",
+      "digest": "eaef5c38b7256997e9c52706196f8a28a2394d3aba1283fd2ac136e07a1a2ec6",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-declaration",
+      "digest": "4dedfba5f66edeebe1bb98e2b7976f77697ec35d90964d25881978843b39846b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-evidence",
+      "digest": "e9568a6110d0763f4eb9137872a3c6ecabd329529b16bc697e64f99ba2856d4e",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-kind",
+      "digest": "9e8853d2fdc40a124d772bf54b3d4ce6f7dd0584e605f9195fad2738fe19a702",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-lineage",
+      "digest": "bad2d5f9163b0de4f252e627d0691aefe9c096eea4559aa20764f5d15cccefcf",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.transformations.transformation-profile-rule",
+      "digest": "dce075e41c74271dc1feb7a39dc2838c67ec1229811f4938d847feda3289639b",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.check",
+      "digest": "c88d9c33edbcf331a949bca3dbde39bba86929d9acf2eadc9eb11440b23cee95",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.confidence",
+      "digest": "26db4deeeda2a077a0046f7efb7d5636dcf74c1423064af68bbb85189c7651fa",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.evidence",
+      "digest": "03643e9cef13c2411963a02018845a8c02806e6b0b83ee06b565ee9709b0dd35",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.finding",
+      "digest": "689a9921c96c0cabc05b999769d39cbd2468a04ef522fa4732ca539e9f12e906",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.report-production",
+      "digest": "55b1a0fc084a210f2860f16d710495d87e25fed4a21196c7000cbed2e040b26c",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.reproducibility",
+      "digest": "5cc6c78478c1051edb1abf64af5b4ad23d7ed97850ce37b14e83bab8ed81c5ea",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.result",
+      "digest": "c145cb21f3707252bef39afabac3679725595c894045669e7cef62dcddf8716f",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.review",
+      "digest": "78cd3f96ab72cc11d191c5b00e4da634dd79960106e11056f9b8c4cd4592f504",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.reviewer",
+      "digest": "88785df1ca7a070217c7f40b0158c647e010ca6185e9fa1e819756338f9adf45",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.sub-result",
+      "digest": "a00a5f4602b6aae6046da5b26fb696b3fa47e120ef52a652a5e1b4ffd7740357",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verification-event",
+      "digest": "0b5faf83a2cad395bdfc7677d91ff478027d5b8d96aa304f9d127f594fdbba8f",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verification-method",
+      "digest": "a9f1b71526312a002ec4d418a72bab409ab204e781211ba04c878b8a8b732f66",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verifier",
+      "digest": "df5a9e35460c6a47b8f014155847d65fdeb5b36f0ab9279083061f03bae97364",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verifier-error",
+      "digest": "bfd9313216d7dcf16b5559681c947a0a2ab7488f2f9b2cf07150f847c5df51d8",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verifier-expectation",
+      "digest": "a08512f582c602964bad1359951c62eb2a7e054a86563e61649ae2b069dad068",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verifier-identity",
+      "digest": "06184f495c44801940d92f8cde47793ff4422d80471ef83a7a99d53ac28d34d4",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    },
+    {
+      "compact_id": "se.accountable-record.verification.verifier-operation",
+      "digest": "1d723e3549208c8e56a77700661b721d1ff276fa5b0662b4db3ff55ee281e2a7",
+      "digest_algorithm": "sha256",
+      "digest_target": "canonical-generated-json",
+      "included_by": [],
+      "version": "0.1.0"
+    }
+  ],
+  "packages": [],
   "resolution_policy": {
     "one_major_version_per_identity_per_graph": true,
     "range_conflicts_are_errors": true
   },
-  "packages": [
-    {
-      "compact_id": "se.accountable-record.packages.core",
-      "version": "0.3.0",
-      "canonical_uri": "https://structural-explainability.org/accountable-record/packages/core",
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "fd6a50673da7cabecf4612cb4788094afd0787116ef5d92b330dea97cc41c498",
-      "source": "data/packages/core/package.toml"
-    },
-    {
-      "compact_id": "se.accountable-record.packages.source-traceability",
-      "version": "0.3.0",
-      "canonical_uri": "https://structural-explainability.org/accountable-record/packages/source-traceability",
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "755b3a246eb3a0d9a9fbccbb3ea17469bfd06bc72b15b305d1589cd4161c9a15",
-      "source": "data/packages/source-traceability/package.toml"
-    },
-    {
-      "compact_id": "se.accountable-record.packages.verification-core",
-      "version": "0.3.0",
-      "canonical_uri": "https://structural-explainability.org/accountable-record/packages/verification-core",
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "bdcff1797791d0c2003b56eccd0b2b7a5e93596642c7177ebccb3632fd5cd186",
-      "source": "data/packages/verification-core/package.toml"
-    }
-  ],
-  "elements": [
-    {
-      "compact_id": "se.accountable-record.identity.identifier",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "a76b7fef6ff2a4d6431f9d54868b7d2672d021dd62630385b76e2412ed2eafbe"
-    },
-    {
-      "compact_id": "se.accountable-record.subjects.record-subject",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "d5a9d1ced7203c0fa61a76e695c4077b064b320835b78c38ebb1f42eb29500e0"
-    },
-    {
-      "compact_id": "se.accountable-record.claims.claim",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "b04ca24c0272365e5e972d0462eb9cc395c1086a2de35a1cd547398e19430e8b"
-    },
-    {
-      "compact_id": "se.accountable-record.traits.trait",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "54fdbf0da2244dc0e4528da344596eeecfb07d652df8112863c0b9a3e0084852"
-    },
-    {
-      "compact_id": "se.accountable-record.sources.source",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0",
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "4913237d2d87eff3a38488ce54ee19e1db29f5d0f0bf7defd62936880620fe79"
-    },
-    {
-      "compact_id": "se.accountable-record.references.source-reference",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0",
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "40840ace820d32ca96418ed86b3a1e4dc2ed3526a490d0e160075bfe3475f1fc"
-    },
-    {
-      "compact_id": "se.accountable-record.relations.relation",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "feff03914d6cc73b4451a3edcc39ef9bfd38cde9a55025d8c451f30e1446e318"
-    },
-    {
-      "compact_id": "se.accountable-record.provenance.provenance-event",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0",
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "878ae893e1a7e18896a4092aa86971b97e947494c3c22f16be58eb3a831b3466"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.verification-event",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0",
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "d8a2183222fa92e98fddde5570ca2d0da2a3e267fa90797dc4caf9847100f4b2"
-    },
-    {
-      "compact_id": "se.accountable-record.conformance.conformance-check",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0",
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "b88fb6a477c0dcb10fe378248a560a8256ccfb3943d979a4850c913f3e1027f1"
-    },
-    {
-      "compact_id": "se.accountable-record.maturity.maturity-level",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "845a448729a23fa3365749055d6d052d3a9b5131fe4f9f5672e61b0b13d053a0"
-    },
-    {
-      "compact_id": "se.accountable-record.sources.source-kind",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "c51c27423aae3fd731adfa0a129995692d94a1828b0723fe3db97dd02ce37e5b"
-    },
-    {
-      "compact_id": "se.accountable-record.sources.source-role",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "ad473515f4383c60d07e8a8c4fb6b792c56181b2023673a848c060351eeacb85"
-    },
-    {
-      "compact_id": "se.accountable-record.references.citation",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "f541f0f394da2469b6884d9657191c838a2ee28b55b46c8a5e5d5b72a86ac630"
-    },
-    {
-      "compact_id": "se.accountable-record.references.locator",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "88fb56aa8e11403dee18371ab1a340ad4e0bd1e5e08893efd1498bb737fa620e"
-    },
-    {
-      "compact_id": "se.accountable-record.references.source-span",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "3d65bab4318d341ee80bdf146b3e890cc6455419e229b4b10dcec22bc6015b29"
-    },
-    {
-      "compact_id": "se.accountable-record.references.uri-reference",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "4a87bf4e08d0dd53398512b4454c421e1af70c9f1d8e4597e05c325ecb16e152"
-    },
-    {
-      "compact_id": "se.accountable-record.references.hash-reference",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "724bc1988e935a1e3ba200d021f38eb2d5ce6e0093723cc2bec55fc62338528c"
-    },
-    {
-      "compact_id": "se.accountable-record.provenance.derivation-event",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "d4282cf9c79a4de4734b83c9d9c71345a788968613abc6c18fa3e5de29efa318"
-    },
-    {
-      "compact_id": "se.accountable-record.provenance.revision-event",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "e4f36f33b4147e89a48bdb58151f5aea9297b3d956582fd6a7f27a5c4eda2cc9"
-    },
-    {
-      "compact_id": "se.accountable-record.provenance.custody-event",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.source-traceability@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "8c7c91c576119930902bd18917a09df1828c2fdc6df8c6464c132129aaa01324"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.verification-method",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "222fcb087c30aa77aa2686111e24d450e655ca5a370da68a9573e6caddab5f82"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.evidence",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "a0b18d65d5ad6d76f4266240edc4a2c844db14e5f58d7a9632bbc3fb58cec315"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.check",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "9752d112ae493ab96ac727b2111ea6a8d7e83a633687aede2674d337ffd3584b"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.review",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "d0e6438862f5216fa861891e7a4863324a87455fd22e02721bff4aa4cd3aca9d"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.reviewer",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "77abb9ec0e985078ea83a4153b8a15b5a919500c85f277c546e0cf79a37a78ad"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.result",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "40de48ecb8c068287546b20c4b90c24fd828b7ffee7fa86eacc952197231ce27"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.confidence",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "32899bb19c2dd2e3914cea1200287f97d4da0fc380c55cc312d8de81dbebf459"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.reproducibility",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "74979705176ae24748e24a7f43f464b82e80c0936dd22472d8a2efd14f280d1f"
-    },
-    {
-      "compact_id": "se.accountable-record.verification.verifier-expectation",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "d4374ff00ab23717a2dd237500af41300b1350a1d9e7e0e5dac08d3cf71003ac"
-    },
-    {
-      "compact_id": "se.accountable-record.conformance.conformance-outcome",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "f67fdca63c34ca2a5a2262108bd2a7b947df345c9eb03cd5eb623f97657bee3d"
-    },
-    {
-      "compact_id": "se.accountable-record.conformance.conformance-report",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "5e54f6028f2f4a8ab24330137efbe51a53cda0a55438634f28b40aca7408e505"
-    },
-    {
-      "compact_id": "se.accountable-record.conformance.expected-report",
-      "version": "0.3.0",
-      "included_by": [
-        "se.accountable-record.packages.verification-core@0.3.0"
-      ],
-      "digest_algorithm": "sha256",
-      "digest_target": "canonical-generated-json",
-      "digest": "ee4cba98e0b4ebee860616f103fd4f11b58772dcb660f94bb89fce020cab1ede"
-    }
-  ]
+  "resolved_at": "2026-05-26T13:50:10+00:00",
+  "schema": "ar-element-lock-1"
 }

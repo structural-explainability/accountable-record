@@ -92,9 +92,18 @@ jobs:
 
       # ============================================================
       # E) Execute local cli commands for additional checks
-      # ============================================================
-      - name: E1) Validate schema internal consistency
-        run: uv run se-manifest validate-schema --strict
-
-      - name: E2) Validate repository manifest against schema
+      # ===========================================================
+      - name: E1) Validate repository manifest against schema
         run: uv run se-manifest validate-manifest --strict
+
+      - name: E2) Check Accountable Record source artifacts
+        run: uv run accountable-record check --strict
+
+      - name: E3) Run full Accountable Record staged pipeline
+        run: uv run accountable-record run all
+
+      - name: E4) Validate generated artifacts are current
+        run: uv run accountable-record validate-generated
+
+      - name: E5) Verify lock is current
+        run: uv run accountable-record verify-lock
